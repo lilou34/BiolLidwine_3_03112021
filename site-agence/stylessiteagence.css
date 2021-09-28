@@ -1,6 +1,10 @@
 /* style.css de Lilou */
 
 /* page d'accueil */
+body
+{
+    background-color: slategray;
+}
 h1 {
     color: pink;
 }
