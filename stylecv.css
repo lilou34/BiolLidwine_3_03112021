@@ -24,5 +24,19 @@ font-family: '2dumbregular'
 #conteneur
 {
 display: flex;
+flex-wrap: no-wrap;
+justify-content: flex-end;
+height: 2000px;
+width: 2000px;
     
 }
+#liseret
+{
+    float: left;
+
+}
+.element :nth-child(1)
+{
+    flex-shrink: 0.3;
+}
+   
