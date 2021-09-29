@@ -18,8 +18,8 @@ font-size: small;
 h1
 {
     text-align: center;
-    border:2px aqua solid;
-    background-color: yellow;
+    border:2px rgb(26, 27, 27) solid;
+    background-color: slategrey;
 }
 body
 {
@@ -33,7 +33,7 @@ font-family: '2dumbregular'
     height: 300px;
     border:2px midnightblue inset;
     border-radius: 10px;
-    background-color: orchid;
+    background-color:rgba(235, 156, 183, 0.548);
     margin: 3px;
     padding: 3px;
 
@@ -41,16 +41,20 @@ font-family: '2dumbregular'
 #conteneur
 {
 display: flex;
+margin: auto;
 flex-flow: row nowrap;
 justify-content: flex-end;
 align-items: flex-start;
 height: 100%;
 width: 70%; 
 gap: 3%;
-border: 1px purple solid;
+
+
 }
 .element
 {
-    background-color: slateblue;
+    background-color: silver;
     border-radius: 3%;
+    margin: auto;
+    padding: 2%;
 }
