@@ -11,9 +11,14 @@ font-weight: normal;
 font-style: bold;
 font-size: small;
 }
+.ma-photo
+{
+    width: 60px;
+    height: 75px;
+}
 #photo
 {
-    float: right;
+    float: left;
 }
 h1
 {
@@ -39,6 +44,11 @@ font-family: '2dumbregular'
 
 }
 #conteneur
+{
+    float: left;
+}
+
+.enveloppe
 {
 display: flex;
 margin: auto;
