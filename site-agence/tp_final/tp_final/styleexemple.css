@@ -38,6 +38,13 @@ body
     width: 900px;
     margin: auto;
 }
+@media all and (max-width: 1024px)
+{
+    #bloc_page
+    {
+        width: auto;
+    }
+}
 
 section h1, footer h1, nav a
 {
@@ -117,6 +124,34 @@ nav a:hover
     color: #760001;
     border-bottom: 3px solid #760001;
 }
+@media all and (max-width: 1024px)
+{
+    nav
+    {
+        width: auto;
+        text-align: left;
+    }
+    
+    nav ul
+    {
+        flex-direction: column;
+    }
+
+    nav li
+    {
+        padding-left: 4px;
+    }
+    
+    nav a
+    {
+        font-size: 1.1em;
+    }
+    
+    nav a:hover
+    {
+        border-bottom: 0;
+    }
+}
 
 /* Bannière */
 
@@ -165,6 +200,13 @@ nav a:hover
 .bouton_rouge img
 {
     border: 0;
+}
+@media all and (max-width: 1024px)
+{
+    #banniere_image
+    {
+        display: none;
+    }
 }
 
 /* Corps */
