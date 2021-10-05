@@ -9,7 +9,7 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
 }
 html
 {
-    max-width: 992px;
+    width: 1024px;
     margin: auto;
 }
 h1
@@ -31,17 +31,18 @@ header
     justify-content: space-between;
     align-items: flex-start;
     align-content: space-around;
-    max-width: 95%;
-    margin-left: 2%;  
+    max-width: 100%;
+    padding-left: 2%;  
 }
 .logo
 {
-    padding-right: 50%; 
+    padding-right: 48%; 
     padding-bottom: 2%;
 }
 #nav
 {
- padding-top: 2%; 
+ padding-top: 2%;
+ padding-right: 2%; 
 }
 #menu
 {
@@ -59,11 +60,12 @@ li:hover
 #annonce_sous_logo
 {
     padding-right: 60%;  
-    padding-bottom: 2%;
+    padding-bottom: 4%;
 }
 .zonerechercher
 {
-   border: #F2F2F2 solid 1px; 
+   border: 1px solid #F2F2F2; 
+   
 }
 .zonerechercher:focus
 {
@@ -98,9 +100,53 @@ li:hover
 .barre_filtre
 {
     display: flex;
-    flex-basis: 80%;
+    justify-content: center;
+    align-content: space-between;
     flex-direction: row;
-    margin-top: 2%;
+    margin-top: 4%;
+    gap: 2%;
+    width: 90%; 
 }
+#filtres
+{
+    padding-right: 2%;
+    padding-top: 1%;
+    font-weight: bold;
+}
+.filtre
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width: 90%;
+    height: 37px;
+    
+}
+.texte_filtre
+{
+    font-size: small;
+    text-align: center;
+    border: 2px solid #d9d9d9;
+    width: 85%;
+    border-radius: 15px;
+    padding-top: 4%;
+    margin-left: 12%;
+    margin-top: 2%;
+    padding-left: 6%;
+    padding-right: 10%;
+    font-weight: bold;
+}
+.icone_filtre
+{
+    background-color: #deebff;
+    position: absolute;
+    opacity: 1;
+    padding: 0;
+    border:2px solid #deebff;
+    border-radius:50%;
+    width: 40px;
+    height: 40px;
+}
+
 
 
