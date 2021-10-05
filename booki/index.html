@@ -2,46 +2,67 @@
 <html lang=fr>
     <head>
         <meta charset="utf-8" />
-        <meta name=viewport content="width=device-width, initial-scale=1">
-        <title>Booki</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/style.css" rel="stylesheet"/>
         <script src="https://kit.fontawesome.com/7792f8e9f2.js" crossorigin="anonymous">
         </script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,500;1,100;1,200;1,300;1,500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,500;1,100;1,200;1,300;1,500&display=swap" rel="stylesheet">
+        <title>
+            Booki
+        </title>
     </head>
         
 <header>
-    <div class="conteneur-header">
-        <!--logo-->
-        <img class= "logo" src="images/logo/Booki.png" alt="logo booky"/>
-        <!--navigation-->
-         <nav id="nav"> 
-            <ul id="menu">
-                <li id="hebergement">
-                    <a href="#hebergements">Hébergements</a>
-                </li>
-                <li id="activites">
-                    <a href="#activites">Activités</a>
-                </li>
-            </ul>
-        </nav>
-        <!--titre / phrase accroche-->
-        <div id="annonce-sous-logo">
-        <h1>
-            Trouvez votre hébergement pour des vacances de rêves
-        </h1>
-        <h6>
-            En plein centre ville ou en pleine nature
-        </h6>
+    <!--logo-->
+    <img class= "logo" src="images/logo/Booki.png" alt="logo booky"/>
+    <!--navigation-->
+    <nav id="nav"> 
+        <ul id="menu">
+            <li id="hebergement">
+            <a href="#hebergements">Hébergements</a>
+            </li>
+            <li id="activites">
+            <a href="#activites">Activités</a>
+            </li>
+        </ul>
+    </nav>
+    <!--titre / phrase accroche-->
+    <div id="annonce_sous_logo">
+    <h1>
+        Trouvez votre hébergement pour des vacances de rêves
+    </h1>
+    <h6>
+        En plein centre ville ou en pleine nature
+    </h6>
+    </div>
+    <!--recherche-->
+    <form id="ville">
+        <i class="fas fa-map-marker-alt">
+        </i>
+        <input class="zonerechercher" type="text" name="barre de recherche" placeholder="Marseille,France">
+        <input class="bouton_recherche" type="submit" value="Rechercher">
+        <div class="loupe">
+        <i class="fas fa-search"></i>
+        </i>
         </div>
-        <!--recherche-->
-        <form id="recherche">
-            <i class="fas fa-map-marker-alt"></i>
-			<input class="rechercher" type="rechercher" name="rechercher" placeholder="Marseille,France">
-			<input type="submit" value="Rechercher">
-			<i id="fas fa-search"></i>
-		</form>
+    </form>
+    <!--filtres-->
+    <div class="filtres">
+        <ul class="barre_filtre">
+            <li>Filtres</li>
+            <li class="icone_filtre"><i class="fas fa-money-bill-wave"></i></i>Economique</li>
+            <li class="icone_filtre"><i class="fas fa-money-bill-wave"></i></i>Economique</li>
+            <li class="icone_filtre"><i class="fas fa-money-bill-wave"></i></i>Economique</li>
+            <li class="icone_filtre"><i class="fas fa-money-bill-wave"></i></i>Economique</li>
+        </ul>
+
+
+
+
+
+
+
     </div>
 </header>

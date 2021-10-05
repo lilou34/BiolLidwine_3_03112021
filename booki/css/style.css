@@ -7,57 +7,100 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
     -webkit-box-sizing: border-box;
     box-sizing: border-box; 
 }
-.conteneur-header
+html
+{
+    max-width: 992px;
+    margin: auto;
+}
+h1
+{
+    font-size: medium;
+    font-weight: bold; 
+}
+h6
+{
+    font-weight: normal;
+    font-size: x-small;
+}
+header
 {
     font-family:"Raleway", Arial, Helvetica, sans-serif;
     display: flex;
-    
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    align-content: space-around; 
-    gap: 10%;
-   max-width: 100%;
-   margin-left: 20px;  
+    align-content: space-around;
+    max-width: 95%;
+    margin-left: 2%;  
 }
 .logo
 {
-    display: flex;
-    margin-right: 1000px; 
+    padding-right: 50%; 
+    padding-bottom: 2%;
 }
 #nav
 {
-   margin-right: 10%; 
-   margin-top: 1%;
+ padding-top: 2%; 
 }
 #menu
 {
     display: flex;   
 }
-
 ul
 {
-    margin-left: 10%; 
     gap: 5%;
     color: #0065fc;
 }
 li:hover
 {
-    border-top: 2px solid #0065fc;
+    border-top: 1px solid #0065fc;
 }
-#annonce-sous-logo
+#annonce_sous_logo
 {
-    margin-right: 1010px; 
+    padding-right: 60%;  
+    padding-bottom: 2%;
 }
-#recherche
+.zonerechercher
 {
+   border: #F2F2F2 solid 1px; 
+}
+.zonerechercher:focus
+{
+    height: 25px;
+    border: solid #0065fc;
+}
+.bouton_recherche
+{
+    font-size: 16px;
+    color: #F2F2F2;
+    background-color: #0065fc;
+    cursor: pointer;
+    border-radius: 0px 15px 15px 0px;
+}
+.bouton_recherche:hover
+{
+    background-color: #F2F2F2;
+    border-color: #0065fc;
+    color: #0065fc;
+}
+.loupe
+{
+    display: none;
+    position: absolute;
+    left: 208px;
+    opacity: 1;
+    color: white;
+    padding: 12px ;
+    background-color: #0065fc;
+    border-radius: 0 15px 15px 0;
+}
+.barre_filtre
+{
+    display: flex;
+    flex-basis: 80%;
+    flex-direction: row;
     margin-top: 2%;
 }
-.placeholder::-webkit-input-placeholder{
-    font-weight: 800;
-    color:black;
-}
-#fas fa-search
-{
-     display: none;
-}
+
+
