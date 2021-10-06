@@ -3,81 +3,103 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/style.css" rel="stylesheet"/>
-        <script src="https://kit.fontawesome.com/7792f8e9f2.js" crossorigin="anonymous">
-        </script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,500;1,100;1,200;1,300;1,500&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet"/>
         <title>
             Booki
         </title>
     </head>
-        
-<header>
-    <!--logo-->
-    <img class= "logo" src="images/logo/Booki.png" alt="logo booky"/>
-    <!--navigation-->
-    <nav id="nav"> 
-        <ul id="menu">
-            <li id="hebergement">
-            <a href="#hebergements">Hébergements</a>
-            </li>
-            <li id="activites">
-            <a href="#activites">Activités</a>
-            </li>
-        </ul>
-    </nav>
-    <!--titre / phrase accroche-->
-    <div id="annonce_sous_logo">
-    <h1>
-        Trouvez votre hébergement pour des vacances de rêves
-    </h1>
-    <h6>
-        En plein centre ville ou en pleine nature
-    </h6>
-    </div>
-    <!--recherche-->
-    <form id="ville">
-        <i class="fas fa-map-marker-alt">
-        </i>
-        <input class="zonerechercher" type="text" name="barre de recherche" placeholder="Marseille,France">
-        <input class="bouton_recherche" type="submit" value="Rechercher">
-        <div class="loupe">
-        <i class="fas fa-search"></i>
-        </i>
-        </div>
-    </form>
-    <!--filtres-->
-    <div class="barre_filtre">
-        <p id="filtres">Filtres</p>
-        <div class="filtre">
-                <button class="icone_filtre"><i class="fas fa-money-bill-wave"></i>
-            </i></button>
-            <p class="texte_filtre">
-                Economique
-            </p>
-        </div>
-        <div class="filtre">
-            <button class="icone_filtre"><i class="fas fa-child"></i>
-            </i></button>
-            <p class="texte_filtre">
-                Familial
-            </p>
-        </div>
-        <div class="filtre">
-            <button class="icone_filtre"><i class="fas fa-heart"></i>
-            </i></button>
-            <p class="texte_filtre">
-                Romantique
-            </p>
-        </div>    
-        <div class="filtre">
-            <button class="icone_filtre"><i class="fas fa-dog"></i>
-            </i></button>
-            <p class="texte_filtre">
-                Animaux autorisés
-            </p>
-        </div>
-    </div>
-</header>
+    <body>        
+        <header id="header-entete">
+            <!--logo-->
+            <a href="#index.html">
+                <img class= "logo" src="images/logo/Booki.png" alt="logo booky"/>
+            </a>
+            <!--navigation-->
+            <nav id="nav"> 
+                <ul id="menu">
+                    <li id="hebergement">
+                        <a href="#hebergements">Hébergements</a>
+                    </li>
+                    <li id="activites">
+                        <a href="#activites">Activités</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--titre / phrase accroche-->
+            <div id="annonce_sous_logo">
+                <h1>
+                    Trouvez votre hébergement pour des vacances de rêves
+                </h1>
+                <p class="texte_divers">
+                    En plein centre ville ou en pleine nature
+                </p>
+            </div>
+            <!--recherche-->
+            <form id="ville">
+                <i class="fas fa-map-marker-alt">
+                </i>
+                <input class="zonerechercher" type="text" name="barre de recherche" placeholder="Marseille,France">
+                <input class="bouton_recherche" type="submit" value="Rechercher">
+                <div class="loupe">
+                <i class="fas fa-search"></i>
+                </i>
+                </div>
+            </form>
+            <!--filtres-->
+            <div class="barre_filtre">
+                <p id="filtres">Filtres</p>
+                <div class="filtre">
+                        <button class="icone_filtre"><i class="fas fa-money-bill-wave"></i>
+                    </i></button>
+                    <p class="texte_filtre">
+                        Economique
+                    </p>
+                </div>
+                <div class="filtre">
+                    <button class="icone_filtre"><i class="fas fa-child"></i>
+                    </i></button>
+                    <p class="texte_filtre">
+                        Familial
+                    </p>
+                </div>
+                <div class="filtre">
+                    <button class="icone_filtre"><i class="fas fa-heart"></i>
+                    </i></button>
+                    <p class="texte_filtre">
+                        Romantique
+                    </p>
+                </div>    
+                <div class="filtre">
+                    <button class="icone_filtre"><i class="fas fa-dog"></i>
+                    </i></button>
+                    <p class="texte_filtre">
+                        Animaux autorisés
+                    </p>
+                </div>
+            </div>
+            <div id="info_sous_filtre">
+                <button class="bouton_info">
+                    <i class="fas fa-info"></i>
+                </button>
+                <p>Plus de 500 logements sont disponbles dans cette ville</p>
+            </div>
+        </header>
+        <main>
+            <section id="hebergements_populaires">
+                <div id="hebergement_contenaire">
+                    <h2>Hébergements à Marseille</h2>
+                    <div id="enfants_hebergement">
+                        
+                    </div>
+
+
+
+
+                    
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
