@@ -52,7 +52,6 @@ a:link
 }
 body
 {
-    max-width: 1400px;
     margin: auto;
 }
 h1 
@@ -125,12 +124,12 @@ h2, h3
     height: 40px;
     border-radius: 10px 0 0 10px;
     border: none;
+    margin-right: -1%;
 }
 #header-entete #ville .zonerechercher 
 {
     border: 1px solid #F2F2F2;
     height: 40px;
-    padding: -1%;
     margin: -1px;
 }
 #header-entete #ville .zonerechercher:hover 
@@ -150,6 +149,7 @@ h2, h3
     background-color: #0065fc;
     cursor: pointer;
     border-radius: 0px 15px 15px 0px;
+    margin-left: -1%;
 }
 #header-entete #ville .bouton-recherche:hover 
 {
@@ -264,9 +264,9 @@ h2, h3
 #main #hebergements-populaires 
 {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     max-width: 99%;
-    height: 900px;
+    height: 700px;
     gap: 2%;
     margin-top: 4%;
 }
@@ -342,7 +342,7 @@ h2, h3
 {
     padding-bottom: 2%;
 }
-#main #hebergements-populaires #hebergement-marseille .card-conteneur .card .texte-sous-photo #prix 
+#main #hebergements-populaires #hebergement-marseille .card-conteneur .card .texte-sous-photo .prix 
 {
     font-weight: bold;
 }
@@ -365,26 +365,24 @@ h2, h3
     margin: 2%;
     font-weight: bold;
 }
-#main #hebergements-populaires #populaire 
+#main #hebergements-populaires #populaire
 {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    width: 29%;
-    height: 80%;
-    margin: 0 auto;
+    justify-content: space-around;
     background-color: #f2f2f2;
     border-radius: 15px;
-    gap: 4%;
+    width: 30%;
+    height: 80%;
+    gap: 2%;
+    
 }
 #main #hebergements-populaires #populaire #pop
 {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 90%;
-    padding-top: 4%;
-    padding-left: 3%;
+    padding: 3%;
     margin: 0;
     gap: 50%;
 }
@@ -396,7 +394,7 @@ h2, h3
     justify-content: flex-start;
     width: 99%;
     height: 90%;
-    gap: 6%;
+    gap: 3%;
 }
 #main #hebergements-populaires #populaire .card-conteneur .card
 {
@@ -457,10 +455,47 @@ h2, h3
 
 @media (min-width: 769px) and (max-width: 991px)
 {
-    #header-entete
+    body
+    {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 99%;
+    }
+    #header-entete 
     {
         flex-direction: column;
-    }    
+        margin-bottom: 20%;
+    }   
+    #header-entete .logo
+    {
+        margin-inline: auto;
+    }
+    #header-entete #nav
+    {
+        width: 99%;
+    }
+    #header-entete #nav #menu 
+    {
+        gap: 0%;
+        justify-content: space-around;
+    }
+    #header-entete #nav #menu li
+    {
+        text-align: center;
+    }
+    #header-entete #nav #menu li:hover 
+    {
+        padding-bottom: 2px;
+        border-bottom: 4px solid #0065fc;
+        width: 50%;
+        border-top: none;
+        color: #0065fc;
+    }
+    #header-entete #annonce-sous-logo 
+    {
+        padding: 2% 0 2% 0;
+    }
     #header-entete #ville .bouton-recherche
     {
         display: none;
@@ -469,13 +504,6 @@ h2, h3
     {
         display: inline;
         border-radius: 10px
-    }
-    #header-entete #nav #menu li:hover 
-    {
-        border-bottom: 1px solid #0065fc;
-        border-top: none;
-        margin-bottom: 2%;
-        color: #0065fc;
     }
     #header-entete .barre-filtre .filtre
     {
@@ -491,25 +519,75 @@ h2, h3
     }
     #main #hebergements-populaires 
     {
-        flex-direction: column-reverse;
-        justify-content: flex-end;
+        display: flex;
+        width: 99%;
+        gap: 2%;
+        margin-top: 4%;
+        flex-wrap: nowrap;
+        align-items: center;
     }
-    #main #hebergements-populaires #populaire 
-    {
-        width: auto;
+    #main #hebergements-populaires #populaire {
+        display: flex;
+        flex-direction: column;
+        background-color: #f2f2f2;
+        border-radius: 15px;
+        width: 98%;
+        height: 50%;
+        gap: 2%;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
     }
     #main #hebergements-populaires #populaire .card-conteneur .card .texte-sous-photo
     {
         flex-direction: column;
     }
+    #main #hebergements-populaires 
+    {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+
+    #main #hebergements-populaires #hebergement-marseille 
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 101%;
+        background-color: #f2f2f2;
+        border-radius: 15px;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: stretch;
+    }
     #main #hebergements-populaires #hebergement-marseille .card-conteneur
     {
         flex-direction: column;
         flex-wrap: nowrap;
+        gap: 2%;
+    }
+    #main #hebergements-populaires #hebergement-marseille .card-conteneur .card 
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        background-color: #fff;
+        width: 98%;
+        height: 10%;
+        border-radius: 15px;
+        box-shadow: 5px 5px 5px #c7c7c7c2;
     }
 }
 @media (max-width: 768px)
 {
+    body
+    {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 99%;
+    }
     #header-entete
     {
         flex-direction: column;
@@ -517,13 +595,14 @@ h2, h3
     }
     #header-entete .logo 
     {
-        padding: 0;
-        width: 100%;
-        padding: 0 20%;
+        padding: 0px 130%;
     }
     #header-entete #nav
     {
+        width: 99%;
+        padding: 0;
         width: 100%;
+        padding: 0 20%;
     }
     #header-entete #nav #menu 
     {
@@ -533,7 +612,6 @@ h2, h3
     #header-entete #nav #menu li
     {
         text-align: center;
-
     }
     #header-entete #nav #menu li:hover 
     {
@@ -545,9 +623,7 @@ h2, h3
     }
     #header-entete #annonce-sous-logo 
     {
-        padding-right: 40%;
-        padding-top: 2%;
-        padding-bottom: 4%;
+        padding: 2% 0 2% 0;
     }
     #header-entete #ville .bouton-recherche
     {
@@ -558,7 +634,6 @@ h2, h3
         display: inline;
         border-radius: 10px
     }
-
     #header-entete .barre-filtre
     {
         flex-direction: column;
@@ -569,11 +644,6 @@ h2, h3
         width: 89%;
         flex-flow: column wrap;
         justify-content: start;
-    }
-    #header-entete .barre-filtre .filtre:nth-child(2)
-    {
-        align-self: flex-end;
-        position: fixed;
     }
     #main #hebergements-populaires 
     {
@@ -592,5 +662,6 @@ h2, h3
     {
         flex-direction: column;
         flex-wrap: nowrap;
+        gap: 2%;
     }
 }
