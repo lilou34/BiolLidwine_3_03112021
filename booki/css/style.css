@@ -601,21 +601,11 @@ h2, h3
     }
     #header-entete .logo 
     {
-<<<<<<< HEAD
         padding: 1px;
-=======
-        padding: 0px 130%;
->>>>>>> a3bbd3f5c3d0cdda81bec0990544b902516e1a92
     }
     #header-entete #nav
     {
         width: 99%;
-<<<<<<< HEAD
-=======
-        padding: 0;
-        width: 100%;
-        padding: 0 20%;
->>>>>>> a3bbd3f5c3d0cdda81bec0990544b902516e1a92
     }
     #header-entete #nav #menu 
     {
