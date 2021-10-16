@@ -53,6 +53,8 @@ a:link
 body
 {
     margin: auto;
+    max-width: 1400px;
+    width: 99.5%;
 }
 h1 
 {
@@ -78,8 +80,7 @@ h2, h3
 }
 #header-entete .logo 
 {
-    padding-right: 48%;
-    padding-bottom: 2%;
+    margin-inline: 2%;
 }
 #header-entete #nav 
 {
@@ -176,14 +177,11 @@ h2, h3
 }
 #header-entete .barre-filtre #filtres 
 {
-    margin-top: 3%;
-    flex-basis: 7%;
-    width: 100%;
+    margin-top: 2%;
 }
 #header-entete .barre-filtre .englobe-filtre
 {
     display: flex;
-    flex-basis: 93%;
     text-align: center;
 }
 #header-entete .barre-filtre .englobe-filtre .filtre 
@@ -526,17 +524,22 @@ h2, h3
         flex-wrap: nowrap;
         align-items: center;
     }
-    #main #hebergements-populaires #populaire {
+    #main #hebergements-populaires #populaire 
+    {
         display: flex;
         flex-direction: column;
         background-color: #f2f2f2;
         border-radius: 15px;
         width: 98%;
-        height: 50%;
         gap: 2%;
         flex-wrap: nowrap;
         align-items: center;
         justify-content: space-between;
+    }
+    #main #hebergements-populaires #populaire #pop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
     #main #hebergements-populaires #populaire .card-conteneur .card .texte-sous-photo
     {
@@ -547,23 +550,22 @@ h2, h3
         flex-direction: column-reverse;
         justify-content: space-around;
     }
-
     #main #hebergements-populaires #hebergement-marseille 
     {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 101%;
         background-color: #f2f2f2;
         border-radius: 15px;
         flex-wrap: nowrap;
         align-content: center;
-        align-items: stretch;
+        align-items: center;
     }
     #main #hebergements-populaires #hebergement-marseille .card-conteneur
     {
         flex-direction: column;
         flex-wrap: nowrap;
+        width: 99%;
         gap: 2%;
     }
     #main #hebergements-populaires #hebergement-marseille .card-conteneur .card 
@@ -573,8 +575,8 @@ h2, h3
         flex-wrap: wrap;
         margin: 0 auto;
         background-color: #fff;
-        width: 98%;
-        height: 10%;
+        width: 99%;
+        
         border-radius: 15px;
         box-shadow: 5px 5px 5px #c7c7c7c2;
     }
@@ -586,23 +588,24 @@ h2, h3
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: 99%;
+    width: 98%;
+    height: 2000px;
+    align-items: center;
+    align-content: center;
     }
     #header-entete
     {
         flex-direction: column;
         align-items: center;
+        margin-left: 5%;
     }
     #header-entete .logo 
     {
-        padding: 0px 130%;
+        padding: 1px;
     }
     #header-entete #nav
     {
         width: 99%;
-        padding: 0;
-        width: 100%;
-        padding: 0 20%;
     }
     #header-entete #nav #menu 
     {
@@ -641,27 +644,98 @@ h2, h3
     #header-entete .barre-filtre .englobe-filtre
     {
         display: flex;
-        width: 89%;
+        width: 99%;
         flex-flow: column wrap;
         justify-content: start;
+    }
+    #header-entete #info-sous-filtre 
+    {
+        width: 100%;
+        padding-top: 2%;
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        font-size: small;
+    }
+    #main
+    {
+        margin-left: 5%;
     }
     #main #hebergements-populaires 
     {
         flex-direction: column-reverse;
         justify-content: flex-end;
+        height: 1400px;
     }
     #main #hebergements-populaires #populaire 
     {
-        width: auto;
+        height: 400px;
+        width: 95%;
+        margin-inline: auto;
+        gap: 1%;
+    }
+    #main #hebergements-populaires #populaire #pop 
+    {
+        padding: 1%;
+    }
+    #main #hebergements-populaires #populaire .card-conteneur
+    {
+       gap: 4%; 
     }
     #main #hebergements-populaires #populaire .card-conteneur .card .texte-sous-photo
     {
         flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    #main #hebergements-populaires #hebergement-marseille 
+    {
+        width: 95%;
+        height: 1000px;
+        justify-content: flex-start;
+    }
+    #main #hebergements-populaires #hebergement-marseille #hebergement-texte
+    {
+        height: 3%;
     }
     #main #hebergements-populaires #hebergement-marseille .card-conteneur
     {
         flex-direction: column;
         flex-wrap: nowrap;
-        gap: 2%;
+        width: 99%;
+        height: 99%;
+        gap: 5px;
+    }
+    #main #hebergements-populaires #hebergement-marseille .card-conteneur .card 
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 99%;
+        height: 19%;
+    }
+    #main #hebergements-populaires #hebergement-marseille .card-conteneur .card .photo-hebergement
+    {
+        height: 55%;
+    }
+    #main #hebergements-populaires #hebergement-marseille .card-conteneur .card .texte-sous-photo
+    {
+        height: 15%;
+        font-size: xx-small;
+        gap: 1px;
+    }
+    #main #hebergements-populaires #populaire .card-conteneur .card .texte-sous-photo .nom-hbg, .nuit 
+    {
+        padding-bottom: 0;
+    }
+    #main #hebergements-populaires #hebergement-marseille .card-conteneur .card .etoiles 
+    {
+        margin-bottom: 1%;
+    }
+    #main #hebergements-populaires #hebergement-marseille #plus
+    {
+        height: 2%;
+        margin-top: 45%;
+        margin-left: 1%;
     }
 }
