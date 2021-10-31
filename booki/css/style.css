@@ -40,7 +40,9 @@ td, th
 }
 a:link 
 { 
- text-decoration:none; 
+    text-decoration:none; 
+    color: #000000;
+    cursor: pointer;
 }
 /*box-sizing */
 *, *:before, *:after 
@@ -198,11 +200,12 @@ h2, h3
 #header-entete .barre-filtre 
 {
     display: flex;
+    align-items: center;
     width: 100%;
 }
 #header-entete .barre-filtre #filtres 
 {
-    margin-top: 30px;
+    margin-top: 15px;
     margin-right: 15px;
     font-weight: bold;
 }
@@ -321,7 +324,13 @@ h2, h3
     padding: 0;
     margin: auto;
 }
-#main #hebergements-populaires #hebergement-marseille .card-conteneur .card 
+#main #hebergements-populaires #hebergement-marseille .card-conteneur .card .card-link
+{
+    display: block;
+    width: 96%;
+    height: 100%;
+}
+#main #hebergements-populaires #hebergement-marseille .card-conteneur .card
 {
     display: flex;
     flex-direction: row;
@@ -408,6 +417,12 @@ h2, h3
     width: 96%;
     height: 92%;
 }
+#main #hebergements-populaires #populaire .card-conteneur .card-link
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
 #main #hebergements-populaires #populaire .card-conteneur .card
 {
     display: flex;
@@ -479,6 +494,12 @@ h2, h3
     gap: 2%;
     height: 400px;
 }
+#main #activites #conteneur-activites .card-link
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 #main #activites #conteneur-activites .card 
 {
     display: flex;
@@ -487,6 +508,11 @@ h2, h3
     width: 25%;
     border-radius: 15px;
     box-shadow: 5px 5px 5px #c7c7c7c2
+}
+#main #activites #conteneur-activites .card:hover
+{
+    background-color: #DEEBFF;
+    border: 2px solid #0065fc;
 }
 #main #activites #conteneur-activites .duo
 {
@@ -502,6 +528,11 @@ h2, h3
     height: 45%;
     border-radius: 15px;
     box-shadow: 5px 5px 5px #c7c7c7c2
+}
+#main #activites #conteneur-activites .duo .card-duo:hover
+{
+    background-color: #DEEBFF;
+    border: 2px solid #0065fc;
 }
 #main #activites #conteneur-activites .duo #duocard1
 {
@@ -608,7 +639,7 @@ h2, h3
     {
         text-align: center;
         flex-basis: 50%;
-        border-bottom: 4px solid #ffff;
+        border-bottom: 4px solid #f2f2f2;
     }
     #header-entete #nav #menu li a:hover
     {
@@ -659,7 +690,7 @@ h2, h3
         width: 100%;
     }
     /*main version desktop/tablette*/
-    /*conteneur hébergements populaire version desktop/tablette*/
+    /*conteneur hébergements-populaire version desktop/tablette*/
     #main #hebergements-populaires 
     {
         flex-direction: column-reverse;
@@ -669,7 +700,7 @@ h2, h3
         flex-wrap: nowrap;
         align-items: center;
     }
-    /*populaire version desktop/tablette*/
+    /*les + populaires version desktop/tablette*/
     #main #hebergements-populaires #populaire 
     {
         background-color: #f2f2f2;
@@ -683,19 +714,18 @@ h2, h3
     }
     #main #hebergements-populaires #populaire #pop 
     {
-        width: 100%;
-        gap: 80%;
-        padding: 1%;
+        width: 94%;
+        gap: 81%;
+        padding-bottom: 15px;
     }
     #main #hebergements-populaires #populaire .card-conteneur
     {
         height: 450px;
+        width: 100%;
     }
     #main #hebergements-populaires #populaire .card-conteneur .card
     {
-        width: 96%;
-        height: 150px;
-        margin-left: 1%;
+        width: 92%;
     }
     #main #hebergements-populaires #populaire .card-conteneur .card .texte-sous-photo
     {
@@ -716,25 +746,28 @@ h2, h3
         height: 80%;
         flex-wrap: nowrap;
         align-content: center;
-        align-items: flex-start;
+        align-items: center;
     }
     #main #hebergements-populaires #hebergement-marseille #hebergement-texte
     {
-        padding: 1% 0 0 0;
+        padding: 15px 0px 15px 15px;
+        width: 94%;
+        margin-left: 0;
     }
     #main #hebergements-populaires #hebergement-marseille .card-conteneur
     {
         flex-direction: column;
         flex-wrap: nowrap;
-        gap: 3%;
+        width: 100%;
         height: 100%;
         margin: 0;
+        align-items: center;
     }
     #main #hebergements-populaires #hebergement-marseille .card-conteneur .card 
     {
-        width: 96%;
+        width: 92%;
         height: 200px;
-        margin-left: 1%;
+        margin: 0 0 15px 0;
     }
     #main #hebergements-populaires #hebergement-marseille .card-conteneur .card .photo-hebergement
     {   
@@ -745,6 +778,7 @@ h2, h3
     {
         justify-content: flex-start;
         height: 30%;
+        padding-left: 10px;
     }
     #main #hebergements-populaires #hebergement-marseille .card-conteneur .card .texte-sous-photo .nom-hbg
     {
@@ -758,76 +792,117 @@ h2, h3
     {
         margin: 0;
     }
+    #main #hebergements-populaires #hebergement-marseille #plus
+    {
+        width: 94%;
+        padding: 15px;
+        margin: 0;
+    }
     #main #activites
     {
-        width: 100%;
-        margin: 15px 0 10px 0;
-        height: 40%;
+        margin: 0 0 70px 0;
     }
     #main #activites #activites-texte
     {
-        margin-left: 15px;
+        width: 94%;
+        padding: 15px 15px 15px 15px;
     }
     #main #activites #conteneur-activites
     {
         flex-direction: column;
         width: 100%;
-        gap: 2%;
+        height: 1250px;
+        gap: 15px;
         align-items: center;
     }
     #main #activites #conteneur-activites .card 
     {
-        width: 96%;
-        height: 40%;
-        margin: auto;
+        width: 92%;
+        height: 200px;
+        margin-inline: auto;
+        padding-bottom: 15px;
     }
     #main #activites #conteneur-activites .duo
     {
-        width: 96%;
+        width: 92%;
         height: 100%;
-        gap: 2%;
+        gap: 15px;
     }
-    #main #activites #conteneur-activites .card-duo
+    #main #activites #conteneur-activites .duo .card-duo
     {
-        width: 96%;
-        height: 160px;
-        margin: auto;
+        width: 100%;
+        height: 200px;
+        margin-inline: auto;
+        padding-bottom: 15px;
+    }
+    #main #activites #conteneur-activites .duo #duocard1 
+    {
+        height: 200px;
+        padding-bottom: 15px;
+    }
+
+    #main #activites #conteneur-activites .duo #duocard2 
+    {
+        height: 200px;
+        padding-bottom: 15px;
+    }
+    #main #activites #conteneur-activites .duo #duocard1 .photo-hebergement
+    {
+        height: 90%;
+    }
+    #main #activites #conteneur-activites .duo #duocard2 .photo-hebergement
+    {
+        height: 90%;
     }
     #footer
     {
-        background-color: #f2f2f2;
-        height: 5%;
+        height: 15%;
+    }
+    .footer
+    {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 15px;
+        gap: 15px;
+        height: 100%;
     }
 }
 @media (max-width: 768px)
 {
-    /*header version mobile*/
-    h1
+    body
     {
-        font-size: 14px;
+        height: 3200px;
     }
+    /*header version mobile*/
+
     #header-entete
     {
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: space-between;
         width: 100%;
-        height: 30%;
-        max-width: 100%;
+        height: 17%;
         align-items: center;
         padding: 0;
+        margin-bottom: 20px;
     }
+    /*logo version mobile*/
     #header-entete .logo 
     {
-        width: 46%;
+        width: 100%;
+        height: 70%;
         object-fit: cover;
-        margin-left: 85px;
+        margin-bottom: -20px;
     }
+    /*menu version mobile*/
     #header-entete #nav
     {
         width: 100%;
         padding-right: 0;
-        padding-top: 2px;
+        padding-top: 0;
+        padding-bottom: 10px;
     }
     #header-entete #nav #menu 
     {
@@ -839,8 +914,12 @@ h2, h3
     {
         text-align: center;
         flex-basis: 50%;
-        border-bottom: 4px solid white;
         font-size: 15px;
+        border-bottom: 4px solid #f2f2f2;
+    }
+    #header-entete #nav #menu li a
+    {
+        padding-top: 0;
     }
     #header-entete #nav #menu li:hover 
     {
@@ -854,14 +933,21 @@ h2, h3
     {
         border-top: none;
     }
+    /*annonce sous menu version mobile*/
     #header-entete #annonce-sous-logo 
     {
-        padding: 1% 1% 2% 1%;
-        font-size: xx-small;
+        padding-left: 15px; 
     }
+    #header-entete #annonce-sous-logo p
+    {
+        margin-top: 5px;
+        font-size: small;
+    }
+    /*recherche ville version mobile*/
     #header-entete #ville 
     {
-        margin-left: 1%;
+        padding-left: 15px;
+        padding-top: 10px;
     }
     #header-entete #ville .geolocalisation 
     {
@@ -876,28 +962,31 @@ h2, h3
         display: inline;
         border-radius: 10px
     }
+    /*filtres version mobile*/
     #header-entete .barre-filtre #filtres
     {
-        margin-left: 10px;
-        font-size: small;
-        margin-top: 0;
+        margin: 10px 0px 0px 15px;
+        font-size: medium;
+        width: 100%;
     }
     #header-entete .barre-filtre
     {
-        flex-direction: column;
-        margin-top: 0;
+        flex-wrap: wrap;
+        align-content: flex-start;
     }
     #header-entete .barre-filtre .englobe-filtre
     {
-        width: 99%;
-        flex-flow: column wrap;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: flex-start;
-        margin-left: 10px;
+        padding-left: 15px;
     }
     #header-entete .barre-filtre .englobe-filtre .filtre 
     {
-        width: 40%;
-        margin-top: 3px;
+        width: auto;
+        margin-top: 10px;
+        margin-right: 75px;
     }
     #header-entete #info-sous-filtre 
     {
@@ -913,6 +1002,7 @@ h2, h3
         flex-wrap: nowrap;
         align-items: center;
         margin-top: 10px;
+        max-height: 100%;
     }
     /*populaire version mobile*/
     #main #hebergements-populaires #populaire 
@@ -929,8 +1019,9 @@ h2, h3
     #main #hebergements-populaires #populaire #pop 
     {
         width: 100%;
-        gap: 80%;
-        padding: 1%;
+        gap: 0;
+        padding: 15px 15px 5px 15px;
+        justify-content: space-between;
     }
     #main #hebergements-populaires #populaire .card-conteneur
     {
@@ -959,14 +1050,15 @@ h2, h3
         background-color: white;
         width: 100%;
         height: 100%;
-        margin-top: 4%;
+        margin-top: 20px;
         flex-wrap: nowrap;
         align-content: center;
-        align-items: center;
+        align-items: flex-start;
     }
     #main #hebergements-populaires #hebergement-marseille #hebergement-texte
     {
-        padding: 1% 0 0 0;
+        padding: 0 15px 15px 15px;
+        margin-left: 0;
     }
     #main #hebergements-populaires #hebergement-marseille .card-conteneur
     {
@@ -979,18 +1071,25 @@ h2, h3
     #main #hebergements-populaires #hebergement-marseille .card-conteneur .card 
     {
         width: 96%;
-        height: 200px;
+        height: 180px;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        margin-inline: auto;
+
     }
     #main #hebergements-populaires #hebergement-marseille .card-conteneur .card .photo-hebergement
     {   
-    margin: 0.5% 0.5% 0.5% 0.5%;
-    height: 70%;
+    padding: 10px 5px 0px 5px;
+    margin: 0;
+    height: 60%;
+    width: 100%;
     }
     #main #hebergements-populaires #hebergement-marseille .card-conteneur .card .texte-sous-photo
     {
         justify-content: flex-start;
         height: 30%;
-        font-size: x-small;
+        font-size: small;
     }
     #main #hebergements-populaires #hebergement-marseille .card-conteneur .card .texte-sous-photo .nom-hbg
     {
