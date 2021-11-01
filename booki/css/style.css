@@ -225,7 +225,7 @@ input
     width: auto;
     white-space: nowrap;
     margin-top: 20px;
-    margin-right: 80px;
+    margin-right: 68px;
 }
 #header-entete .barre-filtre .englobe-filtre .texte-filtre 
 {
@@ -236,12 +236,12 @@ input
     border-bottom: 2px solid #f2f2f2;
     border-right: 2px solid #f2f2f2;
     border-radius: 0 20px 20px 0;
-    width: 130%;
+    width: 100%;
     height: 40px;
     display: inline-block;
-    padding: 7.5px 10px;
-    margin-left: -17px;
-    cursor: pointer;
+    padding: 7.5px 1px 7.5px  12px;
+    margin-left: -23px;
+    cursor: pointer; 
 }
 #header-entete .barre-filtre .englobe-filtre .icone-filtre 
 {
@@ -260,11 +260,10 @@ input
 }
 #header-entete .barre-filtre .englobe-filtre .texte-filtre:hover 
 {
-    background-color: #deebff;
     color: #0065fc;
-    border-top: 2px solid #0065fc;
-    border-bottom: 2px solid #0065fc;
-    border-right: 2px solid #0065fc;
+    border-top: 1px solid #0065fc;
+    border-bottom: 1px solid #0065fc;
+    border-right: 1px solid #0065fc;
 }
 #header-entete #info-sous-filtre 
 {
