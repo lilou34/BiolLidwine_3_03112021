@@ -466,7 +466,7 @@ input
     height: 90%;
     padding-left: 10px;
     font-size: small;
-    align-items: center;
+    align-items: flex-start;
     align-content: space-around;
 }
 #main #hebergements-populaires #populaire .card-conteneur .card .texte-sous-photo .prix 
@@ -730,7 +730,6 @@ input
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: space-around;
-        align-items: flex-start;
         gap: 0%;
         width: 60%;
         height: 80%;
@@ -776,7 +775,7 @@ input
     }
     #main #hebergements-populaires #hebergement-marseille .card-conteneur .card .photo-hebergement
     {   
-    height: 70%;
+        height: 70%;
     }
     #main #hebergements-populaires #hebergement-marseille .card-conteneur .card .texte-sous-photo
     {
@@ -998,7 +997,6 @@ input
         margin: auto;
         border-radius: 15px;
         width: 100%;
-        gap: 1%;
         padding-bottom: 25px;
         flex-wrap: nowrap;
         align-items: center;
