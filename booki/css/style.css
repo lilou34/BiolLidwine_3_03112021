@@ -150,7 +150,7 @@ input
 }
 #header-entete #ville .zonerechercher 
 {
-    border: 1px solid #F2F2F2;
+    border: 1px solid #f2f2f2;
     height: 40px;
     margin: -1px;
 }
@@ -195,7 +195,7 @@ input
     position: absolute;
     left: 208px;
     opacity: 1;
-    color: white;
+    color: #ffffff;
     padding: 11px;
     background-color: #0065fc;
     border-radius: 0 15px 15px 0;
@@ -232,14 +232,14 @@ input
     color: #000000;
     font-size: medium;
     font-weight: bold;
-    border-top: 1px solid #f2f2f2;
-    border-bottom: 1px solid #f2f2f2;
-    border-right: 1px solid #f2f2f2;
+    border-top: 1px solid #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
+    border-right: 1px solid #d1d1d1;
     border-radius: 0 20px 20px 0;
     width: 100%;
     height: 40px;
     display: inline-block;
-    padding: 7.5px 1px 7.5px  12px;
+    padding: 8px 1px 7.5px  12px;
     margin-left: -23px;
     cursor: pointer; 
 }
@@ -277,10 +277,10 @@ input
 #header-entete .bouton-info 
 {
     color: #0065fc;
-    border: 2px #d9d9d9;
+    border: 2px solid #d1d1d1;
     background-color: #ffff;
     border-radius: 50%;
-    width: 4%;
+    width: 20px;
     height: 20px;
     padding-bottom: 4px;
 }
@@ -345,7 +345,7 @@ input
     width: 30%;
     max-height: 200px;
     border-radius: 15px;
-    box-shadow: 5px 5px 5px #c7c7c7c2;
+    box-shadow: 5px 5px 5px #d1d1d1;
 }
 #main #hebergements-populaires #hebergement-marseille .card-conteneur .card:hover
 {
@@ -383,14 +383,14 @@ input
 }
 #main #hebergements-populaires #hebergement-marseille .card-conteneur .card .etoiles .grey 
 {
-    color: #f2f2f2;
+    color: #d1d1d1;
 }
 #main #hebergements-populaires #hebergement-marseille #plus 
 {
-    width: 98%;
+    width: 96%;
     min-height: 5%;
     height: 5%;
-    margin: 20px;
+    margin: 20px 20px 15px 20px;
     font-weight: bold;
 }
 /*Les plus populaires*/
@@ -439,7 +439,7 @@ input
     width: 90%;
     max-height: 30%;
     border-radius: 15px;
-    box-shadow: 5px 5px 5px #c7c7c7c2;
+    box-shadow: 5px 5px 5px #d1d1d1;
     margin-bottom: 15px;
 }
 #main #hebergements-populaires #populaire .card-conteneur .card:hover
@@ -480,18 +480,17 @@ input
 }
 #main #hebergements-populaires #populaire .card-conteneur .card .etoiles .grey 
 {
-    color: #f2f2f2;
+    color: #d1d1d1;
 }
 /*activités à Marseille*/
 #main #activites
 {
-    width: 100%;
     margin: 15px 0 10px 0;
 }
 #main #activites #activites-texte
 {
-    width: 100%;
     margin: 4px 0 10px 15px;
+    width: 96%;
 }
 #main #activites #conteneur-activites
 {
@@ -625,6 +624,7 @@ input
         width: 100%;
         height: 15%;
         max-width: 100%;
+        padding-left: 0;
     }   
     #header-entete .logo
     {
@@ -660,7 +660,11 @@ input
     }
     #header-entete #annonce-sous-logo 
     {
-        padding: 0;
+        padding: 0 0 0 15px;
+    }
+    #header-entete #ville
+    {
+        padding-left: 15px;
     }
     #header-entete #ville .bouton-recherche
     {
@@ -672,10 +676,14 @@ input
         border-radius: 10px;
         margin-left: -0.5%;
     }
+    #header-entete .barre-filtre 
+    {
+        padding-left: 15px;
+    }
     #header-entete .barre-filtre .englobe-filtre
     {
         flex-wrap: wrap;
-        width: 90%;
+        width: 80%;
         display: flex;
         justify-content: space-around;
     }
@@ -686,6 +694,7 @@ input
     #header-entete #info-sous-filtre
     {
         width: 100%;
+        padding-left: 15px;
     }
     /*main version desktop/tablette*/
     /*conteneur hébergements-populaire version desktop/tablette*/
@@ -713,7 +722,7 @@ input
     #main #hebergements-populaires #populaire #pop 
     {
         width: 94%;
-        gap: 81%;
+        gap: 75%;
         padding-bottom: 15px;
     }
     #main #hebergements-populaires #populaire .card-conteneur
@@ -797,7 +806,6 @@ input
     }
     #main #hebergements-populaires #hebergement-marseille #plus
     {
-        width: 94%;
         padding: 15px;
         margin: 0;
     }
@@ -808,7 +816,6 @@ input
     }
     #main #activites #activites-texte
     {
-        width: 94%;
         padding: 15px;
     }
     #main #activites #conteneur-activites
@@ -1094,7 +1101,7 @@ input
     /*activités version mobile*/
     #main #activites #activites-texte
     {
-        width: 94%;
+        width: 90%;
         padding: 15px;
         margin: 0;
     }
