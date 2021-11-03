@@ -389,6 +389,7 @@ input
 {
     width: 98%;
     min-height: 5%;
+    height: 5%;
     margin: 20px;
     font-weight: bold;
 }
@@ -877,7 +878,8 @@ input
 {
     body
     {
-        height: 3200px;
+        height: 4400px;
+       
     }
     /*header version mobile*/
 
@@ -895,10 +897,10 @@ input
     /*logo version mobile*/
     #header-entete .logo 
     {
-        width: 100%;
-        height: 70%;
-        object-fit: cover;
-        margin-bottom: -20px;
+        width: 80%;
+        height: 80%;
+        margin-left: 30px;
+    
     }
     /*barre navigation version mobile*/
     #header-entete #nav
@@ -1032,6 +1034,7 @@ input
     /*hébergements à Marseille version mobile*/
     #main #hebergements-populaires #hebergement-marseille 
     {
+        display: block;
         background-color: white;
         width: 100%;
         height: 100%;
