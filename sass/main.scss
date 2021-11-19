@@ -1,0 +1,19 @@
+@charset 'utf-8';
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
+@import "./base/base";
+@import "./base/typography";
+@import "./composants/buttons";
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/container";
+
+
+.header-div{
+    display: block;
+    background-color: $primary-color;
+    width: 50%;
+}
+
