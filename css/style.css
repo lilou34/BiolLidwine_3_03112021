@@ -1,0 +1,10 @@
+/*mini-reset et box-sizing*/
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+.header-div {
+  display: block;
+  background-color: blue;
+  width: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */
