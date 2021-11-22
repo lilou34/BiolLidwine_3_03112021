@@ -1,1 +1,28 @@
-$primary-color: blue;
+
+//color
+$colours-map: (
+    primary-color: #9356dc,
+    secondary-color: #ff79da,
+    tertiary-color: #99e2d0,
+);
+$body-color: #000000;
+$footer-color: #ffffff;
+$bc-color: #efefef;
+$border-top: darken($bc-color, 10%);
+$border: darken 2% #efefef;
+
+//fonts
+$font-title: 'Shrikhand', arial, sans-serif;
+$font-primary: 'Roboto', arial, sans-serif;
+
+//units
+$units: 10px;
+
+//sass-flexbox Copyright (c) 2015 Samuel Marchal
+$sass-flexbox-rename-map: (nowrap: none, auto: auto, flex-start: start, flex-end: end, center: center, baseline: baseline, space-between: space-between, space-around: space-around, stretch: stretch, inherit: inherit);
+$flex-direction-args: row, row-reverse, column, column-reverse, inherit;
+$flex-wrap-args: nowrap, wrap, wrap-reverse, inherit;
+$justify-content-args: flex-start, flex-end, center, space-between, space-around, space-evenly, inherit;
+$align-items-args: flex-start, flex-end, center, baseline, stretch, inherit;
+$align-self-args: auto, flex-start, flex-end, center, baseline, stretch, inherit;
+$align-content-args: flex-start, flex-end, center, space-between, space-around, space-evenly, stretch, inherit;

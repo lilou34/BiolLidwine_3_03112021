@@ -1,2 +1,15 @@
-/*mini-reset et box-sizing*/
-@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+/*box-sizing */
+*, *:before, *:after 
+{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    width: 375px;
+    height: 2280px;
+}

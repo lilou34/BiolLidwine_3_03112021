@@ -9,11 +9,4 @@
 @import "./layout/header";
 @import "./layout/nav";
 @import "./layout/container";
-
-
-.header-div{
-    display: block;
-    background-color: $primary-color;
-    width: 50%;
-}
-
+@import "./utils/mixin-sass-flexbox"
