@@ -1,0 +1,6 @@
+// mixin perso
+@mixin box-shadow {
+    box-shadow:2px 2px 10px $border; 
+    -moz-box-shadow:2px 2px 10px $border;
+    -webkit-box-shadow:2px 2px 10px $border;
+}

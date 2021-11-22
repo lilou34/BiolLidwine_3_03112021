@@ -1,0 +1,43 @@
+/*header*/
+.header
+{
+    @include display-flex;
+    @include flex-direction-column;
+    @include flex-wrap-nowrap;
+    @include justify-content-center;
+    @include align-items-center;
+    margin-top: $units;
+    font-family: $font-primary;
+    &__h1
+    {
+        font-family: $font-title;
+    }
+
+    &__search
+    {
+    @include display-flex;
+    @include flex-direction-row;
+    @include align-items-center;
+    height: $units * 4;
+    background-color: $bc-color;
+    margin-top: $units / 2;
+    border-top: 2px solid $border-top;
+        &__icon
+            {
+                width: $units * 3;
+                height: $units * 3;
+                border: none;
+            } 
+            &__input{
+                width: 50%;
+                border: none;
+                margin-left: $units;
+                background-color: $bc-color;
+                font-family: $font-primary;
+                    &::focus-visible
+                    {
+                        outline: none;
+                    }
+            } 
+    }
+}
