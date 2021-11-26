@@ -8,8 +8,16 @@
     margin: 0;
     padding: 0;
 }
+
 body
 {
-    width: 375px;
+    width: $width;
     height: 2280px;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus 
+{
+    outline: none;
 }
