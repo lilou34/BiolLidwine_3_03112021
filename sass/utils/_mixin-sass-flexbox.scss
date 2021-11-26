@@ -7,13 +7,18 @@
 //      "url": "http://blainehansen.co/"
 //    }
 /*"url": "git+https://github.com/zessx/sass-flexbox.git"*/
+
+//variables
+$sass-flexbox-rename-map: (nowrap: none, auto: auto, flex-start: start, flex-end: end, center: center, baseline: baseline, space-between: space-between, space-around: space-around, stretch: stretch, inherit: inherit);
+$flex-direction-args: row, row-reverse, column, column-reverse, inherit;
+$flex-wrap-args: nowrap, wrap, wrap-reverse, inherit;
+$justify-content-args: flex-start, flex-end, center, space-between, space-around, space-evenly, inherit;
+$align-items-args: flex-start, flex-end, center, baseline, stretch, inherit;
+$align-self-args: auto, flex-start, flex-end, center, baseline, stretch, inherit;
+$align-content-args: flex-start, flex-end, center, space-between, space-around, space-evenly, stretch, inherit;
 // Display
 @mixin display-flex {
-    display: -webkit-box;
     display: -moz-box;
-    display: -webkit-flexbox;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
   }
   
@@ -53,17 +58,14 @@
       $orientation: vertical;
     }
   
-    -webkit-box-orient: $orientation;
+   
     -moz-box-orient: $orientation;
   
     @if $reverse {
-      -webkit-box-direction: reverse;
       -moz-box-direction: reverse;
     }
   
-    -webkit-flex-direction: $direction;
     -moz-flex-direction: $direction;
-    -ms-flex-direction: $direction;
     flex-direction: $direction;
   }
   
@@ -99,10 +101,7 @@
     @if not index($flex-wrap-args, $wrap) {
       @error "flex-wrap has been passed an invalid argument: #{$wrap}";
     }
-  
-    -webkit-flex-wrap: $wrap;
     -moz-flex-wrap: $wrap;
-    -ms-flex-wrap: map-get($sass-flexbox-rename-map, $wrap);
     flex-wrap: $wrap;
   }
   
@@ -130,10 +129,7 @@
   
   // Order
   @mixin order($order: 0) {
-    -webkit-box-ordinal-group: $order + 1;
     -moz-box-ordinal-group: $order;
-    -ms-flex-order: $order;
-    -webkit-order: $order;
     -moz-order: $order;
     order: $order;
   }
@@ -146,27 +142,21 @@
   
   // Flex grow
   @mixin flex-grow($grow: 0) {
-    -webkit-flex-grow: $grow;
-    -webkit-box-flex: $grow;
+
     -moz-flex-grow: $grow;
-    -ms-flex-positive: $grow;
     flex-grow: $grow;
   }
   
   // Flex shrink
   @mixin flex-shrink($shrink: 1) {
-    -webkit-flex-shrink: $shrink;
-    -webkit-box-flex: $shrink;
+
     -moz-flex-shrink: $shrink;
-    -ms-flex-negative: $shrink;
     flex-shrink: $shrink;
   }
   
   // Flex basis
   @mixin flex-basis($basis: auto) {
-    -webkit-flex-basis: $basis;
     -moz-flex-basis: $basis;
-    -ms-flex-preferred-size: $basis;
     flex-basis: $basis;
   }
   
@@ -185,20 +175,18 @@
     }
   
     @if $justify == space-between {
-      -webkit-box-pack: justify;
       -moz-box-pack: justify;
-      -webkit-flex-pack: justify;
       -ms-flex-pack: justify;
     }
     @else if $justify != space-around {
-      -webkit-box-pack: map-get($sass-flexbox-rename-map, $justify);
+   
       -moz-box-pack: map-get($sass-flexbox-rename-map, $justify);
-      -webkit-flex-pack: map-get($sass-flexbox-rename-map, $justify);
+     
       -ms-flex-pack: map-get($sass-flexbox-rename-map, $justify);
     }
   
     -moz-justify-content: $justify;
-    -webkit-justify-content: $justify;
+   
     justify-content: $justify;
   }
   
@@ -239,9 +227,6 @@
       @error "align-items has been passed an invalid argument: #{$align}";
     }
   
-    -webkit-box-align: map-get($sass-flexbox-rename-map, $align);
-    -ms-flex-align: map-get($sass-flexbox-rename-map, $align);
-    -webkit-align-items: $align;
     -moz-align-items: $align;
     align-items: $align;
   }
@@ -282,9 +267,7 @@
     @if not index($align-self-args, $align) {
       @error "align-self has been passed an invalid argument: #{$align}";
     }
-  
-    -ms-flex-item-align: map-get($sass-flexbox-rename-map, $align);
-    -webkit-align-self: $align;
+ 
     -moz-align-self: $align;
     align-self: $align;
   }
@@ -329,9 +312,7 @@
     @if not index($align-content-args, $align) {
       @error "align-content has been passed an invalid argument: #{$align}";
     }
-  
-    -ms-flex-line-pack: map-get($sass-flexbox-rename-map, $align);
-    -webkit-align-content: $align;
+ 
     -moz-align-content: $align;
     align-content: $align;
   }
