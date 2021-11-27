@@ -1,3 +1,27 @@
+.navigation
+{
+    @include display-flex;
+    @include flex-direction-column;
+    @include align-items-flex-start;
+    &__list
+    {
+        list-style: none; 
+        counter-reset: li;
+        &__li
+        {
+            &:before
+            {
+                content: counter(li); 
+                color: setc(primary);
+                display: inline-block; 
+                width: $units;
+                height: $units;
+                border: 1px solid setc(primary);
+                margin-left: $units * 2;
+            }
+        }
+    }
+}
 .principal
 {
     @include display-flex;
@@ -15,7 +39,6 @@
             &__img
             {
                 @include card-img;
-
             }
         }
     }

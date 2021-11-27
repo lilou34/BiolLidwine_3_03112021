@@ -1,0 +1,10 @@
+//fonction qui permet d'appeler les couleurs dans une map sans écrire map-get
+@function setc($key) 
+{
+    @if map-has-key($colors, $key) {
+        @return map-get($colors, $key);  
+      }
+       
+      @warn "The key #{$key} is not in the map ’$colors’";
+      @return null;
+  }

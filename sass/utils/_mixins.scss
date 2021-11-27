@@ -5,23 +5,29 @@
     -moz-box-shadow:2px 2px 10px $border;
     -webkit-box-shadow:2px 2px 10px $border;
 }
-@mixin spinner-ball($color: $primary-color)
+@mixin spinner-ball ($color)
 {
     @include display-inline-flex;
     @include align-items-center;
     @include justify-content-center;
-    border: 2px solid $color;
+    border: 2px solid setc(bc);
     border-radius: $units * 5;
     width: $units * 8;
     height: $units * 8;
 }
-@mixin card ($background-color: $footer-color)
+@mixin button
 {
-
+    width: 218px;
+    height: 53px;
+}
+@mixin card ($background-color: setc(footer))
+{
     border-radius: $units * 5;
     width: $pourcent * 8;
+    background-color: setc(bc);
 }
-@mixin card-img {
+@mixin card-img 
+{
     border-radius: 15px 15px 0px 0px;
     object-fit: cover;
     width: 335px;

@@ -7,6 +7,7 @@
     @include flex-wrap-nowrap;
     @include justify-content-center;
     @include align-items-center;
+    text-align: center;
     margin-top: $units;
     font-family: $font-primary;
     &__h1
@@ -21,10 +22,10 @@
     @include justify-content-center;
     @include align-items-center;
     width: $pourcent * 10;
-    height: $units * 4;
-    background-color: $bc-color;
-    margin-top: $units / 2;
-    border-top: 2px solid $border-top;
+    height: $units * 5;
+    background-color: setc(bc);
+    margin-top: $units, 2;
+    border-top: 2px solid setc(bord);
         &__icon
             {
                 @include display-inline-flex;
@@ -38,7 +39,7 @@
                 width: $pourcent * 5;
                 border: none;
                 margin-left: $units;
-                background-color: $bc-color;
+                background-color: setc(bc);
                 font-family: $font-primary;
                 
                     &__::focus-visible
@@ -49,10 +50,26 @@
     }
     &__presentation
     {
-        &__div
-        {
-            margin-left: $marginl;
-        }
-        
+            text-align: center;
+            margin-top: $units * 2;
+            &__title
+            {
+                font-size: $units * 2;
+                width: $pourcent * 10;
+            }
+            &__text
+            {
+                width: $pourcent * 10;
+                font-size: small;
+                margin-top: $units;
+            }
+    }
+    &__button
+    {
+        margin-top: $units * 2;
+       &__style
+       {
+            @include button;
+       }
     }
 }
