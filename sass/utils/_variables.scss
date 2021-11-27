@@ -1,14 +1,16 @@
 
 //color
-
-$primary-color: #9356dc;
-$secondary-color: #ff79da;
-$tertiary-color: #99e2d0;
-$body-color: #000000;
-$footer-color: #ffffff;
-$bc-color: #efefef;
-$border-top: darken($bc-color, 10%);
-$border: darken 2% #efefef;
+$colors: 
+(
+primary: #9356dc,
+secondary: #ff79da,
+tertiary: #99e2d0,
+body: #000000,
+footer: #ffffff,
+bc: #efefef,
+bord: darken 10% #efefef,
+borderc: darken 2% #efefef
+);
 
 
 //fonts
@@ -23,6 +25,6 @@ $pourcent: 10%;
 $width: 375px;
 
 //margin, padding
-$marginl: 15px;
+$margin: 15px;
 
 
