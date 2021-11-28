@@ -9,6 +9,7 @@
     @include align-items-center;
     text-align: center;
     margin-top: $units;
+    margin-bottom: $units * 5;
     font-family: $font-primary;
     &__h1
     {
@@ -25,7 +26,7 @@
     height: $units * 5;
     background-color: setc(bc);
     margin-top: $units, 2;
-    border-top: 2px solid setc(bord);
+    border-top: 2px solid $bord10;
         &__icon
             {
                 @include display-inline-flex;
@@ -67,9 +68,14 @@
     &__button
     {
         margin-top: $units * 2;
+        
        &__style
        {
-            @include button;
+        @include button;
+        &:focus
+    {
+        color: setc(footer);
+    }
        }
     }
 }

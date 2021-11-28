@@ -8,7 +8,6 @@
     margin: 0;
     padding: 0;
 }
-
 body
 {
     width: $width;
@@ -18,7 +17,10 @@ body
 input:focus,
 select:focus,
 textarea:focus,
-button:focus 
+button:focus,
+a
 {
     outline: none;
+    text-decoration: none;
+    color: setc(body);
 }
