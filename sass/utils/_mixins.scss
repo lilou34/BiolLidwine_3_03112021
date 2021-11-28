@@ -1,11 +1,11 @@
 // mixin perso
 @mixin box-shadow 
 {
-    box-shadow:2px 2px 10px $border; 
-    -moz-box-shadow:2px 2px 10px $border;
-    -webkit-box-shadow:2px 2px 10px $border;
+    box-shadow: 5px 5px 10px $bord20; 
+    -moz-box-shadow: 5px 5px 10px $bord20;
+    -webkit-box-shadow: 5px 5px 10px $bord20;
 }
-@mixin spinner-ball ($color)
+@mixin spinner-ball($color)
 {
     @include display-inline-flex;
     @include align-items-center;
@@ -17,14 +17,24 @@
 }
 @mixin button
 {
-    width: 218px;
-    height: 53px;
+    width: $units * 21.8;
+    height: $units * 5;
+    border-radius: $units * 3;
+    background: linear-gradient(setc(secondary), setc(primary));
+    color: setc(footer);
+    border: none;
+    cursor:pointer;
+    @include box-shadow;
+    
 }
-@mixin card ($background-color: setc(footer))
+@mixin card($background-color: setc(footer))
 {
-    border-radius: $units * 5;
+    border-radius: $units * 1.5;
     width: $pourcent * 8;
+    height: $pourcent * 2;
     background-color: setc(bc);
+    @include box-shadow;
+    margin-bottom: $pourcent * 1;
 }
 @mixin card-img 
 {

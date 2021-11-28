@@ -3,32 +3,69 @@
     @include display-flex;
     @include flex-direction-column;
     @include align-items-flex-start;
-    &__list
-    {
-        list-style: none; 
-        counter-reset: li;
-        &__li
+    margin-left: $units * 1.5;
+    font-weight: bold;
+        &__list
         {
-            &:before
+            gap: $units * 1.5;
+            @include display-flex;
+            @include flex-direction-column;
+            @include align-items-flex-start;
+
+
+            &__elm
             {
-                content: counter(li); 
-                color: setc(primary);
-                display: inline-block; 
-                width: $units;
-                height: $units;
-                border: 1px solid setc(primary);
-                margin-left: $units * 2;
+                @include display-flex;
+                @include flex-direction-row;
+                @include flex-wrap-nowrap;
+                @include align-items-center;
+                @include box-shadow;
+                border-radius: $units * 2;
+                margin-top: $units * 2;
+                margin-left: $units;
+                gap: $units * 2;
+                width: $units * 32.7;
+                height: $units * 7.5;
+                background-color: setc(bc);
+                &__chiffre
+                {
+                    background-color: setc(primary);
+                    position: absolute;
+                    margin-left: -$units * 1.3;
+                    text-align: center;
+                    font-size: small;
+                    color: setc(footer);
+                    width: $units * 2;
+                    height: $units * 2;
+                    border: 1px solid setc(primary);
+                    border-radius: $pourcent * 5;
+                    max-width: -$units * 2;
+                }
+                &__icon
+                {
+                    margin-left: $units * 2.5;
+                }
+                
             }
         }
-    }
+      
 }
 .principal
 {
     @include display-flex;
     @include flex-direction-column;
-    @include align-items-flex-start;
+    @include align-items-center;
+    gap: $pourcent * 0.5;
+    background-color: setc(bc);
+    margin-top: $pourcent;
+    &__title
+    {
+        align-self: start;
+        margin: $units * 1.5;
+    }
     &__conteneur
     {
+        align-items: center;
         &__card
         {
             @include display-flex;
@@ -36,10 +73,30 @@
             @include align-items-center;
             @include justify-content-center;
             @include card;
+            width: $pourcent * 10;
             &__img
             {
                 @include card-img;
+                margin-bottom: $units;
             }
+            &__text
+            {
+                height: $units * 7.7;
+                margin-left: $units * 1.5;
+                margin-top: $units * 0.5;
+                gap: $units;
+                @include display-flex;
+                @include flex-direction-column;
+                @include flex-wrap-nowrap;
+            
+                &__anim
+                {
+                    position: relative;
+                    right: -80%;
+                    top: -60%;
+                    font-size: $units * 3;
+                }
+            } 
         }
     }
 }

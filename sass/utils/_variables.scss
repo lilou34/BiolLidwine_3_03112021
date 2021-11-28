@@ -8,11 +8,11 @@ tertiary: #99e2d0,
 body: #000000,
 footer: #ffffff,
 bc: #efefef,
-bord: darken 10% #efefef,
-borderc: darken 2% #efefef
 );
-
-
+$bord2: darken(#efefef, 2%);
+$bord10: darken(#efefef,10%);
+$bord15: darken(#efefef, 15%);
+$bord20: darken(#efefef, 20%);
 //fonts
 $font-title: 'Shrikhand', arial, sans-serif;
 $font-primary: 'Roboto', arial, sans-serif;
