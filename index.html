@@ -18,50 +18,84 @@
         <header class="header">        
 
             <!--logo-->
-            <h1 class="header__h1">ohmyfood</h1>
+            <h1 class="header__h1">
+                ohmyfood
+            </h1>
             <!--placeholder-->
             <div class="header__search">
                     <div class="header__search__icon">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fas fa-map-marker-alt">
+                        </i>
                     </div>
                     <input class="header__search__input" type="text" name="form city" placeholder="Paris,Belleville">
             </div>
             <div class="header__presentation">
-                <h2 class="header__presentation__title">Réservez le menu qui vous convient</h2>
+                <h2 class="header__presentation__title">
+                    Réservez le menu qui vous convient
+                </h2>
                 <p class="header__presentation__text">
-                    Découvrez des restaurants d'exception,<br/> sélectionnés par nos soins
+                    Découvrez des restaurants d'exception,
+                    <br/>sélectionnés par nos soins
                 </p>
             </div>
-            <div class="header__button"><button class="header__button__style">Explorer nos restaurants</button></div>
+            <div class="header__button">
+                <a href="#principal">
+                    <button class="header__button__style">
+                        Explorer nos restaurants
+                    </button>
+                </a>
+            </div>
         </header>
         <main>
             <div class="navigation">
                 <h3 class="navigation__title">
                     Fonctionnement
                 </h3>
-                <ol class="navigation__list">
-                    <li class="navigation__li">
-                            <i class="fas fa-mobile-alt">
-                            </i>
-                                <span>
-                                    Choisissez un restaurant
-                                </span>
-                    </li>
-                    <li class="navigation__li">
-                            <i class="fas fa-list-ul">
-                            </i>
-                                <span>
-                                    Composez votre menu
-                                </span>
-                    </li>
-                    <li class="navigation__li">
-                        <i class="fas fa-store">
-                        </i>
-                            <span>
-                            Dégustez au restaurant
-                            </span>
-                    </li>
-                </ol>
+                <div class="navigation__list">
+                    <a class="navigation__list__elm__lien" href="#">
+                        <div class="navigation__list__elm">
+                            <div class="navigation__list__elm__chiffre">
+                                1
+                            </div>
+                                <div class="navigation__list__elm__icon">
+                                    <i class="fas fa-mobile-alt">
+                                    </i>
+                                </div>
+                                        <p>
+                                            Choisissez un restaurant
+                                        </p>
+                        </div>
+                    </a>
+                
+                    <a class="navigation__list__elm__lien" href="#">
+                        <div class="navigation__list__elm">
+                            <div class="navigation__list__elm__chiffre">
+                                2
+                            </div>
+                                <div class="navigation__list__elm__icon">
+                                    <i class="fas fa-list-ul">
+                                    </i>
+                                </div>
+                                        <p>
+                                            Composez votre menu
+                                        </p>
+                        </div>
+                    </a>
+                    <a class="navigation__list__elm__lien" href="#">       
+                        <div class="navigation__list__elm">
+                            <div class="navigation__list__elm__chiffre">
+                                3
+                            </div>
+                                <div class="navigation__list__elm__icon">
+                                    <i class="fas fa-store">
+                                    </i>
+                                </div>
+                                        <p>
+                                            Dégustez au restaurant
+                                        </p>
+                        </div>
+                    </a>
+                </div>
             </div>
             <section class="principal">
                 <h3 class="principal__title">
@@ -69,8 +103,14 @@
                 </h3>
                 <div class="principal__conteneur">
                     <div class="principal__conteneur__card card-1">
+
                         <a class="principal__conteneur__card__link" href="page1.html">
-                            <img class="principal__conteneur__card__img" src="images/restaurants/img1.jpg" alt="La palette du goût">
+                            <div class="principal__conteneur__card__contimg">
+                                <img class="principal__conteneur__card__contimg__img" src="images/restaurants/img1.jpg" alt="La palette du goût">
+                                <span class="principal__conteneur__card__contimg__new" id="new1">
+                                    Nouveau
+                                </span>
+                            </div>
                         <div class="principal__conteneur__card__text">
                             <h4 class="principal__conteneur__card__text__name">
                                 La palette du goût
@@ -78,16 +118,22 @@
                             <p class="principal__conteneur__card__text__localisation">
                                 Ménilmontant
                             </p>
+                        
                             <div class="principal__conteneur__card__text__anim">
                                 <i class="far fa-heart">
                                 </i>
                             </div>
                         </div>
                         </a>
-                    </d>
+                    </div>
                     <div class="principal__conteneur__card card-2">
                         <a class="principal__conteneur__card__link" href="page2.html">
-                        <img class="principal__conteneur__card__img" src="images/restaurants/img2.jpg" alt="La note enchantée">
+                        <div class="principal__conteneur__card__contimg">
+                            <img class="principal__conteneur__card__contimg__img" src="images/restaurants/img2.jpg" alt="La note enchantée">
+                            <span class="principal__conteneur__card__contimg__new" id="new2">
+                                Nouveau
+                            </span>
+                        </div>
                         <div class="principal__conteneur__card__text">
                             <h4 class="principal__conteneur__card__text__name">
                                 La note enchantée
@@ -104,7 +150,12 @@
                     </div>
                     <div class="principal__conteneur__card card-3">
                         <a class="principal__conteneur__card__link" href="page3.html">
-                        <img class="principal__conteneur__card__img" src="images/restaurants/img3.jpg" alt="À la française">
+                            <div class="principal__conteneur__card__contimg">
+                                <img class="principal__conteneur__card__contimg__img" src="images/restaurants/img3.jpg" alt="À la française">
+                                <span class="principal__conteneur__card__contimg__new" id="new3">
+                                    Nouveau
+                                </span>
+                            </div>
                         <div class="principal__conteneur__card__text">
                             <h4 class="principal__conteneur__card__text__name">
                                 À la française
@@ -121,7 +172,12 @@
                     </div>
                     <div class="principal__conteneur__card card-4">
                         <a class="principal__conteneur__card__link" href="page4.html">
-                        <img class="principal__conteneur__card__img" src="images/restaurants/img4.jpg" alt="Le délice des sens">
+                            <div class="principal__conteneur__card__contimg">
+                                <img class="principal__conteneur__card__contimg__img" src="images/restaurants/img4.jpg" alt="Le délice des sens">
+                                <span class="principal__conteneur__card__contimg__new" id="principal__conteneur__card__contimg__new4">
+                                    Nouveau
+                                </span>
+                            </div>
                         <div class="principal__conteneur__card__text">
                             <h4 class="principal__conteneur__card__text__name">
                                 Le délice des sens
@@ -136,10 +192,8 @@
                         </div>
                         </a>    
                     </div>
-
                 </div>
             </section>
         </main>
-
     </body>
 </html>
