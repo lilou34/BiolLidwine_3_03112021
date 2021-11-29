@@ -2,11 +2,11 @@
 
 .header
 {
-    @include display-flex;
-    @include flex-direction-column;
-    @include flex-wrap-nowrap;
-    @include justify-content-center;
-    @include align-items-center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin-top: $units;
     margin-bottom: $units * 5;
@@ -18,10 +18,10 @@
 
     &__search
     {
-    @include display-flex;
-    @include flex-direction-row;
-    @include justify-content-center;
-    @include align-items-center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: $pourcent * 10;
     height: $units * 5;
     background-color: setc(bc);
@@ -29,9 +29,9 @@
     border-top: 2px solid $bord10;
         &__icon
             {
-                @include display-inline-flex;
-                @include justify-content-center;
-                @include align-items-center;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
                 width: $units * 3;
                 height: $units * 3;
                 border: none;

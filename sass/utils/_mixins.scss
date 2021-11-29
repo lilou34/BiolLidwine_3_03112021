@@ -1,4 +1,4 @@
-// mixin perso
+
 @mixin box-shadow 
 {
     box-shadow: 5px 5px 10px $bord20; 
@@ -7,9 +7,9 @@
 }
 @mixin spinner-ball($color)
 {
-    @include display-inline-flex;
-    @include align-items-center;
-    @include justify-content-center;
+    display: inline-flex;
+    align-items: center;
+    justify-content:center;
     border: 2px solid setc(bc);
     border-radius: $units * 5;
     width: $units * 8;
@@ -30,17 +30,20 @@
 @mixin card($background-color: setc(footer))
 {
     border-radius: $units * 1.5;
-    width: $pourcent * 8;
+    width: $pourcent * 10;
     height: $pourcent * 2;
     background-color: setc(bc);
     @include box-shadow;
     margin-bottom: $pourcent * 1;
+    
 }
 @mixin card-img 
 {
     border-radius: 15px 15px 0px 0px;
     object-fit: cover;
-    width: 335px;
-    height: 174px;
+    width: $units * 33.5;
+    
+    height: $units * 17.4;
     overflow: hidden;
+    position: relative;
 }

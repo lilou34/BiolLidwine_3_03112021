@@ -1,24 +1,24 @@
 .navigation
 {
-    @include display-flex;
-    @include flex-direction-column;
-    @include align-items-flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin-left: $units * 1.5;
     font-weight: bold;
         &__list
         {
             gap: $units * 1.5;
-            @include display-flex;
-            @include flex-direction-column;
-            @include align-items-flex-start;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
 
 
             &__elm
             {
-                @include display-flex;
-                @include flex-direction-row;
-                @include flex-wrap-nowrap;
-                @include align-items-center;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
                 @include box-shadow;
                 border-radius: $units * 2;
                 margin-top: $units * 2;
@@ -40,6 +40,7 @@
                     border: 1px solid setc(primary);
                     border-radius: $pourcent * 5;
                     max-width: -$units * 2;
+                    line-height: $units * 2;
                 }
                 &__icon
                 {
@@ -52,9 +53,9 @@
 }
 .principal
 {
-    @include display-flex;
-    @include flex-direction-column;
-    @include align-items-center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: $pourcent * 0.5;
     background-color: setc(bc);
     margin-top: $pourcent;
@@ -68,16 +69,34 @@
         align-items: center;
         &__card
         {
-            @include display-flex;
-            @include flex-direction-column;
-            @include align-items-center;
-            @include justify-content-center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             @include card;
-            width: $pourcent * 10;
-            &__img
+            &__contimg
             {
-                @include card-img;
-                margin-bottom: $units;
+                &__img
+                {
+                    @include card-img;
+                    margin-bottom: $units;
+                }
+                &__new
+                {
+                    position: absolute;
+                    
+                    background-color: setc(tertiary);
+                    font-size: $units;
+                    padding: $units * 0.5;
+                }
+                &__#new1,__#new2
+                    {
+                        margin-top: $pourcent;
+                    }
+                &__#new3,__#new4
+                {
+                    display: none;
+                }
             }
             &__text
             {
@@ -85,9 +104,9 @@
                 margin-left: $units * 1.5;
                 margin-top: $units * 0.5;
                 gap: $units;
-                @include display-flex;
-                @include flex-direction-column;
-                @include flex-wrap-nowrap;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
             
                 &__anim
                 {

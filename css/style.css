@@ -1,5 +1,3 @@
-/*sass-flexbox Copyright (c) 2015 Samuel Marchal*/
-/*"url": "git+https://github.com/zessx/sass-flexbox.git"*/
 /*box-sizing */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -28,18 +26,10 @@ a {
 
 /*header*/
 .header {
-  display: -moz-box;
   display: flex;
-  -moz-box-orient: vertical;
-  -moz-flex-direction: column;
   flex-direction: column;
-  -moz-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  -moz-justify-content: center;
   justify-content: center;
-  -moz-align-items: center;
   align-items: center;
   text-align: center;
   margin-top: 10px;
@@ -50,16 +40,9 @@ a {
   font-family: "Shrikhand", arial, sans-serif;
 }
 .header__search {
-  display: -moz-box;
   display: flex;
-  -moz-box-orient: horizontal;
-  -moz-flex-direction: row;
   flex-direction: row;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  -moz-justify-content: center;
   justify-content: center;
-  -moz-align-items: center;
   align-items: center;
   width: 100%;
   height: 50px;
@@ -68,13 +51,8 @@ a {
   border-top: 2px solid #d6d6d6;
 }
 .header__search__icon {
-  display: -webkit-inline-flex;
   display: inline-flex;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  -moz-justify-content: center;
   justify-content: center;
-  -moz-align-items: center;
   align-items: center;
   width: 30px;
   height: 30px;
@@ -123,35 +101,22 @@ a {
 }
 
 .navigation {
-  display: -moz-box;
   display: flex;
-  -moz-box-orient: vertical;
-  -moz-flex-direction: column;
   flex-direction: column;
-  -moz-align-items: flex-start;
   align-items: flex-start;
   margin-left: 15px;
   font-weight: bold;
 }
 .navigation__list {
   gap: 15px;
-  display: -moz-box;
   display: flex;
-  -moz-box-orient: vertical;
-  -moz-flex-direction: column;
   flex-direction: column;
-  -moz-align-items: flex-start;
   align-items: flex-start;
 }
 .navigation__list__elm {
-  display: -moz-box;
   display: flex;
-  -moz-box-orient: horizontal;
-  -moz-flex-direction: row;
   flex-direction: row;
-  -moz-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -moz-align-items: center;
   align-items: center;
   box-shadow: 5px 5px 10px #bcbcbc;
   -moz-box-shadow: 5px 5px 10px #bcbcbc;
@@ -176,18 +141,15 @@ a {
   border: 1px solid #9356dc;
   border-radius: 50%;
   max-width: -20px;
+  line-height: 20px;
 }
 .navigation__list__elm__icon {
   margin-left: 25px;
 }
 
 .principal {
-  display: -moz-box;
   display: flex;
-  -moz-box-orient: vertical;
-  -moz-flex-direction: column;
   flex-direction: column;
-  -moz-align-items: center;
   align-items: center;
   gap: 5%;
   background-color: #efefef;
@@ -201,46 +163,47 @@ a {
   align-items: center;
 }
 .principal__conteneur__card {
-  display: -moz-box;
   display: flex;
-  -moz-box-orient: vertical;
-  -moz-flex-direction: column;
   flex-direction: column;
-  -moz-align-items: center;
   align-items: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  -moz-justify-content: center;
   justify-content: center;
   border-radius: 15px;
-  width: 80%;
+  width: 100%;
   height: 20%;
   background-color: #efefef;
   box-shadow: 5px 5px 10px #bcbcbc;
   -moz-box-shadow: 5px 5px 10px #bcbcbc;
   -webkit-box-shadow: 5px 5px 10px #bcbcbc;
   margin-bottom: 10%;
-  width: 100%;
 }
-.principal__conteneur__card__img {
+.principal__conteneur__card__contimg__img {
   border-radius: 15px 15px 0px 0px;
   object-fit: cover;
   width: 335px;
   height: 174px;
   overflow: hidden;
+  position: relative;
   margin-bottom: 10px;
+}
+.principal__conteneur__card__contimg__new {
+  position: absolute;
+  background-color: #99e2d0;
+  font-size: 10px;
+  padding: 5px;
+}
+.principal__conteneur__card__contimg__#new1, .principal__conteneur__card__contimg __#new2 {
+  margin-top: 10%;
+}
+.principal__conteneur__card__contimg__#new3, .principal__conteneur__card__contimg __#new4 {
+  display: none;
 }
 .principal__conteneur__card__text {
   height: 77px;
   margin-left: 15px;
   margin-top: 5px;
   gap: 10px;
-  display: -moz-box;
   display: flex;
-  -moz-box-orient: vertical;
-  -moz-flex-direction: column;
   flex-direction: column;
-  -moz-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
 .principal__conteneur__card__text__anim {

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch sass/main.scss:css/style.css"
+    "sass": "sass --watch sass/main.scss:css/style.css",
+    "prefix": "postcss css/style.css --use autoprefixer -d css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,11 +13,6 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lilou34/repo-lilou/issues"
-  },
-  "homepage": "https://github.com/lilou34/repo-lilou#readme",
-  "dependencies": {
-    "sass-flexbox": "^2.0.0"
-  }
+  "browserslist": "last 4 versions"
+
 }
