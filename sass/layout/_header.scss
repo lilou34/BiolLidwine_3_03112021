@@ -14,6 +14,8 @@
     &__h1
     {
         font-family: $font-title;
+        font-size: xx-large;
+        font-weight: bolder;
     }
 
     &__search
@@ -37,7 +39,7 @@
                 border: none;
             } 
             &__input{
-                width: $pourcent * 5;
+                width: auto;
                 border: none;
                 margin-left: $units;
                 background-color: setc(bc);
@@ -52,22 +54,22 @@
     &__presentation
     {
             text-align: center;
-            margin-top: $units * 2;
+            margin-top: $units * 3.5;
             &__title
             {
-                font-size: $units * 2;
+                font-size: $units * 2.4;
                 width: $pourcent * 10;
             }
             &__text
             {
                 width: $pourcent * 10;
-                font-size: small;
+                font-size: $units * 1.8;
                 margin-top: $units;
             }
     }
     &__button
     {
-        margin-top: $units * 2;
+        margin-top: $units * 2.5;
         
        &__style
        {

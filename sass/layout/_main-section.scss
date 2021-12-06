@@ -3,14 +3,24 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-top: $units * 5.5;
     margin-left: $units * 1.5;
     font-weight: bold;
+    font-size: $units * 2.4;
+    @media (min-width: 768px)
+            {
+                align-items: center;
+            }
+
+    
         &__list
         {
             gap: $units * 1.5;
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 100%;
 
 
             &__elm
@@ -22,11 +32,15 @@
                 @include box-shadow;
                 border-radius: $units * 2;
                 margin-top: $units * 2;
-                margin-left: $units;
                 gap: $units * 2;
-                width: $units * 32.7;
+                width: auto;
+                min-width: $units * 25;
                 height: $units * 7.5;
                 background-color: setc(bc);
+                font-size: medium;
+                padding-right: 20px;
+
+                
                 &__chiffre
                 {
                     background-color: setc(primary);
@@ -46,6 +60,9 @@
                 {
                     margin-left: $units * 2.5;
                 }
+                &__p{
+                    padding-right: $units;
+                }
                 
             }
         }
@@ -58,64 +75,88 @@
     align-items: center;
     gap: $pourcent * 0.5;
     background-color: setc(bc);
-    margin-top: $pourcent;
+    margin-top: $units * 2;
+    width: auto;
+    padding-bottom: $units * 2;
+    
+    
     &__title
     {
         align-self: start;
-        margin: $units * 1.5;
+        margin: 25px 0px 0px 15px;
+        padding-bottom: $units * 2.8;
+        font-size: x-large;
+        font-weight: bolder;
+        @media (min-width: 768px)
+            {
+                align-self: center;
+            }
     }
     &__conteneur
     {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: center;
+        width: $pourcent * 10;
+        gap: $units;
+
+        
+        
         &__card
-        {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        { 
             @include card;
-            &__contimg
+            position:relative;
+            &__nouv
             {
+                
+                &__text
+                {
+                position: absolute;
+                font-weight: bold;
+                top: $units;
+                right: $units;
+                width: $units * 7;
+                height: $units * 3;
+                text-align: center;
+                line-height: $units * 2.7;
+                background-color: setc(tertiary);
+                color: darken($color: setc(tertiary), $amount: 40);
+                font-size: small;
+                }
+                
                 &__img
-                {
-                    @include card-img;
-                    margin-bottom: $units;
-                }
-                &__new
-                {
-                    position: absolute;
-                    
-                    background-color: setc(tertiary);
-                    font-size: $units;
-                    padding: $units * 0.5;
-                }
-                &__#new1,__#new2
-                    {
-                        margin-top: $pourcent;
-                    }
-                &__#new3,__#new4
-                {
-                    display: none;
-                }
+            {
+                @include card-img;
+                
+            }
+            }
+            &__img
+            {
+                @include card-img;
             }
             &__text
             {
-                height: $units * 7.7;
-                margin-left: $units * 1.5;
-                margin-top: $units * 0.5;
+                height: $pourcent * 2;
+                margin: $units * 1.5;
                 gap: $units;
                 display: flex;
                 flex-direction: column;
                 flex-wrap: nowrap;
+                position: relative;
             
                 &__anim
                 {
-                    position: relative;
-                    right: -80%;
-                    top: -60%;
+                    position: absolute;
+                    width: $units * 3;
+                    right: 0%;
+                    top: 0%;
                     font-size: $units * 3;
                 }
             } 
         }
+        
+        
     }
 }
