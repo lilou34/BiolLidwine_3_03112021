@@ -9,10 +9,9 @@ body: #000000,
 footer: #ffffff,
 bc: #efefef,
 );
-$bord2: darken(#efefef, 2%);
 $bord10: darken(#efefef,10%);
-$bord15: darken(#efefef, 15%);
 $bord20: darken(#efefef, 20%);
+$bord60: darken(#efefef, 60%);
 //fonts
 $font-title: 'Shrikhand', arial, sans-serif;
 $font-primary: 'Roboto', arial, sans-serif;
