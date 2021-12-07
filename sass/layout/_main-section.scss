@@ -8,65 +8,58 @@
     font-weight: bold;
     font-size: $units * 2.4;
     @media (min-width: 768px)
-            {
-                align-items: center;
-            }
-
-    
-        &__list
         {
-            gap: $units * 1.5;
+            align-items: center;
+        }
+    &__list
+    {
+        gap: $units * 1.5;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        &__elm
+        {
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            width: 100%;
-
-
-            &__elm
-            {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                align-items: center;
-                @include box-shadow;
-                border-radius: $units * 2;
-                margin-top: $units * 2;
-                gap: $units * 2;
-                width: auto;
-                min-width: $units * 25;
-                height: $units * 7.5;
-                background-color: setc(bc);
-                font-size: medium;
-                padding-right: 20px;
-
-                
+            flex-wrap: nowrap;
+            align-items: center;
+            @include box-shadow;
+            border-radius: $units * 2;
+            margin-top: $units * 2;
+            gap: $units * 2;
+            width: auto;
+            min-width: $units * 25;
+            height: $units * 7.5;
+            background-color: setc(bc);
+            font-size: medium;
+            padding-right: 20px;
                 &__chiffre
                 {
-                    background-color: setc(primary);
-                    position: absolute;
-                    margin-left: -$units * 1.3;
-                    text-align: center;
-                    font-size: small;
-                    color: setc(footer);
-                    width: $units * 2;
-                    height: $units * 2;
-                    border: 1px solid setc(primary);
-                    border-radius: $pourcent * 5;
-                    max-width: -$units * 2;
-                    line-height: $units * 2;
+                background-color: setc(primary);
+                position: absolute;
+                margin-left: -$units * 1.3;
+                text-align: center;
+                font-size: small;
+                color: setc(footer);
+                width: $units * 2;
+                height: $units * 2;
+                border: 1px solid setc(primary);
+                border-radius: $pourcent * 5;
+                max-width: -$units * 2;
+                line-height: $units * 2;
                 }
-                &__icon
-                {
-                    margin-left: $units * 2.5;
-                }
-                &__p{
-                    padding-right: $units;
-                }
-                
-            }
+                    &__icon
+                    {
+                        margin-left: $units * 2.5;
+                    }
+                        &__p
+                        {
+                            padding-right: $units;
+                        }  
         }
-      
+    }  
 }
 .principal
 {
@@ -78,8 +71,6 @@
     margin-top: $units * 2;
     width: auto;
     padding-bottom: $units * 2;
-    
-    
     &__title
     {
         align-self: start;
@@ -97,20 +88,15 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         width: $pourcent * 10;
         gap: $units;
-
-        
-        
         &__card
         { 
             @include card;
             position:relative;
             &__nouv
             {
-                
                 &__text
                 {
                 position: absolute;
@@ -125,12 +111,14 @@
                 color: darken($color: setc(tertiary), $amount: 40);
                 font-size: small;
                 }
-                
-                &__img
-            {
-                @include card-img;
-                
-            }
+                &__text3
+                {
+                    padding-right: 30px;
+                }
+                    &__img
+                    {
+                        @include card-img; 
+                    }
             }
             &__img
             {
@@ -145,18 +133,54 @@
                 flex-direction: column;
                 flex-wrap: nowrap;
                 position: relative;
-            
+                
                 &__anim
                 {
-                    position: absolute;
-                    width: $units * 3;
-                    right: 0%;
-                    top: 0%;
-                    font-size: $units * 3;
+                    position: relative;
+                    .far
+                    {
+                        position: absolute;
+                        transition: 300ms;
+                        width: $units * 3;
+                        right: 10px;
+                        top: -55px;
+                        font-size: $units * 3;
+                        
+                        &:hover
+                        {
+                            opacity: 0;
+                            color: transparent;
+                        }
+                    }
+                    .fas
+                    {
+                        position: absolute;
+                        
+                        width: $units * 3;
+                        right: 10px;
+                        top: -55px;
+                        font-size: $units * 3;
+                        opacity: 0;
+                        transition: transform 500ms;
+                        &:hover
+                        {
+                            background:-webkit-linear-gradient(bottom, #9356dc 30%, #ff79da 70%);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            color: transparent;
+                            opacity: 1;
+                            transform: scale(1.1);
+                            
+
+                        }
+                    }
+                    
+                    }
                 }
+
             } 
         }
         
         
     }
-}
+

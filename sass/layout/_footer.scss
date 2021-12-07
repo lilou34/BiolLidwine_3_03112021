@@ -1,0 +1,56 @@
+.foo
+{
+background-color: setc(body);
+color: setc(footer);
+height: $units * 16;
+
+
+
+    &__liste
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        gap: $units;
+        padding: $units * 1.5;
+        list-style-type: none;
+        
+        
+        &__title
+        {
+            font-family: $font-title;
+            font-weight: 200;
+            width: $pourcent * 10;
+            padding-bottom: $units;
+        }
+        &__elm
+        {
+            font-weight: 100;
+            font-size: small;
+            width: $pourcent * 9;
+            &__lien
+            {
+                color: setc(footer);
+                
+            }
+            &__contain
+                {
+                    display: flex;
+                    flex-direction: row;
+                    &__fas
+                    {
+                        font-weight: 100;
+                    }
+                    &__text
+                    {
+                        margin-left: $units;
+                    }
+                }
+        }
+        @media (min-width: 768px)
+        {
+            align-items: center;
+        } 
+    }
+}
