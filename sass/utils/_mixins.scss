@@ -1,10 +1,10 @@
 
 @mixin box-shadow 
 {
-    box-shadow: 5px 5px 10px $bord20; 
-    &:hover
+    box-shadow: 10px 10px 20px $bord20; 
+    &:hover,:focus
     {
-        box-shadow: 5px 5px 10px $bord60; 
+        box-shadow: 10px 10px 20px $bord60; 
     }
 }
 @mixin spinner-ball($color)
@@ -22,13 +22,17 @@
     width: $units * 21.8;
     height: $units * 5;
     border-radius: $units * 3;
-    background: linear-gradient(setc(secondary), setc(primary));
-    color: setc(footer);
+    background: $linear;
     font-size: medium;
     border: none;
+    &>a
+    {
+        color: setc(footer);
+    }
     cursor:pointer;
     @include box-shadow;
-    &:hover
+    &:hover,
+    :focus
     {
         filter: brightness(1.2);
     }
@@ -37,14 +41,14 @@
 {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
     justify-content: space-around;
     border-radius: $units * 1.5;
     width: auto;
     background-color: setc(bc);
     @include box-shadow;
     margin-bottom: $pourcent * 0.5;
+
 }
 @mixin card-img 
 {
@@ -52,8 +56,4 @@
     object-fit: cover;
     width: $units * 33.6;
     height: $units * 17.4;
-}
-@mixin heart 
-{
-    
 }

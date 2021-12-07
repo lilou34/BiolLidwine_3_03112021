@@ -70,14 +70,9 @@
     &__button
     {
         margin-top: $units * 2.5;
-        
        &__style
        {
         @include button;
-        &:focus
-    {
-        color: setc(footer);
-    }
-       }
+       }    
     }
 }

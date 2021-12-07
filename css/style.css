@@ -88,21 +88,21 @@ a {
   width: 218px;
   height: 50px;
   border-radius: 30px;
-  background: linear-gradient(#ff79da, #9356dc);
-  color: #ffffff;
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
   font-size: medium;
   border: none;
   cursor: pointer;
-  box-shadow: 5px 5px 10px #bcbcbc;
+  box-shadow: 10px 10px 20px #bcbcbc;
 }
-.header__button__style:hover {
-  box-shadow: 5px 5px 10px #565656;
-}
-.header__button__style:hover {
-  filter: brightness(1.2);
-}
-.header__button__style:focus {
+.header__button__style > a {
   color: #ffffff;
+}
+.header__button__style:hover, .header__button__style :focus {
+  box-shadow: 10px 10px 20px #565656;
+}
+.header__button__style:hover,
+.header__button__style :focus {
+  filter: brightness(1.2);
 }
 
 .navigation {
@@ -132,7 +132,7 @@ a {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  box-shadow: 5px 5px 10px #bcbcbc;
+  box-shadow: 10px 10px 20px #bcbcbc;
   border-radius: 20px;
   margin-top: 20px;
   gap: 20px;
@@ -143,8 +143,8 @@ a {
   font-size: medium;
   padding-right: 20px;
 }
-.navigation__list__elm:hover {
-  box-shadow: 5px 5px 10px #565656;
+.navigation__list__elm:hover, .navigation__list__elm :focus {
+  box-shadow: 10px 10px 20px #565656;
 }
 .navigation__list__elm__chiffre {
   background-color: #9356dc;
@@ -193,26 +193,24 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   gap: 10px;
 }
 .principal__conteneur__card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
   justify-content: space-around;
   border-radius: 15px;
   width: auto;
   background-color: #efefef;
-  box-shadow: 5px 5px 10px #bcbcbc;
+  box-shadow: 10px 10px 20px #bcbcbc;
   margin-bottom: 5%;
   position: relative;
 }
-.principal__conteneur__card:hover {
-  box-shadow: 5px 5px 10px #565656;
+.principal__conteneur__card:hover, .principal__conteneur__card :focus {
+  box-shadow: 10px 10px 20px #565656;
 }
 .principal__conteneur__card__nouv__text {
   position: absolute;
@@ -226,6 +224,9 @@ a {
   background-color: #99e2d0;
   color: #278870;
   font-size: small;
+}
+.principal__conteneur__card__nouv__text3 {
+  padding-right: 30px;
 }
 .principal__conteneur__card__nouv__img {
   border-radius: 15px 15px 0px 0px;
@@ -249,11 +250,80 @@ a {
   position: relative;
 }
 .principal__conteneur__card__text__anim {
+  position: relative;
+}
+.principal__conteneur__card__text__anim .far {
+  position: absolute;
+  transition: 300ms;
+  width: 30px;
+  right: 10px;
+  top: -55px;
+  font-size: 30px;
+}
+.principal__conteneur__card__text__anim .far:hover {
+  opacity: 0;
+  color: transparent;
+}
+.principal__conteneur__card__text__anim .fas {
   position: absolute;
   width: 30px;
-  right: 0%;
-  top: 0%;
+  right: 10px;
+  top: -55px;
   font-size: 30px;
+  opacity: 0;
+  transition: transform 500ms;
+}
+.principal__conteneur__card__text__anim .fas:hover {
+  background: -webkit-linear-gradient(bottom, #9356dc 30%, #ff79da 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.foo {
+  background-color: #000000;
+  color: #ffffff;
+  height: 160px;
+}
+.foo__liste {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  gap: 10px;
+  padding: 15px;
+  list-style-type: none;
+}
+.foo__liste__title {
+  font-family: "Shrikhand", arial, sans-serif;
+  font-weight: 200;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.foo__liste__elm {
+  font-weight: 100;
+  font-size: small;
+  width: 90%;
+}
+.foo__liste__elm__lien {
+  color: #ffffff;
+}
+.foo__liste__elm__contain {
+  display: flex;
+  flex-direction: row;
+}
+.foo__liste__elm__contain__fas {
+  font-weight: 100;
+}
+.foo__liste__elm__contain__text {
+  margin-left: 10px;
+}
+@media (min-width: 768px) {
+  .foo__liste {
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
