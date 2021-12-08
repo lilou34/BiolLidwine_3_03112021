@@ -8,10 +8,15 @@ tertiary: #99e2d0,
 body: #000000,
 footer: #ffffff,
 bc: #efefef,
+bord10: #d6d6d6,
+bord20: #bcbcbc,
+bord60: #565656
 );
-$bord10: darken(#efefef,10%);
+$lightp: lighten(#9356dc, 35%);
+$bord10: darken(#efefef, 10%);
 $bord20: darken(#efefef, 20%);
 $bord60: darken(#efefef, 60%);
+
 $linear: -webkit-linear-gradient(#9356dc,#ff79da);
 //fonts
 $font-title: 'Shrikhand', arial, sans-serif;

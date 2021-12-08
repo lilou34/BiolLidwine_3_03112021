@@ -4,8 +4,13 @@ background-color: setc(body);
 color: setc(footer);
 height: $units * 16;
 
-
-
+    h4
+    {
+        font-family: $font-title;
+        font-weight: 200;
+        width: $pourcent * 10;
+        padding: $units * 1.5;
+    }
     &__liste
     {
         display: flex;
@@ -13,17 +18,8 @@ height: $units * 16;
         justify-content: space-around;
         align-content: center;
         gap: $units;
-        padding: $units * 1.5;
+        padding: 0px 5px 5px 15px;
         list-style-type: none;
-        
-        
-        &__title
-        {
-            font-family: $font-title;
-            font-weight: 200;
-            width: $pourcent * 10;
-            padding-bottom: $units;
-        }
         &__elm
         {
             font-weight: 100;
@@ -32,7 +28,6 @@ height: $units * 16;
             &__lien
             {
                 color: setc(footer);
-                
             }
             &__contain
                 {

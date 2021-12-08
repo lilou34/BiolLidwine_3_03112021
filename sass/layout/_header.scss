@@ -27,8 +27,8 @@
     width: $pourcent * 10;
     height: $units * 5;
     background-color: setc(bc);
-    margin-top: $units, 2;
-    border-top: 2px solid $bord10;
+    margin-top: $units * 2;
+    border-top: 2px solid setc(bord10);
         &__icon
             {
                 display: inline-flex;
@@ -38,17 +38,13 @@
                 height: $units * 3;
                 border: none;
             } 
-            &__input{
+            &__input
+            {
                 width: auto;
                 border: none;
                 margin-left: $units;
                 background-color: setc(bc);
-                font-family: $font-primary;
-                
-                    &__::focus-visible
-                    {
-                        outline: none;
-                    }
+                font-family: setc(primary);
             } 
     }
     &__presentation
