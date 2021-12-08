@@ -35,6 +35,14 @@
             background-color: setc(bc);
             font-size: medium;
             padding-right: 20px;
+            &:hover
+            {
+                background-color: $lightp;
+                i
+                {
+                    color: setc(primary);
+                }
+            }
                 &__chiffre
                 {
                 background-color: setc(primary);
@@ -47,7 +55,7 @@
                 height: $units * 2;
                 border: 1px solid setc(primary);
                 border-radius: $pourcent * 5;
-                max-width: -$units * 2;
+                max-width: $units * 2;
                 line-height: $units * 2;
                 }
                     &__icon
@@ -133,36 +141,10 @@
                 flex-direction: column;
                 flex-wrap: nowrap;
                 position: relative;
-                
                 &__anim
                 {
                     position: relative;
-                    .far
-                    {
-                        position: absolute;
-                        transition: 300ms;
-                        width: $units * 3;
-                        right: 10px;
-                        top: -55px;
-                        font-size: $units * 3;
-                        
-                        &:hover
-                        {
-                            opacity: 0;
-                            color: transparent;
-                        }
-                    }
-                    .fas
-                    {
-                        position: absolute;
-                        
-                        width: $units * 3;
-                        right: 10px;
-                        top: -55px;
-                        font-size: $units * 3;
-                        opacity: 0;
-                        transition: transform 500ms;
-                        &:hover
+                    :hover + .fas
                         {
                             background:-webkit-linear-gradient(bottom, #9356dc 30%, #ff79da 70%);
                             background-clip: text;
@@ -170,10 +152,34 @@
                             color: transparent;
                             opacity: 1;
                             transform: scale(1.1);
-                            
-
                         }
-                    }
+                        .far
+                        {
+                            position: absolute;
+                            transition: 300ms;
+                            width: $units * 3;
+                            right: 10px;
+                            top: -55px;
+                            font-size: $units * 3;
+                            opacity: 1;
+                            :hover
+                            {
+                                opacity: 0;
+                                color: transparent;
+                                transform: scale(0.5);
+                            }
+                        }
+                        .fas
+                        {
+                            position: absolute;
+                            width: $units * 3;
+                            right: 10px;
+                            top: -55px;
+                            font-size: $units * 3;
+                            opacity: 0;
+                            transition: transform ease 500ms;
+                            transform: scale(0.1);
+                        }
                     
                     }
                 }

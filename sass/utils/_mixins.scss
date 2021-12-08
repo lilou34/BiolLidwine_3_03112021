@@ -1,10 +1,10 @@
 
 @mixin box-shadow 
 {
-    box-shadow: 10px 10px 20px $bord20; 
+    box-shadow: 10px 10px 20px setc(bord20); 
     &:hover,:focus
     {
-        box-shadow: 10px 10px 20px $bord60; 
+        box-shadow: 10px 10px 20px setc(bord60); 
     }
 }
 @mixin spinner-ball($color)
@@ -25,9 +25,10 @@
     background: $linear;
     font-size: medium;
     border: none;
-    &>a
+    p
     {
         color: setc(footer);
+        padding-top: $units * 1.4;
     }
     cursor:pointer;
     @include box-shadow;
