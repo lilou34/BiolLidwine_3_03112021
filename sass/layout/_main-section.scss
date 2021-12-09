@@ -144,7 +144,7 @@
                 &__anim
                 {
                     position: relative;
-                    :hover + .fas
+                    &:hover > .fas
                         {
                             background:-webkit-linear-gradient(bottom, #9356dc 30%, #ff79da 70%);
                             background-clip: text;
@@ -162,7 +162,7 @@
                             top: -55px;
                             font-size: $units * 3;
                             opacity: 1;
-                            :hover
+                            &:hover
                             {
                                 opacity: 0;
                                 color: transparent;
