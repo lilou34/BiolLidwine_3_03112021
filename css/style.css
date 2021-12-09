@@ -256,7 +256,7 @@ a {
 .principal__conteneur__card__text__anim {
   position: relative;
 }
-.principal__conteneur__card__text__anim :hover + .fas {
+.principal__conteneur__card__text__anim:hover > .fas {
   background: -webkit-linear-gradient(bottom, #9356dc 30%, #ff79da 70%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -273,7 +273,7 @@ a {
   font-size: 30px;
   opacity: 1;
 }
-.principal__conteneur__card__text__anim .far :hover {
+.principal__conteneur__card__text__anim .far:hover {
   opacity: 0;
   color: transparent;
   transform: scale(0.5);
