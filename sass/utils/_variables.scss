@@ -12,7 +12,7 @@ bord10: #d6d6d6,
 bord20: #bcbcbc,
 bord60: #565656
 );
-$lightp: lighten(#9356dc, 35%);
+$lightp: lighten(#9356dc, 30%);
 $bord10: darken(#efefef, 10%);
 $bord20: darken(#efefef, 20%);
 $bord60: darken(#efefef, 60%);
@@ -31,5 +31,12 @@ $width: 375px;
 
 //margin, padding
 $margin: 15px;
+//media queries
+$breakpoints: (
+  desktop: 768px
+);
+
+
+
 
 

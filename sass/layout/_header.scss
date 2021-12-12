@@ -2,8 +2,7 @@
 
 .header
 {
-    display: flex;
-    flex-direction: column;
+    @include flexc;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
@@ -11,17 +10,14 @@
     margin-top: $units;
     margin-bottom: $units * 5;
     font-family: $font-primary;
-    &__h1
+    h1
     {
-        font-family: $font-title;
-        font-size: xx-large;
-        font-weight: bolder;
+        @include header-logo;
     }
 
     &__search
     {
-    display: flex;
-    flex-direction: row;
+    @include flexr;
     justify-content: center;
     align-items: center;
     width: $pourcent * 10;
@@ -44,7 +40,7 @@
                 border: none;
                 margin-left: $units;
                 background-color: setc(bc);
-                font-family: setc(primary);
+                font-family: $font-primary;
             } 
     }
     &__presentation

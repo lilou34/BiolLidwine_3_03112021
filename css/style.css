@@ -34,10 +34,11 @@ a {
   margin-bottom: 50px;
   font-family: "Roboto", arial, sans-serif;
 }
-.header__h1 {
+.header h1 {
   font-family: "Shrikhand", arial, sans-serif;
   font-size: xx-large;
-  font-weight: bolder;
+  font-weight: 500;
+  padding-top: 10px;
 }
 .header__search {
   display: flex;
@@ -63,7 +64,7 @@ a {
   border: none;
   margin-left: 10px;
   background-color: #efefef;
-  font-family: #9356dc;
+  font-family: "Roboto", arial, sans-serif;
 }
 .header__presentation {
   text-align: center;
@@ -112,7 +113,7 @@ a {
   font-weight: bold;
   font-size: 24px;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .navigation {
     align-items: center;
   }
@@ -145,7 +146,7 @@ a {
   box-shadow: 10px 10px 20px #565656;
 }
 .navigation__list__elm:hover {
-  background-color: #f2eafb;
+  background-color: #e4d5f6;
 }
 .navigation__list__elm:hover i {
   color: #9356dc;
@@ -188,7 +189,7 @@ a {
   font-size: x-large;
   font-weight: bolder;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .principal__title {
     align-self: center;
   }
@@ -265,13 +266,13 @@ a {
   transform: scale(1.1);
 }
 .principal__conteneur__card__text__anim .far {
-  position: absolute;
-  transition: 300ms;
   width: 30px;
   right: 10px;
   top: -55px;
   font-size: 30px;
+  position: absolute;
   opacity: 1;
+  transition: 300ms;
 }
 .principal__conteneur__card__text__anim .far:hover {
   opacity: 0;
@@ -279,11 +280,11 @@ a {
   transform: scale(0.5);
 }
 .principal__conteneur__card__text__anim .fas {
-  position: absolute;
   width: 30px;
   right: 10px;
   top: -55px;
   font-size: 30px;
+  position: absolute;
   opacity: 0;
   transition: transform ease 500ms;
   transform: scale(0.1);
@@ -294,10 +295,16 @@ a {
   color: #ffffff;
   height: 160px;
 }
+@media screen and (min-width: 768px) {
+  .foo {
+    text-align: center;
+    font-size: x-large;
+  }
+}
 .foo h4 {
   font-family: "Shrikhand", arial, sans-serif;
   font-weight: 200;
-  width: 100%;
+  width: 90%;
   padding: 15px;
 }
 .foo__liste {
@@ -309,10 +316,22 @@ a {
   padding: 0px 5px 5px 15px;
   list-style-type: none;
 }
+@media screen and (min-width: 768px) {
+  .foo__liste {
+    flex-direction: row;
+    align-items: center;
+  }
+}
 .foo__liste__elm {
   font-weight: 100;
   font-size: small;
   width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .foo__liste__elm {
+    font-size: medium;
+    padding-top: 5px;
+  }
 }
 .foo__liste__elm__lien {
   color: #ffffff;
@@ -327,10 +346,87 @@ a {
 .foo__liste__elm__contain__text {
   margin-left: 10px;
 }
-@media (min-width: 768px) {
-  .foo__liste {
-    align-items: center;
-  }
+
+.header-menu {
+  text-align: center;
+}
+.header-menu__arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-weight: 900;
+  font-size: larger;
+}
+.header-menu h1 {
+  font-family: "Shrikhand", arial, sans-serif;
+  font-size: xx-large;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+.resto {
+  font-family: "Roboto", arial, sans-serif;
+}
+.resto__image {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+.resto__container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: #ff79da;
+  margin-top: -25px;
+  position: relative;
+  z-index: 1;
+}
+.resto__container h2 {
+  font-family: "Shrikhand", arial, sans-serif;
+  font-size: x-large;
+  font-weight: 500;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+.resto__container__menu {
+  align-items: flex-start;
+  margin-left: 15px;
+}
+.resto__container__menu__liste {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+}
+.resto__container__menu__liste__item {
+  display: flex;
+  flex-direction: column;
+}
+.resto__container__menu__liste__item__texte {
+  width: 80%;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.resto__container__menu__liste__item__texte p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.resto__container__menu__liste__item__texte b {
+  position: absolute;
+  right: 5px;
+  bottom: 30px;
+  font-weight: 500;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

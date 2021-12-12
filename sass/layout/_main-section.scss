@@ -1,28 +1,25 @@
 .navigation
 {
-    display: flex;
-    flex-direction: column;
+    @include flexc;
     align-items: flex-start;
     padding-top: $units * 5.5;
     margin-left: $units * 1.5;
     font-weight: bold;
     font-size: $units * 2.4;
-    @media (min-width: 768px)
+    @include mediaq
         {
             align-items: center;
         }
     &__list
     {
         gap: $units * 1.5;
-        display: flex;
-        flex-direction: row;
+        @include flexr;
         flex-wrap: wrap;
         justify-content: space-evenly;
         width: 100%;
         &__elm
         {
-            display: flex;
-            flex-direction: row;
+            @include flexr;
             flex-wrap: nowrap;
             align-items: center;
             @include box-shadow;
@@ -71,8 +68,7 @@
 }
 .principal
 {
-    display: flex;
-    flex-direction: column;
+    @include flexc;
     align-items: center;
     gap: $pourcent * 0.5;
     background-color: setc(bc);
@@ -86,15 +82,14 @@
         padding-bottom: $units * 2.8;
         font-size: x-large;
         font-weight: bolder;
-        @media (min-width: 768px)
+        @include mediaq
             {
                 align-self: center;
             }
     }
     &__conteneur
     {
-        display: flex;
-        flex-direction: row;
+        @include flexr;
         flex-wrap: wrap;
         justify-content: space-around;
         width: $pourcent * 10;
@@ -137,8 +132,7 @@
                 height: $pourcent * 2;
                 margin: $units * 1.5;
                 gap: $units;
-                display: flex;
-                flex-direction: column;
+                @include flexc;
                 flex-wrap: nowrap;
                 position: relative;
                 &__anim
@@ -155,13 +149,9 @@
                         }
                         .far
                         {
-                            position: absolute;
-                            transition: 300ms;
-                            width: $units * 3;
-                            right: 10px;
-                            top: -55px;
-                            font-size: $units * 3;
+                            @include hearts;
                             opacity: 1;
+                            transition: 300ms;
                             &:hover
                             {
                                 opacity: 0;
@@ -171,11 +161,7 @@
                         }
                         .fas
                         {
-                            position: absolute;
-                            width: $units * 3;
-                            right: 10px;
-                            top: -55px;
-                            font-size: $units * 3;
+                            @include hearts;
                             opacity: 0;
                             transition: transform ease 500ms;
                             transform: scale(0.1);
