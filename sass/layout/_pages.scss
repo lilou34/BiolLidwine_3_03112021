@@ -1,0 +1,21 @@
+.header-menu
+{
+    
+    text-align: center;
+    &__arrow
+    {
+        position: absolute;
+        top: $units * 2;
+        left: $units * 2;
+        font-weight: 900;
+        font-size: larger;
+    }
+    h1
+    {
+        @include header-logo;
+    }
+}
+.resto
+{
+@include pages;
+}

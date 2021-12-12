@@ -1,12 +1,5 @@
 
-@mixin box-shadow 
-{
-    box-shadow: 10px 10px 20px setc(bord20); 
-    &:hover,:focus
-    {
-        box-shadow: 10px 10px 20px setc(bord60); 
-    }
-}
+
 @mixin spinner-ball($color)
 {
     display: inline-flex;
@@ -16,6 +9,31 @@
     border-radius: $units * 5;
     width: $units * 8;
     height: $units * 8;
+}
+@mixin header-logo 
+{
+    font-family: $font-title;
+    font-size: xx-large;
+    font-weight: 500;
+    padding-top: $units;
+}
+@mixin flexr
+{
+    display: flex;
+    flex-direction: row;
+}
+@mixin flexc
+{
+    display: flex;
+    flex-direction: column;
+}
+@mixin box-shadow 
+{
+    box-shadow: 10px 10px 20px setc(bord20); 
+    &:hover,:focus
+    {
+        box-shadow: 10px 10px 20px setc(bord60); 
+    }
 }
 @mixin button
 {
@@ -40,8 +58,7 @@
 }
 @mixin card($background-color: setc(footer))
 {
-    display: flex;
-    flex-direction: column;
+    @include flexc;
     align-items: flex-start;
     justify-content: space-around;
     border-radius: $units * 1.5;
@@ -57,4 +74,97 @@
     object-fit: cover;
     width: $units * 33.6;
     height: $units * 17.4;
+}
+@mixin hearts
+{
+    width: $units * 3;
+    right: $units;
+    top: -$units * 5.5;
+    font-size: $units * 3;
+    position: absolute;
+   
+}
+
+@mixin mediaq 
+{
+    @media screen and (min-width: map-get($breakpoints, desktop))
+    {
+        @content;
+    }
+}
+@mixin pages
+{
+    font-family: $font-primary;
+    
+    &__image
+    {
+        object-fit: cover;
+        width: $pourcent * 10;
+        height: $units * 25;
+    }
+
+    &__container
+    {
+        @include flexc;
+        gap: $units * 1.5;
+        width: $pourcent * 10;
+        border-top-left-radius: $units * 2.5;
+        border-top-right-radius: $units * 2.5;
+        background-color: setc(secondary);
+        margin-top: -$units * 2.5;
+        position: relative;
+    z-index: 1;
+        h2
+        {
+            font-family: $font-title;
+            font-size: x-large;
+            font-weight: 500;
+            margin-left: $units * 1.5;
+            margin-bottom: $units;
+            
+        }
+        &__menu
+        {
+            align-items: flex-start;
+            margin-left: $units * 1.5;
+            &__liste
+            {
+                list-style-type: none;
+                @include flexc;
+                gap: $units;
+                width: $pourcent * 9;
+                
+                &__item
+                {
+                    @include flexc;
+                    &__texte
+                    {
+
+                        width: $pourcent * 8;
+                        position: relative;  
+                        background-color: setc(footer);
+                        border-radius: $units;
+                        padding: $units * 1.5;
+                        @include flexc;
+                        flex-wrap: nowrap;
+                        p
+                        {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        b
+                        {
+                            position: absolute;
+                            right: $units * 0.5;
+                            bottom: $units * 3;
+                            font-weight: 500;
+                            padding: $units * 0.5;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
 }

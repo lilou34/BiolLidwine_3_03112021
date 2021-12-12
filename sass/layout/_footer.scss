@@ -3,36 +3,51 @@
 background-color: setc(body);
 color: setc(footer);
 height: $units * 16;
+@include mediaq
+    {
+        text-align: center;
+        font-size: x-large;
+    }
 
     h4
     {
         font-family: $font-title;
         font-weight: 200;
-        width: $pourcent * 10;
+        width: $pourcent * 9;
         padding: $units * 1.5;
     }
     &__liste
     {
-        display: flex;
-        flex-direction: column;
+        @include flexc;
         justify-content: space-around;
         align-content: center;
         gap: $units;
         padding: 0px 5px 5px 15px;
         list-style-type: none;
+        @include mediaq
+        {
+            flex-direction: row;
+            align-items: center;
+            
+        } 
         &__elm
         {
             font-weight: 100;
             font-size: small;
             width: $pourcent * 9;
+            @include mediaq
+            {
+                font-size: medium;
+                padding-top: $units * 0.5;
+            }
+
             &__lien
             {
                 color: setc(footer);
             }
             &__contain
                 {
-                    display: flex;
-                    flex-direction: row;
+                    @include flexr; 
                     &__fas
                     {
                         font-weight: 100;
@@ -43,9 +58,7 @@ height: $units * 16;
                     }
                 }
         }
-        @media (min-width: 768px)
-        {
-            align-items: center;
-        } 
+        
     }
+    
 }
