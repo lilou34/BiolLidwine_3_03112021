@@ -17,5 +17,23 @@
 }
 .resto
 {
-@include pages;
+    @include page;
+    &-title
+    {
+        &__anim
+        {
+            top: $units * 3.9;
+        }
+ 
+    }
 }
+.menu
+{
+    @include menu;
+}
+.button
+    {
+        @include button;
+        background-color: setc(bc);
+        margin-bottom: $units * 4;
+    }

@@ -1,7 +1,6 @@
 .navigation
 {
-    @include flexc;
-    align-items: flex-start;
+    @include flex(column, nowrap, center, flex-start);
     padding-top: $units * 5.5;
     margin-left: $units * 1.5;
     font-weight: bold;
@@ -13,15 +12,11 @@
     &__list
     {
         gap: $units * 1.5;
-        @include flexr;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+        @include flex(row, wrap, space-evenly, center);
         width: 100%;
         &__elm
         {
-            @include flexr;
-            flex-wrap: nowrap;
-            align-items: center;
+            @include flex(row, nowrap, flex-start, center);
             @include box-shadow;
             border-radius: $units * 2;
             margin-top: $units * 2;
@@ -68,8 +63,7 @@
 }
 .principal
 {
-    @include flexc;
-    align-items: center;
+    @include flex(column, nowrap, center, center);
     gap: $pourcent * 0.5;
     background-color: setc(bc);
     margin-top: $units * 2;
@@ -89,9 +83,7 @@
     }
     &__conteneur
     {
-        @include flexr;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        @include flex(row, wrap, space-around, center);
         width: $pourcent * 10;
         gap: $units;
         &__card
@@ -132,47 +124,15 @@
                 height: $pourcent * 2;
                 margin: $units * 1.5;
                 gap: $units;
-                @include flexc;
-                flex-wrap: nowrap;
+                @include flex(column, nowrap, center, stretch);
                 position: relative;
                 &__anim
                 {
-                    position: relative;
-                    &:hover > .fas
-                        {
-                            background:-webkit-linear-gradient(bottom, #9356dc 30%, #ff79da 70%);
-                            background-clip: text;
-                            -webkit-background-clip: text;
-                            color: transparent;
-                            opacity: 1;
-                            transform: scale(1.1);
-                        }
-                        .far
-                        {
-                            @include hearts;
-                            opacity: 1;
-                            transition: 300ms;
-                            &:hover
-                            {
-                                opacity: 0;
-                                color: transparent;
-                                transform: scale(0.5);
-                            }
-                        }
-                        .fas
-                        {
-                            @include hearts;
-                            opacity: 0;
-                            transition: transform ease 500ms;
-                            transform: scale(0.1);
-                        }
-                    
-                    }
+                    @include heart;
                 }
 
             } 
         }
+    }   
         
-        
-    }
-
+ }
