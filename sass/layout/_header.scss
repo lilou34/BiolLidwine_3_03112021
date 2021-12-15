@@ -2,10 +2,7 @@
 
 .header
 {
-    @include flexc;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    @include flex(column, nowrap, center, center);
     text-align: center;
     margin-top: $units;
     margin-bottom: $units * 5;
@@ -17,9 +14,7 @@
 
     &__search
     {
-    @include flexr;
-    justify-content: center;
-    align-items: center;
+    @include flex(row, nowrap, center, center);
     width: $pourcent * 10;
     height: $units * 5;
     background-color: setc(bc);

@@ -18,16 +18,13 @@ height: $units * 16;
     }
     &__liste
     {
-        @include flexc;
-        justify-content: space-around;
-        align-content: center;
+        @include flex(column, nowrap, space-around, flex-start);
         gap: $units;
         padding: 0px 5px 5px 15px;
         list-style-type: none;
         @include mediaq
         {
-            flex-direction: row;
-            align-items: center;
+            @include flex(row, nowrap, center, center);
             
         } 
         &__elm
@@ -47,7 +44,7 @@ height: $units * 16;
             }
             &__contain
                 {
-                    @include flexr; 
+                    @include flex(row, nowrap, flex-start, center);
                     &__fas
                     {
                         font-weight: 100;

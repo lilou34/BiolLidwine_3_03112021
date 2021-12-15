@@ -17,16 +17,15 @@
     font-weight: 500;
     padding-top: $units;
 }
-@mixin flexr
+@mixin flex($dir: column, $wrap: wrap, $jc: center, $ai: flex-start)
 {
     display: flex;
-    flex-direction: row;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $jc;
+    align-items: $ai;
 }
-@mixin flexc
-{
-    display: flex;
-    flex-direction: column;
-}
+
 @mixin box-shadow 
 {
     box-shadow: 10px 10px 20px setc(bord20); 
@@ -58,15 +57,12 @@
 }
 @mixin card($background-color: setc(footer))
 {
-    @include flexc;
-    align-items: flex-start;
-    justify-content: space-around;
+    @include flex(column, wrap, space-around, flex-start);
     border-radius: $units * 1.5;
     width: auto;
     background-color: setc(bc);
     @include box-shadow;
     margin-bottom: $pourcent * 0.5;
-
 }
 @mixin card-img 
 {
@@ -75,16 +71,51 @@
     width: $units * 33.6;
     height: $units * 17.4;
 }
-@mixin hearts
+%hearts
 {
     width: $units * 3;
     right: $units;
     top: -$units * 5.5;
     font-size: $units * 3;
     position: absolute;
-   
 }
+@mixin heart 
+{
+    position: relative;
+    &:hover > .fas
+    {
+        background:-webkit-linear-gradient(bottom, #9356dc 30%, #ff79da 70%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    .far
+    {
+        @extend %hearts;
+        opacity: 1;
+        transition: 300ms;
+        &:hover
+        {
+            opacity: 0;
+            color: transparent;
+            transform: scale(0.5);
+        }
+    }
+    .fas
+    {
+        @extend %hearts;
+        opacity: 0;
+        transition: transform ease 500ms;
+        transform: scale(0.1);
+    }
+    
+}
+    
 
+
+/*média queries, beakpoint*/
 @mixin mediaq 
 {
     @media screen and (min-width: map-get($breakpoints, desktop))
@@ -92,79 +123,120 @@
         @content;
     }
 }
-@mixin pages
+@mixin page
 {
     font-family: $font-primary;
-    
-    &__image
+    background-color: setc(bc);
+    padding-bottom: $units * 4;
+    &-image
     {
         object-fit: cover;
         width: $pourcent * 10;
         height: $units * 25;
     }
-
-    &__container
+    &-title
     {
-        @include flexc;
-        gap: $units * 1.5;
-        width: $pourcent * 10;
         border-top-left-radius: $units * 2.5;
         border-top-right-radius: $units * 2.5;
-        background-color: setc(secondary);
+        background-color: setc(bc);
         margin-top: -$units * 2.5;
         position: relative;
-    z-index: 1;
+        height: $units * 6;
+        @include flex(row, nowrap, space-around, center);
         h2
         {
             font-family: $font-title;
             font-size: x-large;
-            font-weight: 500;
-            margin-left: $units * 1.5;
-            margin-bottom: $units;
-            
+            font-weight: 700;
         }
-        &__menu
+        &__anim
         {
-            align-items: flex-start;
-            margin-left: $units * 1.5;
-            &__liste
-            {
-                list-style-type: none;
-                @include flexc;
-                gap: $units;
-                width: $pourcent * 9;
-                
-                &__item
-                {
-                    @include flexc;
-                    &__texte
-                    {
-
-                        width: $pourcent * 8;
-                        position: relative;  
-                        background-color: setc(footer);
-                        border-radius: $units;
-                        padding: $units * 1.5;
-                        @include flexc;
-                        flex-wrap: nowrap;
-                        p
-                        {
-                            white-space: nowrap;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                        }
-                        b
-                        {
-                            position: absolute;
-                            right: $units * 0.5;
-                            bottom: $units * 3;
-                            font-weight: 500;
-                            padding: $units * 0.5;
-                        }
-                    }
-                }
-
-            }
+            @include heart;
         }
     }
+    &-container
+    {
+        @include flex(column, nowrap, space-around, stretch);
+        width: $pourcent * 10;
+        background-color: setc(bc);
+        @include mediaq
+        {
+            @include flex(row, wrap, space-evenly, stretch);
+        }
+    }
+    
+    
 }
+@mixin menu 
+{
+    align-items: flex-start;
+    margin-left: $units * 1.5;
+    padding-top: $units * 2;
+    padding-bottom: $units * 2;
+    h3
+    {
+        margin-bottom: $units;
+        padding-bottom: $units;
+        position: relative;
+        &::after
+        {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: 0.5px;
+        width: $units * 4;
+        height: $units * 0.4;
+        background-color: setc(tertiary);
+        }
+    }
+    &__liste
+    {
+        @include flex(column, nowrap, center, center);
+        gap: $units;
+        width: $pourcent * 9.4;
+        &__item
+        {
+            width: $pourcent * 9;
+            margin: auto;
+            background-color: setc(footer);
+            border-radius: $units;
+            padding: $units * 1.5;
+            @include flex(row, nowrap, space-between, center);
+            &__texte
+            {
+                width: $pourcent * 10;
+                position: relative;  
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                @include flex(column, nowrap, center, flex-start);
+                &__txp
+                {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: $pourcent * 10;
+                }
+                &__txo
+                {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: $pourcent * 10;
+                }
+                b
+                {
+                    font-weight: 500;
+                    padding: $units * 0.5;
+                }
+            }
+            &__anim
+            {
+                @include flex(row, nowrap, space-around, center);
+            }
+        }
+
+    }
+}
+
+
