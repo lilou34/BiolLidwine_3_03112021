@@ -35,5 +35,6 @@
     {
         @include button;
         background-color: setc(bc);
-        margin-bottom: $units * 4;
+        margin: 0 auto;
+        text-align: center;
     }
