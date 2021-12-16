@@ -544,7 +544,8 @@ a {
   cursor: pointer;
   box-shadow: 10px 10px 20px #bcbcbc;
   background-color: #efefef;
-  margin-bottom: 40px;
+  margin: 0 auto;
+  text-align: center;
 }
 .button p {
   color: #ffffff;
