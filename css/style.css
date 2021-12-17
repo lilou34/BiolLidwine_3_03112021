@@ -674,6 +674,12 @@
   padding: 0;
 }
 
+
+body {
+  font-family: "Roboto", arial, sans-serif;
+}
+
+
 input:focus,
 select:focus,
 textarea:focus,
@@ -684,8 +690,5 @@ a {
   color: #000000;
 }
 
-body {
-  font-family: "Roboto", arial, sans-serif;
-}
 
 /*# sourceMappingURL=style.css.map */
