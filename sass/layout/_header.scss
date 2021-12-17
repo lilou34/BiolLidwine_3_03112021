@@ -1,5 +1,11 @@
-/*header*/
+/*spinner loading*/
 
+
+/*header*/
+body
+{
+    font-family: $font-primary;
+}
 .header
 {
     @include flex(column, nowrap, center, center);
@@ -7,6 +13,59 @@
     margin-top: $units;
     margin-bottom: $units * 5;
     font-family: $font-primary;
+    z-index: 1;
+    &__spinner
+    {
+        width: $pourcent * 10;
+        height: $units * 50;
+        background: setc(bc);
+        animation: spinner-bc 1s linear 2s infinite forwards;
+        @keyframes spinner-bc {
+            0% 
+            {
+                background: linear-gradient(0deg, rgba(147,86,220,1) 8%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 95%)
+            }
+            25%
+            {
+                background: linear-gradient(100deg, rgba(147,86,220,1) 8%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 95%)
+            }
+            50%
+            {
+                background: linear-gradient(200deg, rgba(147,86,220,1) 8%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 95%)
+            }
+            75%
+            {
+                background: linear-gradient(300deg, rgba(147,86,220,1) 8%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 95%)
+            }
+            100%
+            {
+                background: linear-gradient(360deg, rgba(147,86,220,1) 8%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 95%)
+            }
+        }
+        &__contain
+        {
+            @include flex(column, nowrap, center, center);
+            height: $pourcent * 10;
+            gap: $units;
+            top: 0px;
+            left: 0px;
+            z-index: 1000;
+        
+            &__bell1
+            {
+                @include spinner-ball(setc(primary),setc(tertiary));
+
+            }
+            &__ustensils
+            {
+                @include spinner-ball (setc(secondary), setc(primary));
+            }
+            &__bell2
+            {
+                @include spinner-ball (setc(tertiary), setc(secondary));
+            }
+        }
+    }
     h1
     {
         @include header-logo;
