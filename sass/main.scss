@@ -8,6 +8,31 @@
 @import "./layout/main-section";
 @import "./layout/footer";
 @import "./layout/pages";
+*, *:before, *:after 
+{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+a
+{
+    outline: none;
+    text-decoration: none;
+    color: setc(body);
+}
+body
+{
+    font-family: $font-primary;
+}
+
 
 
 *, *:before, *:after 

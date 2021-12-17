@@ -6,7 +6,7 @@
     text-align: center;
     margin-top: $units;
     margin-bottom: $units * 5;
-    
+    font-family: $font-primary;
     z-index: 1;
     &__spinner
     {
