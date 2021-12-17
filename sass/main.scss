@@ -1,9 +1,9 @@
 @charset 'utf-8';
+@import "./utils/base";
+@import "./utils/bases";
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./utils/other";
-@import "./utils/base";
-
 @import "./layout/header";
 @import "./layout/main-section";
 @import "./layout/footer";

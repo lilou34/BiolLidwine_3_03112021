@@ -1,4 +1,5 @@
-
+$font-primary: 'Roboto', arial, sans-serif;
+$font-title: 'Shrikhand', arial, sans-serif;
 //color
 $colors: 
 (
@@ -16,11 +17,7 @@ $lightp: lighten(#9356dc, 30%);
 $bord10: darken(#efefef, 10%);
 $bord20: darken(#efefef, 20%);
 $bord60: darken(#efefef, 60%);
-
 $linear: -webkit-linear-gradient(#9356dc,#ff79da);
-//fonts
-$font-title: 'Shrikhand', arial, sans-serif;
-$font-primary: 'Roboto', arial, sans-serif;
 
 //units
 $units: 10px;
