@@ -1,18 +1,12 @@
-/*spinner loading*/
-
-
 /*header*/
-body
-{
-    font-family: $font-primary;
-}
+
 .header
 {
     @include flex(column, nowrap, center, center);
     text-align: center;
     margin-top: $units;
     margin-bottom: $units * 5;
-    font-family: $font-primary;
+    
     z-index: 1;
     &__spinner
     {
