@@ -7,9 +7,11 @@
     font-weight: bold;
     font-size: $units * 2.4;
     font-family: $font-primary;
+
     @include mediaq
         {
             align-items: center;
+            margin-bottom: $units * 5;
         }
     &__list
     {
@@ -71,6 +73,7 @@
     margin-top: $units * 2;
     width: auto;
     padding-bottom: $units * 2;
+    
     &__title
     {
         align-self: start;
@@ -88,10 +91,21 @@
         @include flex(row, wrap, space-around, center);
         width: $pourcent * 10;
         gap: $units;
+        @include mediaq
+        {
+            max-width: 1200px;
+        }
         &__card
         { 
             @include card;
             position:relative;
+            @include mediaq
+            {
+                margin: $units * 6;
+                padding: $units * 6;
+                gap: $units * 9;
+                transform: scale(1.1);
+            }
             &__nouv
             {
                 &__text

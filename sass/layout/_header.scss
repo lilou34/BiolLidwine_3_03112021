@@ -6,57 +6,67 @@
     text-align: center;
     margin-top: $units;
     margin-bottom: $units * 5;
-    
     z-index: 1;
     &__spinner
     {
         width: $pourcent * 10;
-        height: $units * 50;
-        background: setc(bc);
-        animation: spinner-bc 1s linear 2s infinite forwards;
-        @keyframes spinner-bc {
-            0% 
+        height: $pourcent * 10;
+        background-color: setc(body);
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        animation: loader 15s ease-in-out 50ms forwards;
+        @keyframes loader 
+        {
+            0%
             {
-                background: linear-gradient(0deg, rgba(147,86,220,1) 8%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 95%)
-            }
-            25%
-            {
-                background: linear-gradient(100deg, rgba(147,86,220,1) 8%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 95%)
-            }
-            50%
-            {
-                background: linear-gradient(200deg, rgba(147,86,220,1) 8%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 95%)
-            }
-            75%
-            {
-                background: linear-gradient(300deg, rgba(147,86,220,1) 8%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 95%)
+                opacity: 1;
             }
             100%
             {
-                background: linear-gradient(360deg, rgba(147,86,220,1) 8%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 95%)
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(0)
             }
         }
         &__contain
         {
             @include flex(column, nowrap, center, center);
+            align-content: center;
             height: $pourcent * 10;
-            gap: $units;
-            top: 0px;
-            left: 0px;
-            z-index: 1000;
-        
-            &__bell1
+            margin: auto;
+            &__bell
             {
-                @include spinner-ball(setc(primary),setc(tertiary));
-
+                font-weight: 900;
+                font-size: $units * 8;
+                background-color: setc(body);
+                border-radius: $units * 15;
+                width: $units * 27;
+                height: $units * 27;
+                margin: auto; 
+                position: absolute;
+                z-index: 2;
+                i
+                {
+                    margin-top: $units * 3;
+                    color: setc(body);
+                    text-shadow: -7px 5px 14px #9356dc, 0px -10px 23px #ff79da, 7px 6px 12px #99e2d0;
+                }
             }
-            &__ustensils
+            &__cercle
             {
-                @include spinner-ball (setc(secondary), setc(primary));
+                @include cercle;
             }
-            &__bell2
+            span
             {
-                @include spinner-ball (setc(tertiary), setc(secondary));
+                color: black;
+                text-shadow:  3px 3px #9356dc, 3px 0px 3px #ff79da, 3px 4px 6px #99e2d0;
+                font-size: $units * 4;
+                font-family: $font-title;
+                font-weight: 900;
+                z-index: 3;
+                text-align: center;
+                margin-top: $units * 6;
             }
         }
     }

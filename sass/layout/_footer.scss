@@ -13,7 +13,7 @@ height: $units * 16;
     {
         font-family: $font-title;
         font-weight: 200;
-        width: $pourcent * 9;
+        width: $pourcent * 10;
         padding: $units * 1.5;
     }
     &__liste
@@ -25,6 +25,8 @@ height: $units * 16;
         @include mediaq
         {
             @include flex(row, nowrap, center, center);
+            width: $pourcent * 8;
+            margin: auto;
             
         } 
         &__elm

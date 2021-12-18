@@ -22,25 +22,21 @@
 }
 .header__spinner {
   width: 100%;
-  height: 500px;
-  background: #efefef;
-  animation: spinner-bc 1s linear 2s infinite forwards;
+  height: 100%;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  animation: loader 15s ease-in-out 50ms forwards;
 }
-@keyframes spinner-bc {
+@keyframes loader {
   0% {
-    background: linear-gradient(0deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
-  25% {
-    background: linear-gradient(100deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
-  50% {
-    background: linear-gradient(200deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
-  75% {
-    background: linear-gradient(300deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
+    opacity: 1;
   }
   100% {
-    background: linear-gradient(360deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
   }
 }
 .header__spinner__contain {
@@ -49,104 +45,54 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
   height: 100%;
-  gap: 10px;
-  top: 0px;
-  left: 0px;
-  z-index: 1000;
+  margin: auto;
 }
-.header__spinner__contain__bell1 {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.header__spinner__contain__bell {
   font-weight: 900;
-  font-size: small;
-  color: #9356dc;
-  background-color: #99e2d0;
-  border: 2px solid #efefef;
-  border-radius: 50px;
-  width: 80px;
-  height: 80px;
-  transform: rotate(360deg);
+  font-size: 80px;
+  background-color: #000000;
+  border-radius: 150px;
+  width: 270px;
+  height: 270px;
+  margin: auto;
+  position: absolute;
+  z-index: 2;
 }
-@keyframes spinner-ball {
+.header__spinner__contain__bell i {
+  margin-top: 30px;
+  color: #000000;
+  text-shadow: -7px 5px 14px #9356dc, 0px -10px 23px #ff79da, 7px 6px 12px #99e2d0;
+}
+.header__spinner__contain__cercle {
+  background: linear-gradient(100deg, #9256dc80, #ff79da80, #99e2d080);
+  filter: blur(40px);
+  border-radius: 200px;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  animation: turn 1s linear 1s infinite;
+  position: absolute;
+  z-index: 1;
+}
+@keyframes turn {
   0% {
-    background: linear-gradient(0deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
-  25% {
-    background: linear-gradient(100deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
-  50% {
-    background: linear-gradient(200deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
-  75% {
-    background: linear-gradient(300deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
+    transform: rotate(0deg);
   }
   100% {
-    background: linear-gradient(360deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
+    transform: rotate(360deg);
   }
 }
-.header__spinner__contain__ustensils {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.header__spinner__contain span {
+  color: black;
+  text-shadow: 3px 3px #9356dc, 3px 0px 3px #ff79da, 3px 4px 6px #99e2d0;
+  font-size: 40px;
+  font-family: "Shrikhand", arial, sans-serif;
   font-weight: 900;
-  font-size: small;
-  color: #ff79da;
-  background-color: #9356dc;
-  border: 2px solid #efefef;
-  border-radius: 50px;
-  width: 80px;
-  height: 80px;
-  transform: rotate(360deg);
-}
-@keyframes spinner-ball {
-  0% {
-    background: linear-gradient(0deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
-  25% {
-    background: linear-gradient(100deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
-  50% {
-    background: linear-gradient(200deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
-  75% {
-    background: linear-gradient(300deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
-  100% {
-    background: linear-gradient(360deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
-}
-.header__spinner__contain__bell2 {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  font-size: small;
-  color: #99e2d0;
-  background-color: #ff79da;
-  border: 2px solid #efefef;
-  border-radius: 50px;
-  width: 80px;
-  height: 80px;
-  transform: rotate(360deg);
-}
-@keyframes spinner-ball {
-  0% {
-    background: linear-gradient(0deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
-  25% {
-    background: linear-gradient(100deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
-  50% {
-    background: linear-gradient(200deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
-  75% {
-    background: linear-gradient(300deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
-  100% {
-    background: linear-gradient(360deg, #9356dc 8%, #ff79da 50%, #99e2d0 95%);
-  }
+  z-index: 3;
+  text-align: center;
+  margin-top: 60px;
 }
 .header h1 {
   font-family: "Shrikhand", arial, sans-serif;
@@ -234,6 +180,7 @@
 @media screen and (min-width: 768px) {
   .navigation {
     align-items: center;
+    margin-bottom: 50px;
   }
 }
 .navigation__list {
@@ -325,6 +272,11 @@
   width: 100%;
   gap: 10px;
 }
+@media screen and (min-width: 768px) {
+  .principal__conteneur {
+    max-width: 1200px;
+  }
+}
 .principal__conteneur__card {
   display: flex;
   flex-direction: column;
@@ -340,6 +292,14 @@
 }
 .principal__conteneur__card:hover, .principal__conteneur__card :focus {
   box-shadow: 10px 10px 20px #565656;
+}
+@media screen and (min-width: 768px) {
+  .principal__conteneur__card {
+    margin: 60px;
+    padding: 60px;
+    gap: 90px;
+    transform: scale(1.1);
+  }
 }
 .principal__conteneur__card__nouv__text {
   position: absolute;
@@ -420,7 +380,7 @@
 .foo h4 {
   font-family: "Shrikhand", arial, sans-serif;
   font-weight: 200;
-  width: 90%;
+  width: 100%;
   padding: 15px;
 }
 .foo__liste {
@@ -440,6 +400,8 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    margin: auto;
   }
 }
 .foo__liste__elm {
@@ -510,6 +472,11 @@
   justify-content: space-around;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .resto-title {
+    justify-content: center;
+  }
+}
 .resto-title h2 {
   font-family: "Shrikhand", arial, sans-serif;
   font-size: x-large;
@@ -539,6 +506,12 @@
   opacity: 0;
   transition: transform ease 500ms;
   transform: scale(0.1);
+}
+@media screen and (min-width: 768px) {
+  .resto-title__anim {
+    top: 40px;
+    left: 65px;
+  }
 }
 .resto-container {
   display: flex;

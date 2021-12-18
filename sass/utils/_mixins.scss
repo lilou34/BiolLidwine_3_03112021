@@ -1,42 +1,27 @@
 
 
-@mixin spinner-ball ($color: setc(primary), $bc: setc(primary))
+
+@mixin cercle 
 {
-    display: inline-flex;
-    align-items: center;
-    justify-content:center;
-    font-weight: 900;
-    font-size: small;
-    color: $color;
-    background-color: $bc;
-    border: 2px solid setc(bc);
-    border-radius: $units * 5;
-    width: $units * 8;
-    height: $units * 8;
-    transform: rotate(360deg);
-    @keyframes spinner-ball 
+    background: linear-gradient(100deg, #9256dc80, #ff79da80, #99e2d080);
+    filter: blur($units * 4);
+    border-radius: $units * 20;
+    width: $units * 30;
+    height: $units * 30;
+    margin: auto;
+    animation: turn 1s linear 1s infinite;
+    position: absolute;
+    z-index: 1;
+    @keyframes turn 
     {
-        0% 
+        0%
         {
-            background: linear-gradient(0deg, rgba(147,86,220,1) 8%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 95%)
-        }
-        25%
-        {
-            background: linear-gradient(100deg, rgba(147,86,220,1) 8%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 95%)
-        }
-        50%
-        {
-            background: linear-gradient(200deg, rgba(147,86,220,1) 8%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 95%)
-        }
-        75%
-        {
-            background: linear-gradient(300deg, rgba(147,86,220,1) 8%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 95%)
+            transform: rotate(0deg);
         }
         100%
         {
-            background: linear-gradient(360deg, rgba(147,86,220,1) 8%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 95%)
+            transform: rotate(360deg);
         }
-
     }
 }
 
@@ -101,6 +86,7 @@
     object-fit: cover;
     width: $units * 33.6;
     height: $units * 17.4;
+    
 }
 %hearts
 {
@@ -174,6 +160,10 @@
         position: relative;
         height: $units * 6;
         @include flex(row, nowrap, space-around, center);
+        @include mediaq
+        {
+            justify-content: center;
+        }
         h2
         {
             font-family: $font-title;
@@ -183,6 +173,11 @@
         &__anim
         {
             @include heart;
+            @include mediaq
+            {
+                top: $units * 4;
+                left: $units * 6.5;
+            }
         }
     }
     &-container
