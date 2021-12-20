@@ -13,8 +13,14 @@ height: $units * 16;
     {
         font-family: $font-title;
         font-weight: 200;
-        width: $pourcent * 10;
+        width: $pourcent * 8;
+        margin: auto;
         padding: $units * 1.5;
+        @include mediaq
+        {
+            font-size: xx-large
+            
+        } 
     }
     &__liste
     {
