@@ -1,15 +1,12 @@
-
-
-
 @mixin cercle 
 {
     background: linear-gradient(100deg, #9256dc80, #ff79da80, #99e2d080);
     filter: blur($units * 4);
     border-radius: $units * 20;
-    width: $units * 30;
-    height: $units * 30;
+    width: $units * 25;
+    height: $units * 25;
     margin: auto;
-    animation: turn 1s linear 1s infinite;
+    animation: turn 1s linear 0ms infinite;
     position: absolute;
     z-index: 1;
     @keyframes turn 
@@ -31,6 +28,10 @@
     font-size: xx-large;
     font-weight: 500;
     padding-top: $units;
+    @include mediaq
+    {
+        font-size: xx-large;
+    } 
 }
 
 @mixin flex($dir: column, $wrap: wrap, $jc: center, $ai: flex-start)
@@ -45,7 +46,7 @@
 @mixin box-shadow 
 {
     box-shadow: 10px 10px 20px setc(bord20); 
-    &:hover,:focus
+    &:hover
     {
         box-shadow: 10px 10px 20px setc(bord60); 
     }
@@ -58,15 +59,14 @@
     background: $linear;
     font-size: medium;
     border: none;
+    cursor:pointer;
+    @include box-shadow;
     p
     {
         color: setc(footer);
         padding-top: $units * 1.4;
     }
-    cursor:pointer;
-    @include box-shadow;
-    &:hover,
-    :focus
+    &:hover
     {
         filter: brightness(1.2);
     }
@@ -75,18 +75,19 @@
 {
     @include flex(column, wrap, space-around, flex-start);
     border-radius: $units * 1.5;
-    width: auto;
+    width: $pourcent * 9;
+    height: $pourcent * 8;
     background-color: setc(bc);
     @include box-shadow;
     margin-bottom: $pourcent * 0.5;
+    cursor: pointer;
 }
 @mixin card-img 
 {
     border-radius: 15px 15px 0px 0px;
     object-fit: cover;
-    width: $units * 33.6;
-    height: $units * 17.4;
-    
+    width: $pourcent * 10;
+    max-height: $units * 19;
 }
 %hearts
 {
@@ -106,7 +107,7 @@
         -webkit-background-clip: text;
         color: transparent;
         opacity: 1;
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
     .far
     {
@@ -126,11 +127,9 @@
         opacity: 0;
         transition: transform ease 500ms;
         transform: scale(0.1);
-    }
-    
+    } 
 }
     
-
 
 /*média queries, beakpoint*/
 @mixin mediaq 
@@ -201,18 +200,18 @@
     padding-bottom: $units * 2;
     h3
     {
-        margin-bottom: $units;
+        margin-bottom: $units * 2;
         padding-bottom: $units;
         position: relative;
         &::after
         {
-        content: "";
-        position: absolute;
-        left: 0px;
-        bottom: 0.5px;
-        width: $units * 4;
-        height: $units * 0.4;
-        background-color: setc(tertiary);
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: 0.5px;
+            width: $units * 4;
+            height: $units * 0.4;
+            background-color: setc(tertiary);
         }
     }
     &__liste
@@ -261,6 +260,5 @@
                 @include flex(row, nowrap, space-around, center);
             }
         }
-
     }
 }

@@ -1,5 +1,4 @@
-/*header*/
-
+/*header et loader*/
 .header
 {
     @include flex(column, nowrap, center, center);
@@ -15,20 +14,51 @@
         position: absolute;
         top: 0;
         z-index: 1;
-        animation: loader 15s ease-in-out 50ms forwards;
+        animation: loader 3s ease-in-out 1s forwards;
         @keyframes loader 
         {
             0%
             {
                 opacity: 1;
             }
+            80%
+            {
+                opacity: 0.9;
+                transform: rotate(0deg);
+            }
+            81%
+            {
+                opacity: 0.8;
+                transform: rotate(30deg);
+            }
+            83%
+            {
+                opacity: 0.7;
+                transform: rotate(50deg);
+            }
+            85%
+            {
+                opacity: 0.6;
+                transform: rotate(100deg);
+            }
+            90%
+            {
+                opacity: 0.5;
+                transform: rotate(160deg);
+            }
+            95%
+            {
+                opacity: 0.4;
+                transform: rotate(300deg);
+            }
             100%
             {
                 opacity: 0;
-                visibility: hidden;
+                transform: rotate(360deg);
                 transform: scale(0)
             }
         }
+        
         &__contain
         {
             @include flex(column, nowrap, center, center);
@@ -41,8 +71,8 @@
                 font-size: $units * 8;
                 background-color: setc(body);
                 border-radius: $units * 15;
-                width: $units * 27;
-                height: $units * 27;
+                width: $units * 25;
+                height: $units * 25;
                 margin: auto; 
                 position: absolute;
                 z-index: 2;
@@ -99,6 +129,15 @@
                 margin-left: $units;
                 background-color: setc(bc);
                 font-family: $font-primary;
+                &:focus::placeholder
+                {
+                    color: setc(footer);
+                    
+                }
+                @include mediaq
+                {
+                    font-size: large;
+                } 
             } 
     }
     &__presentation
