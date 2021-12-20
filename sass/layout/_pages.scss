@@ -23,7 +23,6 @@
         {
             top: $units * 3.9;
         }
- 
     }
 }
 .menu
@@ -31,9 +30,9 @@
     @include menu;
 }
 .button
-    {
-        @include button;
-        background-color: setc(bc);
-        margin: 0 auto;
-        text-align: center;
-    }
+{
+    @include button;
+    background-color: setc(bc);
+    margin: 70px auto;
+    text-align: center;
+}
