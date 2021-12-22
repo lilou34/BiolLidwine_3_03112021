@@ -16,19 +16,174 @@
 }
 .resto
 {
-    @include page;
+    font-family: $font-primary;
+    background-color: setc(bc);
+    padding-bottom: $units * 4;
+    &-image
+    {
+        object-fit: cover;
+        width: $pourcent * 10;
+        height: $units * 25;
+    }
     &-title
     {
+        border-top-left-radius: $units * 2.5;
+        border-top-right-radius: $units * 2.5;
+        background-color: setc(bc);
+        margin-top: -$units * 2.5;
+        position: relative;
+        height: $units * 6;
+        @include flex(row, nowrap, space-around, center);
+        @include mediaq
+        {
+            justify-content: center;
+        }
+        h2
+        {
+            font-family: $font-title;
+            font-size: x-large;
+            font-weight: 700;
+        }
         &__anim
         {
-            top: $units * 3.9;
+            @include heart;
+            top: $units * 4;
+            @include mediaq
+            {
+            
+            left: $units * 6;
+            }
         }
     }
+    &-container
+    {
+        @include flex(column, nowrap, space-around, stretch);
+        width: $pourcent * 10;
+        background-color: setc(bc);
+        @include mediaq
+        {
+            @include flex(row, wrap, space-evenly, stretch);
+        }
+    }
+    
 }
 .menu
 {
-    @include menu;
-}
+    align-items: flex-start;
+    margin-left: $units * 1.5;
+    padding-top: $units * 2;
+    padding-bottom: $units * 2;
+    opacity: 0;
+    
+    h3
+    {
+        margin-bottom: $units * 2;
+        padding-bottom: $units;
+        position: relative;
+        &::after
+        {
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: 0.5px;
+            width: $units * 4;
+            height: $units * 0.4;
+            background-color: setc(tertiary);
+        }
+    }
+    &__liste
+    {
+        @include flex(column, nowrap, center, center);
+        gap: $units;
+        width: $pourcent * 9.4;
+        &__item
+        {
+            width: $units * 35;
+            height: $units * 7;
+            margin: auto;
+            background-color: setc(footer);
+            border-radius: $units * 1.5;
+            @include flex(row, nowrap, center, center);
+            &:hover 
+            {
+                
+                div
+                {
+                    animation: check 2s ease-in-out 0s 1 alternate both;           
+                }               
+                i
+                {
+                    animation: check 2s ease-in-out 0s 1 alternate both;           
+                }
+                
+                
+            }
+            
+            &__texte
+            {
+                width: $pourcent * 10;
+                position: relative;  
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding-left: $units * 1.5;
+                @include flex(column, nowrap, center, flex-start);
+                &__txp
+                {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: $pourcent * 10;
+                    font-weight: 900;
+                }
+                &__txo
+                {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: $pourcent * 10;
+                }
+                
+            }
+            &__anim
+            {
+            @include flex(row, nowrap, space-evenly, center);
+            b
+            {
+                font-weight: 500;
+            }
+                &__circle
+                {
+                    background-color: setc(tertiary);
+                    width: $units * 5;
+                    height: $units * 7;
+                    border-radius: 0px 15px 15px 0px;
+                    @include flex(row, nowrap, space-around, center);
+                
+                    i
+                    {
+                        opacity: 0;
+                        color: setc(footer);
+                        vertical-align: middle;
+                    }
+                }
+            } 
+        }
+    }
+    
+}  
+.menu1
+{
+animation: slow 1000ms linear 0ms forwards 1 normal;
+} 
+.menu2
+{
+animation: slow 1000ms linear 1000ms forwards 1 normal;
+} 
+.menu3
+{
+animation: slow 1000ms linear 2000ms forwards 1 normal;
+}  
 .button
 {
     @include button;
