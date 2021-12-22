@@ -1,27 +1,3 @@
-@mixin cercle 
-{
-    background: linear-gradient(100deg, #9256dc80, #ff79da80, #99e2d080);
-    filter: blur($units * 4);
-    border-radius: $units * 20;
-    width: $units * 25;
-    height: $units * 25;
-    margin: auto;
-    animation: turn 1s linear 0ms infinite;
-    position: absolute;
-    z-index: 1;
-    @keyframes turn 
-    {
-        0%
-        {
-            transform: rotate(0deg);
-        }
-        100%
-        {
-            transform: rotate(360deg);
-        }
-    }
-}
-
 @mixin header-logo
 {
     font-family: $font-title;
@@ -82,18 +58,12 @@
     margin-bottom: $pourcent * 0.5;
     cursor: pointer;
 }
-@mixin card-img 
-{
-    border-radius: 15px 15px 0px 0px;
-    object-fit: cover;
-    width: $pourcent * 10;
-    max-height: $units * 19;
-}
+
 %hearts
 {
     width: $units * 3;
     right: $units;
-    top: -$units * 5.5;
+    bottom: $units * 1;
     font-size: $units * 3;
     position: absolute;
 }
@@ -129,7 +99,7 @@
         transform: scale(0.1);
     } 
 }
-    
+
 
 /*média queries, beakpoint*/
 @mixin mediaq 
@@ -139,126 +109,4 @@
         @content;
     }
 }
-@mixin page
-{
-    font-family: $font-primary;
-    background-color: setc(bc);
-    padding-bottom: $units * 4;
-    &-image
-    {
-        object-fit: cover;
-        width: $pourcent * 10;
-        height: $units * 25;
-    }
-    &-title
-    {
-        border-top-left-radius: $units * 2.5;
-        border-top-right-radius: $units * 2.5;
-        background-color: setc(bc);
-        margin-top: -$units * 2.5;
-        position: relative;
-        height: $units * 6;
-        @include flex(row, nowrap, space-around, center);
-        @include mediaq
-        {
-            justify-content: center;
-        }
-        h2
-        {
-            font-family: $font-title;
-            font-size: x-large;
-            font-weight: 700;
-        }
-        &__anim
-        {
-            @include heart;
-            @include mediaq
-            {
-                top: $units * 4;
-                left: $units * 6.5;
-            }
-        }
-    }
-    &-container
-    {
-        @include flex(column, nowrap, space-around, stretch);
-        width: $pourcent * 10;
-        background-color: setc(bc);
-        @include mediaq
-        {
-            @include flex(row, wrap, space-evenly, stretch);
-        }
-    }
-    
-    
-}
-@mixin menu 
-{
-    align-items: flex-start;
-    margin-left: $units * 1.5;
-    padding-top: $units * 2;
-    padding-bottom: $units * 2;
-    h3
-    {
-        margin-bottom: $units * 2;
-        padding-bottom: $units;
-        position: relative;
-        &::after
-        {
-            content: "";
-            position: absolute;
-            left: 0px;
-            bottom: 0.5px;
-            width: $units * 4;
-            height: $units * 0.4;
-            background-color: setc(tertiary);
-        }
-    }
-    &__liste
-    {
-        @include flex(column, nowrap, center, center);
-        gap: $units;
-        width: $pourcent * 9.4;
-        &__item
-        {
-            width: $pourcent * 9;
-            margin: auto;
-            background-color: setc(footer);
-            border-radius: $units;
-            padding: $units * 1.5;
-            @include flex(row, nowrap, space-between, center);
-            &__texte
-            {
-                width: $pourcent * 10;
-                position: relative;  
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                @include flex(column, nowrap, center, flex-start);
-                &__txp
-                {
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    width: $pourcent * 10;
-                }
-                &__txo
-                {
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    width: $pourcent * 10;
-                }
-                b
-                {
-                    font-weight: 500;
-                    padding: $units * 0.5;
-                }
-            }
-            &__anim
-            {
-                @include flex(row, nowrap, space-around, center);
-            }
-        }
-    }
-}
+

@@ -1,3 +1,4 @@
+
 /*header et loader*/
 .header
 {
@@ -14,51 +15,8 @@
         position: absolute;
         top: 0;
         z-index: 1;
-        animation: loader 3s ease-in-out 1s forwards;
-        @keyframes loader 
-        {
-            0%
-            {
-                opacity: 1;
-            }
-            80%
-            {
-                opacity: 0.9;
-                transform: rotate(0deg);
-            }
-            81%
-            {
-                opacity: 0.8;
-                transform: rotate(30deg);
-            }
-            83%
-            {
-                opacity: 0.7;
-                transform: rotate(50deg);
-            }
-            85%
-            {
-                opacity: 0.6;
-                transform: rotate(100deg);
-            }
-            90%
-            {
-                opacity: 0.5;
-                transform: rotate(160deg);
-            }
-            95%
-            {
-                opacity: 0.4;
-                transform: rotate(300deg);
-            }
-            100%
-            {
-                opacity: 0;
-                transform: rotate(360deg);
-                transform: scale(0)
-            }
-        }
-        
+        animation: loader 3500ms ease-in-out 100ms forwards;
+
         &__contain
         {
             @include flex(column, nowrap, center, center);
@@ -73,25 +31,38 @@
                 border-radius: $units * 15;
                 width: $units * 25;
                 height: $units * 25;
-                margin: auto; 
                 position: absolute;
                 z-index: 2;
-                i
-                {
-                    margin-top: $units * 3;
-                    color: setc(body);
-                    text-shadow: -7px 5px 14px #9356dc, 0px -10px 23px #ff79da, 7px 6px 12px #99e2d0;
-                }
+                color: setc(body);
+                text-shadow: -1px 5px 5px #9356dc, 0px -2px 5px #ff79da, 1px 10px 5px #99e2d0;
             }
             &__cercle
             {
-                @include cercle;
+                background: linear-gradient(100deg, #9256dc, #ff79da, #99e2d0);
+                border-radius: $units * 20;
+                width: $units * 25.5;
+                height: $units * 24.1;
+                margin: auto;
+                animation: turn 1s linear 0ms infinite;
+                position: absolute;
+                z-index: 1;
+                @keyframes turn 
+                {
+                    0%
+                    {
+                        transform: rotate(0deg);
+                    }
+                    100%
+                    {
+                        transform: rotate(360deg);
+                    }
+                }
             }
             span
             {
                 color: black;
                 text-shadow:  3px 3px #9356dc, 3px 0px 3px #ff79da, 3px 4px 6px #99e2d0;
-                font-size: $units * 4;
+                font-size: $units * 3.5;
                 font-family: $font-title;
                 font-weight: 900;
                 z-index: 3;
@@ -104,7 +75,6 @@
     {
         @include header-logo;
     }
-
     &__search
     {
     @include flex(row, nowrap, center, center);
