@@ -147,7 +147,10 @@ a
         }
         &__img
         {
-            @include card-img;
+            border-radius: 15px 15px 0px 0px;
+            object-fit: cover;
+            width: $pourcent * 10;
+            max-height: $units * 19;
         }
         &__text
         {
