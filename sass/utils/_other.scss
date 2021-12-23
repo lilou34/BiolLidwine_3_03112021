@@ -50,34 +50,22 @@
     }
 }
 @keyframes slow
-        {
-            0%
-            {
-                
-                opacity: 0;
-                transform: translatey(50%);
-            }
-            50%
-            {
-                opacity: 0.5;
-                transform: translatey(20%);
-            }
-            100%
-            {
-                opacity: 1;
-            }
-        } 
-@keyframes check 
 {
     0%
-    {  
+    {
+        
         opacity: 0;
-        translateX: 50px;
+        transform: translatey(50%);
+    }
+    50%
+    {
+        opacity: 0.5;
+        transform: translatey(20%);
     }
     100%
     {
         opacity: 1;
-        translateX: 10px;
     }
-}
+} 
+
  
