@@ -99,7 +99,37 @@
         transform: scale(0.1);
     } 
 }
-
+@mixin hover 
+{
+#cercle
+{
+    width: $units * 5;
+    height: $units * 7;
+    
+}
+& i
+{
+    color: white;
+    vertical-align: middle;
+    animation: icone 500ms ease normal both;
+    
+}
+@keyframes icone 
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+    
+}       
+        
+    
+    
+}
 
 /*média queries, beakpoint*/
 @mixin mediaq 

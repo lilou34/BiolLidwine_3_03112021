@@ -74,7 +74,6 @@
     padding-top: $units * 2;
     padding-bottom: $units * 2;
     opacity: 0;
-    
     h3
     {
         margin-bottom: $units * 2;
@@ -104,21 +103,26 @@
             background-color: setc(footer);
             border-radius: $units * 1.5;
             @include flex(row, nowrap, center, center);
-            &:hover 
+            @include box-shadow;
+            &:hover
             {
                 
-                div
-                {
-                    animation: check 2s ease-in-out 0s 1 alternate both;           
-                }               
-                i
-                {
-                    animation: check 2s ease-in-out 0s 1 alternate both;           
-                }
                 
-                
+                @include hover;
+        
             }
-            
+            /*&:hover .anim__circle
+            {
+                width: $units * 5;
+                height: $units * 7;
+            }
+            &:hover .anim__circle i
+            {
+                color: white;
+                rotate: 360deg;
+
+            }
+            */
             &__texte
             {
                 width: $pourcent * 10;
@@ -151,27 +155,32 @@
             b
             {
                 font-weight: 500;
+                margin-right: $units;
             }
                 &__circle
                 {
+                    
+                    width: $units * 0;
+                    height: $units * 0;
+                    border-radius: 0px 15px 15px 0px;
                     background-color: setc(tertiary);
+                    @include flex(row, nowrap, space-around, center);
+                    &:hover
+                    {
                     width: $units * 5;
                     height: $units * 7;
-                    border-radius: 0px 15px 15px 0px;
-                    @include flex(row, nowrap, space-around, center);
-                
+                    }
                     i
                     {
-                        opacity: 0;
-                        color: setc(footer);
-                        vertical-align: middle;
+                        color: transparent;
+                        
                     }
                 }
             } 
         }
     }
     
-}  
+} 
 .menu1
 {
 animation: slow 1000ms linear 0ms forwards 1 normal;
