@@ -75,7 +75,12 @@
     padding-bottom: $units * 2;
     opacity: 0;
     max-width: 100%;
-    width: $pourcent * 10;
+    @include mediaq
+        {
+            width: $pourcent * 3;
+            min-width: $units * 32;
+        }
+  
     h3
     {
         margin-bottom: $units * 2;
