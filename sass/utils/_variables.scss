@@ -1,5 +1,7 @@
+//fonts
 $font-primary: 'Roboto', arial, sans-serif;
 $font-title: 'Shrikhand', arial, sans-serif;
+
 //color
 $colors: 
 (
@@ -18,17 +20,16 @@ $bord10: darken(#efefef, 10%);
 $bord20: darken(#efefef, 20%);
 $bord60: darken(#efefef, 60%);
 $linear: -webkit-linear-gradient(#9356dc,#ff79da);
+$linear2: -webkit-linear-gradient(30deg,#ff79d9, #9356dc 80%);
 $linear3: -webkit-linear-gradient(#9356dc,#ff79da, #99e2d0);
 //units
 $units: 10px;
 $pourcent: 10%;
 
-// width and média-queries
-$width: 375px;
-
 //margin, padding
 $margin: 15px;
 //media queries
 $breakpoints: (
+  
   desktop: 768px
 );
