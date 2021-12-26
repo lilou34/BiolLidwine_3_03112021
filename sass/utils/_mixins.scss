@@ -44,7 +44,7 @@
     }
     &:hover
     {
-        filter: brightness(1.2);
+        animation: button 1s ease forwards;
     }
 }
 @mixin card($background-color: setc(footer))
@@ -99,37 +99,38 @@
         transform: scale(0.1);
     } 
 }
-@mixin hover 
+@mixin hover
 {
-#cercle
-{
-    width: $units * 5;
-    height: $units * 7;
+    .menu
+    {
+        &__liste
+        {
+            &__item
+            {
+                &__anim
+                {
+                    animation: check 450ms ease-in-out alternate forwards;
+                    &__circle
+                    {
+                        i
+                        {
+                            color: white;
+                            vertical-align: middle;
+                            animation: turn 700ms ease-in-out alternate forwards;
+                        }
+                    }
+            
+                }
+            }
+        }
+    }
     
 }
-& i
-{
-    color: white;
-    vertical-align: middle;
-    animation: icone 500ms ease normal both;
-    
-}
-@keyframes icone 
-{
-    0%
-    {
-        transform: rotate(0deg);
-    }
-    100%
-    {
-        transform: rotate(360deg);
-    }
-    
-}       
+
+
+
         
-    
-    
-}
+
 
 /*média queries, beakpoint*/
 @mixin mediaq 

@@ -1,46 +1,39 @@
-body
-{
-    font-family:$font-primary;
-}
-*, *:before, *:after 
-{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
 
-input:focus,
-select:focus,
-textarea:focus,
-button:focus,
-a
-{
-    outline: none;
-    text-decoration: none;
-    color: setc(body);
-    cursor: pointer;
-}
+main
+
 .navigation
 {
     @include flex(column, nowrap, center, flex-start);
-    padding-top: $units * 5.5;
-    margin-left: $units * 1.5;
+    width: $pourcent * 9;
+    padding: 55px 0px 40px 0px;
     font-weight: bold;
     font-size: $units * 2.4;
     font-family: $font-primary;
+    animation: display 3000ms ease;
     @include mediaq
         {
             align-items: center;
             margin-bottom: $units * 5;
         }
+    h3
+    {
+        font-size: x-large;
+        padding-left: 15px;
+    }
     &__list
     {
         gap: $units * 1.5;
-        @include flex(row, wrap, space-evenly, center);
-        width: 100%;
+        @include flex(row, wrap, space-around, center);
+        width: $pourcent * 10;
+        margin-left: $units * 1;
+        
+        @include mediaq
+        {
+            flex-direction: row;
+            justify-content: space-around;
+            gap: $units * 3;
+        
+        }
         &__elm
         {
             @include flex(row, nowrap, flex-start, center);
@@ -48,12 +41,13 @@ a
             border-radius: $units * 2;
             margin-top: $units * 2;
             gap: $units * 2;
-            width: auto;
-            min-width: $units * 25;
+            width: $pourcent * 10;
+            min-width: $units * 30;
             height: $units * 7.5;
+            padding-right: $units;
             background-color: setc(bc);
             font-size: medium;
-            padding-right: 20px;
+            
             &:hover
             {
                 background-color: $lightp;
@@ -96,6 +90,7 @@ a
     margin-top: $units * 2;
     width: $pourcent * 10;
     padding-bottom: $units * 2;
+    animation: display 3000ms ease;
     &__title
     {
         align-self: start;

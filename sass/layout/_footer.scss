@@ -1,9 +1,11 @@
 .foo
 {
-background-color: setc(body);
-color: setc(footer);
-height: $units * 16;
-@include mediaq
+    
+    @include flex(column, nowrap, flex-start, flex-start);background-color: setc(body);
+    color: setc(footer);
+    height: 100%;
+    animation: display 3000ms ease;
+    @include mediaq
     {
         text-align: center;
         font-size: x-large;
@@ -14,11 +16,10 @@ height: $units * 16;
         font-family: $font-title;
         font-weight: 200;
         width: $pourcent * 8;
-        margin: auto;
         padding: $units * 1.5;
         @include mediaq
         {
-            font-size: xx-large
+            font-size: xx-large;
             
         } 
     }
@@ -26,13 +27,14 @@ height: $units * 16;
     {
         @include flex(column, nowrap, space-around, flex-start);
         gap: $units;
-        padding: 0px 5px 5px 15px;
+        padding: 0px 5px 25px 15px;
         list-style-type: none;
         @include mediaq
         {
             @include flex(row, nowrap, center, center);
             width: $pourcent * 8;
             margin: auto;
+            padding-bottom: $units * 4;
             
         } 
         &__elm
@@ -53,10 +55,7 @@ height: $units * 16;
             &__contain
                 {
                     @include flex(row, nowrap, flex-start, center);
-                    &__fas
-                    {
-                        font-weight: 100;
-                    }
+
                     &__text
                     {
                         margin-left: $units;

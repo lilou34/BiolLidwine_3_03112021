@@ -57,8 +57,9 @@
     }
     &-container
     {
-        @include flex(column, nowrap, space-around, stretch);
-        width: $pourcent * 10;
+        @include flex(column, nowrap, space-around, flex-start);
+        width: $pourcent * 9.5;
+        margin: auto;
         background-color: setc(bc);
         @include mediaq
         {
@@ -70,10 +71,11 @@
 .menu
 {
     align-items: flex-start;
-    margin-left: $units * 1.5;
     padding-top: $units * 2;
     padding-bottom: $units * 2;
     opacity: 0;
+    max-width: 100%;
+    width: $pourcent * 10;
     h3
     {
         margin-bottom: $units * 2;
@@ -94,43 +96,30 @@
     {
         @include flex(column, nowrap, center, center);
         gap: $units;
-        width: $pourcent * 9.4;
+        max-width: $units * 35;
         &__item
         {
-            width: $units * 35;
+            max-width: $units * 35;
+            width: $pourcent * 10;
             height: $units * 7;
             margin: auto;
             background-color: setc(footer);
             border-radius: $units * 1.5;
-            @include flex(row, nowrap, center, center);
+            @include flex(row, nowrap, space-around, center);
             @include box-shadow;
+            overflow: hidden;
             &:hover
-            {
-                
-                
+            { 
                 @include hover;
+            }
         
-            }
-            /*&:hover .anim__circle
-            {
-                width: $units * 5;
-                height: $units * 7;
-            }
-            &:hover .anim__circle i
-            {
-                color: white;
-                rotate: 360deg;
-
-            }
-            */
             &__texte
             {
-                width: $pourcent * 10;
-                position: relative;  
+                width: $pourcent * 8; 
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                padding-left: $units * 1.5;
+                padding: $units;
                 @include flex(column, nowrap, center, flex-start);
                 &__txp
                 {
@@ -146,34 +135,32 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                     width: $pourcent * 10;
-                }
-                
+                }  
             }
             &__anim
             {
             @include flex(row, nowrap, space-evenly, center);
+            
             b
             {
                 font-weight: 500;
-                margin-right: $units;
+                margin-left: $units * 1.5;
+                position: relative;
+                right: -34px;
             }
                 &__circle
                 {
-                    
-                    width: $units * 0;
-                    height: $units * 0;
+                    width: $units * 4;
+                    height: $units * 7;
                     border-radius: 0px 15px 15px 0px;
                     background-color: setc(tertiary);
+                    position: relative;
+                    right: -48px;
                     @include flex(row, nowrap, space-around, center);
-                    &:hover
-                    {
-                    width: $units * 5;
-                    height: $units * 7;
-                    }
                     i
                     {
                         color: transparent;
-                        
+                        font-size: $units * 2;
                     }
                 }
             } 
