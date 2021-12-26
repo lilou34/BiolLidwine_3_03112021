@@ -688,7 +688,12 @@ main .navigation__list__elm__p {
   padding-bottom: 20px;
   opacity: 0;
   max-width: 100%;
-  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 30%;
+    min-width: 320px;
+  }
 }
 .menu h3 {
   margin-bottom: 20px;
