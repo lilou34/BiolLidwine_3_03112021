@@ -9,7 +9,7 @@ main
     font-weight: bold;
     font-size: $units * 2.4;
     font-family: $font-primary;
-    animation: display 3000ms ease;
+    animation: display 3000ms ease 0s normal both;
     @include mediaq
         {
             align-items: center;
@@ -90,7 +90,7 @@ main
     margin-top: $units * 2;
     width: $pourcent * 10;
     padding-bottom: $units * 2;
-    animation: display 3000ms ease;
+    animation: display 3000ms ease 0s normal both;
     &__title
     {
         align-self: start;
