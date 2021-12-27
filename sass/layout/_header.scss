@@ -3,6 +3,7 @@ body
 {
     font-family:$font-primary;
     position: relative;
+    
 }
 *, *:before, *:after 
 {
@@ -25,6 +26,8 @@ a
     color: setc(body);
     cursor: pointer;
 }
+
+
 /*header et loader*/
 .header
 {
@@ -99,7 +102,7 @@ a
     h1
     {
         @include header-logo;  
-        animation: display 3000ms ease 0s normal both;
+        animation: display 3300ms ease-out 0s normal both;
 
     }
     /*barre localisation et recherche ville*/
@@ -111,7 +114,7 @@ a
     background-color: setc(bc);
     margin-top: $units * 2;
     border-top: 2px solid setc(bord10);
-    animation: display 3000ms ease 0s normal both;
+    animation: display 3300ms ease-out 0s normal both;
         &__icon
             {
                 display: inline-flex;
@@ -142,7 +145,7 @@ a
     {
         text-align: center;
         margin-top: $units * 3.5;
-        animation: display 3000ms ease 0s normal both;
+        animation: display 3300ms ease-out 0s normal both;
         &__title
         {
             font-size: $units * 2.4;
@@ -158,7 +161,7 @@ a
     &__button
     {
         margin-top: $units * 2.5;
-        animation: display 3000ms ease 0s normal both;
+        animation: display 3300ms ease-out 0s normal both;
        &__style
        {
         @include button;

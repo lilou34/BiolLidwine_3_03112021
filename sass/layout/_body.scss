@@ -1,6 +1,7 @@
-
-main
-
+#main-display
+{
+    animation: display 3300ms ease-out 0s normal both;
+}
 .navigation
 {
     @include flex(column, nowrap, center, flex-start);
@@ -9,11 +10,11 @@ main
     font-weight: bold;
     font-size: $units * 2.4;
     font-family: $font-primary;
-    animation: display 3000ms ease 0s normal both;
     @include mediaq
         {
             align-items: center;
             margin-bottom: $units * 5;
+            width: $pourcent * 10;
         }
     h3
     {
@@ -90,7 +91,6 @@ main
     margin-top: $units * 2;
     width: $pourcent * 10;
     padding-bottom: $units * 2;
-    animation: display 3000ms ease 0s normal both;
     &__title
     {
         align-self: start;

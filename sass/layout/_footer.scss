@@ -1,10 +1,12 @@
+#foo-display
+{
+    animation: display 3400ms ease-out 0s normal both;
+}
 .foo
 {
-    
     @include flex(column, nowrap, flex-start, flex-start);background-color: setc(body);
     color: setc(footer);
     height: 100%;
-    animation: display 3000ms ease 0s normal both;
     @include mediaq
     {
         text-align: center;
@@ -15,12 +17,12 @@
     {
         font-family: $font-title;
         font-weight: 200;
-        width: $pourcent * 8;
+        width: $pourcent * 9;
         padding: $units * 1.5;
         @include mediaq
         {
-            font-size: xx-large;
-            
+            font-size: xx-large; 
+            width: $pourcent * 9.7;
         } 
     }
     &__liste
@@ -35,7 +37,6 @@
             width: $pourcent * 8;
             margin: auto;
             padding-bottom: $units * 4;
-            
         } 
         &__elm
         {
@@ -55,7 +56,6 @@
             &__contain
                 {
                     @include flex(row, nowrap, flex-start, center);
-
                     &__text
                     {
                         margin-left: $units;
