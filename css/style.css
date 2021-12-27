@@ -734,6 +734,7 @@ a {
   align-items: center;
   box-shadow: 10px 10px 20px #bcbcbc;
   overflow: hidden;
+  cursor: pointer;
 }
 .menu__liste__item:hover {
   box-shadow: 10px 10px 20px #565656;
@@ -744,7 +745,7 @@ a {
 .menu__liste__item:hover .menu__liste__item__anim__circle i {
   color: white;
   vertical-align: middle;
-  animation: turn 700ms ease-in-out alternate forwards;
+  animation: turn 700ms ease-in-out alternate-reverse forwards;
 }
 .menu__liste__item__texte {
   max-width: 80%;

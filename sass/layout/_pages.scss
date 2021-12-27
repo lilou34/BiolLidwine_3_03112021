@@ -112,11 +112,11 @@
             @include flex(row, nowrap, space-around, center);
             @include box-shadow;
             overflow: hidden;
+            cursor: pointer;
             &:hover
             { 
                 @include hover;
             }
-        
             &__texte
             {
                 max-width: $pourcent * 8;
