@@ -1,6 +1,6 @@
 #main-display
 {
-    animation: display 3300ms ease-out 0s normal both;
+    animation: display 400ms ease-out 3000ms normal both;
 }
 .navigation
 {
@@ -27,13 +27,11 @@
         @include flex(row, wrap, space-around, center);
         width: $pourcent * 10;
         margin-left: $units * 1;
-        
         @include mediaq
         {
             flex-direction: row;
             justify-content: space-around;
             gap: $units * 3;
-        
         }
         &__elm
         {
@@ -48,7 +46,6 @@
             padding-right: $units;
             background-color: setc(bc);
             font-size: medium;
-            
             &:hover
             {
                 background-color: $lightp;
@@ -110,57 +107,54 @@
         gap: $units;
         @include mediaq
         {
-            max-width: 1200px;
             justify-content: space-evenly
         }
         &__card
         { 
-        @include card;
-        position:relative;
-        @include mediaq
-        {
-            width: $pourcent * 4.5;
-            border: 1px solid setc(bord20);
-        }
-        &--nouv
-        {
-            position: absolute;
-            font-weight: bold;
-            top: $units;
-            right: $units;
-            width: $units * 7;
-            height: $units * 3;
-            text-align: center;
-            line-height: $units * 2.7;
-            background-color: setc(tertiary);
-            color: darken($color: setc(tertiary), $amount: 40);
-            font-size: small;
-        } 
-        a
-        {
-            width:  $pourcent * 10;
-        }
-        &__img
-        {
-            border-radius: 15px 15px 0px 0px;
-            object-fit: cover;
-            width: $pourcent * 10;
-            max-height: $units * 19;
-        }
-        &__text
-        {
-            height: $pourcent * 2;
-            margin: $units * 1.5;
-            gap: $units;
-            @include flex(column, nowrap, center, stretch);
-            position: relative;
-            &__anim
+            @include card;
+            position:relative;
+            @include mediaq
             {
-                @include heart;
+                width: $pourcent * 4.5;
+                border: 1px solid setc(bord20);
             }
-
-        } 
+            &--nouv
+            {
+                position: absolute;
+                font-weight: bold;
+                top: $units;
+                right: $units;
+                width: $units * 7;
+                height: $units * 3;
+                text-align: center;
+                line-height: $units * 2.7;
+                background-color: setc(tertiary);
+                color: darken($color: setc(tertiary), $amount: 40);
+                font-size: small;
+            } 
+            a
+            {
+                width:  $pourcent * 10;
+            }
+            &__img
+            {
+                border-radius: 15px 15px 0px 0px;
+                object-fit: cover;
+                width: $pourcent * 10;
+                max-height: $units * 19;
+            }
+            &__text
+            {
+                height: $pourcent * 2;
+                margin: $units * 1.5;
+                gap: $units;
+                @include flex(column, nowrap, center, stretch);
+                position: relative;
+                &__anim
+                {
+                    @include heart;
+                }
+            } 
         }
-    }   
-        
+    }        
  }

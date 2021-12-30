@@ -45,22 +45,34 @@
     overflow: hidden;
     height: 5px;
     opacity: 0;
+    transform: scale(0);
   }
   80% {
     overflow: hidden;
     height: 5px;
-    opacity: 0.5;
+    opacity: 0;
+    transform: scale(0);
   }
   90% {
     overflow: hidden;
     height: 5px;
-    opacity: 0.7;
+    opacity: 0;
+    transform: scale(0);
+  }
+  95% {
+    overflow: hidden;
+    height: 500px;
+    opacity: 0.2;
+    transform: scale(0.2);
   }
   100% {
     overflow: visible;
     opacity: 1;
+    height: 100%;
+    transform: scale(1);
   }
 }
+/*animation button*/
 @keyframes button {
   0% {
     background: -webkit-linear-gradient(#9356dc, #ff79da);
@@ -106,6 +118,8 @@
 body {
   font-family: "Roboto", arial, sans-serif;
   position: relative;
+  max-width: 1400px;
+  margin: auto;
 }
 
 *, *:before, *:after {
@@ -205,7 +219,7 @@ a {
   font-size: xx-large;
   font-weight: 500;
   padding-top: 10px;
-  animation: display 3300ms ease-out 0s normal both;
+  animation: display 400ms ease-out 3000ms normal both;
 }
 @media screen and (min-width: 768px) {
   .header h1 {
@@ -223,7 +237,7 @@ a {
   background-color: #efefef;
   margin-top: 20px;
   border-top: 2px solid #d6d6d6;
-  animation: display 3300ms ease-out 0s normal both;
+  animation: display 400ms ease-out 3000ms normal both;
 }
 .header__search__icon {
   display: inline-flex;
@@ -251,7 +265,7 @@ a {
 .header__presentation {
   text-align: center;
   margin-top: 35px;
-  animation: display 3300ms ease-out 0s normal both;
+  animation: display 400ms ease-out 3000ms normal both;
 }
 .header__presentation__title {
   font-size: 24px;
@@ -264,7 +278,7 @@ a {
 }
 .header__button {
   margin-top: 25px;
-  animation: display 3300ms ease-out 0s normal both;
+  animation: display 400ms ease-out 3000ms normal both;
 }
 .header__button__style {
   width: 218px;
@@ -288,7 +302,7 @@ a {
 }
 
 #main-display {
-  animation: display 3300ms ease-out 0s normal both;
+  animation: display 400ms ease-out 3000ms normal both;
 }
 
 .navigation {
@@ -413,7 +427,6 @@ a {
 }
 @media screen and (min-width: 768px) {
   .principal__conteneur {
-    max-width: 1200px;
     justify-content: space-evenly;
   }
 }
@@ -501,7 +514,7 @@ a {
 }
 
 #foo-display {
-  animation: display 3400ms ease-out 0s normal both;
+  animation: display 400ms ease-out 3000ms normal both;
 }
 
 .foo {
@@ -748,8 +761,7 @@ a {
   animation: turn 700ms ease-in-out alternate-reverse forwards;
 }
 .menu__liste__item__texte {
-  max-width: 80%;
-  width: 190px;
+  width: 80%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

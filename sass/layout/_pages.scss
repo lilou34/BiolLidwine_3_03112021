@@ -50,8 +50,7 @@
             top: $units * 4;
             @include mediaq
             {
-            
-            left: $units * 6;
+                left: $units * 6;
             }
         }
     }
@@ -119,8 +118,8 @@
             }
             &__texte
             {
-                max-width: $pourcent * 8;
-                width: $units * 19; 
+                
+                width: $pourcent * 8; 
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -146,34 +145,33 @@
             }
             &__anim
             {
-            @include flex(row, nowrap, space-evenly, center);
-            
-            b
-            {
-                font-weight: 500;
-                margin-left: $units * 1.5;
-                position: relative;
-                right: -34px;
-            }
-                &__circle
+                @include flex(row, nowrap, space-evenly, center);
+                b
                 {
-                    width: $units * 4;
-                    height: $units * 7;
-                    border-radius: 0px 15px 15px 0px;
-                    background-color: setc(tertiary);
+                    font-weight: 500;
+                    margin-left: $units * 1.5;
                     position: relative;
-                    right: -54px;
-                    @include flex(row, nowrap, space-around, center);
-                    @include mediaq
-                    {
-                        right: -60px; 
-                    }
-                    i
-                    {
-                        color: transparent;
-                        font-size: $units * 2;
-                    }
+                    right: -34px;
                 }
+                    &__circle
+                    {
+                        width: $units * 4;
+                        height: $units * 7;
+                        border-radius: 0px 15px 15px 0px;
+                        background-color: setc(tertiary);
+                        position: relative;
+                        right: -54px;
+                        @include flex(row, nowrap, space-around, center);
+                        @include mediaq
+                        {
+                            right: -60px; 
+                        }
+                        i
+                        {
+                            color: transparent;
+                            font-size: $units * 2;
+                        }
+                    }
             } 
         }
     }
@@ -181,15 +179,16 @@
 } 
 .menu1
 {
-animation: slow 1000ms linear 0ms forwards 1 normal;
+    
+    animation: slow 1000ms linear 0ms forwards 1 normal;
 } 
 .menu2
 {
-animation: slow 1000ms linear 1000ms forwards 1 normal;
+    animation: slow 1000ms linear 1000ms forwards 1 normal;
 } 
 .menu3
 {
-animation: slow 1000ms linear 2000ms forwards 1 normal;
+    animation: slow 1000ms linear 2000ms forwards 1 normal;
 }  
 .button
 {

@@ -1,31 +1,4 @@
-/*normalisation navigateurs et mise en forme du site*/
-body
-{
-    font-family:$font-primary;
-    position: relative;
-    
-}
-*, *:before, *:after 
-{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
 
-input:focus,
-select:focus,
-textarea:focus,
-button:focus,
-a
-{
-    outline: none;
-    text-decoration: none;
-    color: setc(body);
-    cursor: pointer;
-}
 
 
 /*header et loader*/
@@ -102,8 +75,7 @@ a
     h1
     {
         @include header-logo;  
-        animation: display 3300ms ease-out 0s normal both;
-
+        animation: display 400ms ease-out 3000ms normal both;
     }
     /*barre localisation et recherche ville*/
     &__search
@@ -114,7 +86,7 @@ a
     background-color: setc(bc);
     margin-top: $units * 2;
     border-top: 2px solid setc(bord10);
-    animation: display 3300ms ease-out 0s normal both;
+    animation: display 400ms ease-out 3000ms normal both;
         &__icon
             {
                 display: inline-flex;
@@ -145,7 +117,7 @@ a
     {
         text-align: center;
         margin-top: $units * 3.5;
-        animation: display 3300ms ease-out 0s normal both;
+        animation: display 400ms ease-out 3000ms normal both;
         &__title
         {
             font-size: $units * 2.4;
@@ -161,7 +133,7 @@ a
     &__button
     {
         margin-top: $units * 2.5;
-        animation: display 3300ms ease-out 0s normal both;
+        animation: display 400ms ease-out 3000ms normal both;
        &__style
        {
         @include button;

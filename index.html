@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/prefixed/style.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
         <script src="https://kit.fontawesome.com/7792f8e9f2.js" crossorigin="anonymous">
         </script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,18 +17,25 @@
     </head>
     <body class="body">
         <header class="header"> 
+            <!--loading spinner-->
             <div class="header__spinner">
                 <div class="header__spinner__contain">
-                    <div class="header__spinner__contain__bell"><i class="fas fa-concierge-bell icon"></i></div>
-                    <div class="header__spinner__contain__cercle"></div>
-                    <span class="texte">Ohmyfood</span>
+                    <div class="header__spinner__contain__bell">
+                        <i class="fas fa-concierge-bell icon">
+                        </i>
+                    </div>
+                    <div class="header__spinner__contain__cercle">
+                    </div>
+                    <span class="texte">
+                        Ohmyfood
+                    </span>
                 </div>
          </div>       
             <!--logo-->
             <h1 class="header__title">
                 ohmyfood
             </h1>
-            <!--placeholder-->
+            <!--recherche par ville ou géolocalisation-->
             <div class="header__search">
                     <div class="header__search__icon">
                         <i class="fas fa-map-marker-alt">
@@ -36,6 +43,7 @@
                     </div>
                     <input class="header__search__input" type="text" name="form city" placeholder="Paris,Belleville">
             </div>
+            <!--présentation-->
             <div class="header__presentation">
                 <h2 class="header__presentation__title">
                     Réservez le menu qui <br/>vous convient
@@ -45,6 +53,7 @@
                     <br/>sélectionnés par nos soins
                 </p>
             </div>
+            <!--bouton-->
             <div class="header__button">
                 <div class="header__button__style">
                     <a href="#restau">
@@ -111,6 +120,7 @@
                         Restaurants
                     </h3>
                     <div class="principal__conteneur" id="restau">
+                        <!--card type nouveau-->
                         <div class="principal__conteneur__card">
                             <a class="principal__conteneur__card__link" href="page1.html">
                                 <div class="principal__conteneur__image">
@@ -155,6 +165,7 @@
                                 </div>
                             </a>
                         </div>
+                        <!--card type restau-->
                         <div class="principal__conteneur__card">
                             <a class="principal__conteneur__card__link" href="page3.html">
                                 <div class="principal__conteneur__image">
@@ -193,7 +204,7 @@
                                 </div>
                             </a>
                         </div>
-                        <!--   structure ajout  nouveau retaurant                  
+                        <!--   structure ajout  futur nouveau retaurant                  
                             <div class="principal__conteneur__card">
                             <a class="principal__conteneur__card__link" href="page5.html">
                                 <div class="principal__conteneur__nouv">
