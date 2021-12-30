@@ -162,10 +162,6 @@
                         position: relative;
                         right: -54px;
                         @include flex(row, nowrap, space-around, center);
-                        @include mediaq
-                        {
-                            right: -60px; 
-                        }
                         i
                         {
                             color: transparent;

@@ -812,11 +812,6 @@ a {
   justify-content: space-around;
   align-items: center;
 }
-@media screen and (min-width: 768px) {
-  .menu__liste__item__anim__circle {
-    right: -60px;
-  }
-}
 .menu__liste__item__anim__circle i {
   color: transparent;
   font-size: 20px;
