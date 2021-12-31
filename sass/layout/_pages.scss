@@ -31,6 +31,7 @@
         border-top-right-radius: $units * 2.5;
         background-color: setc(bc);
         margin-top: -$units * 2.5;
+        padding-top: $units * 2;
         position: relative;
         height: $units * 6;
         @include flex(row, nowrap, space-around, center);
@@ -56,29 +57,30 @@
     }
     &-container
     {
-        @include flex(column, nowrap, space-around, center);
-        width: $pourcent * 9.5;
-        margin-left: 2%;
-        gap: 2%;
+        @include flex(column, nowrap, space-around, flex-start);
+        gap: $units;
+        margin: $units * 1;
         background-color: setc(bc);
         @include mediaq
         {
             @include flex(row, wrap, space-evenly, stretch);
+            margin: auto;
         }
     }
     
 }
 .menu
 {
+    width: $pourcent * 9.5;
     padding-top: $units * 2;
     padding-bottom: $units * 2;
+    margin: $units;
     opacity: 0;
     @include mediaq
         {
             width: $pourcent * 3;
-            min-width: $units * 32;
+            min-width: $units * 35;
         }
-  
     h3
     {
         margin-bottom: $units * 2;
@@ -97,18 +99,15 @@
     }
     &__liste
     {
-        @include flex(column, nowrap, center, center);
-        gap: $units;
-        max-width: $units * 35;
         &__item
         {
-            max-width: $units * 34;
             width: $pourcent * 10;
             height: $units * 7;
-            margin: auto;
+            margin-top: $units;
+            margin-bottom: $units;
             background-color: setc(footer);
             border-radius: $units * 1.5;
-            @include flex(row, nowrap, space-around, center);
+            @include flex(row, nowrap, flex-start, center);
             @include box-shadow;
             overflow: hidden;
             cursor: pointer;
@@ -118,56 +117,47 @@
             }
             &__texte
             {
-                
-                width: $pourcent * 8; 
-                white-space: nowrap;
+                width: $pourcent * 10;
+                padding-left: $units;
                 overflow: hidden;
-                text-overflow: ellipsis;
-                padding: $units;
-                font-size: 14px;
-                @include flex(column, nowrap, center, flex-start);
                 &__txp
                 {
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    width: $pourcent * 10;
                     font-weight: 900;
+                    font-size: 16px;
                 }
                 &__txo
                 {
-                    
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    width: $pourcent * 10;
-                }  
+                    font-size: 14px;
+                } 
             }
-            &__anim
+            b
             {
-                @include flex(row, nowrap, space-evenly, center);
-                b
+                font-weight: 500;
+                font-size: $units * 1.6;
+                align-self: flex-end;
+                margin-right: -$units * 5;
+                padding-bottom: $units;
+            }   
+            &__circle
+            {
+                width: $units * 6.5;
+                height: $units * 7;
+                border-radius: 0px 15px 15px 0px;
+                background-color: setc(tertiary);
+                position: relative;
+                right: -$units * 6.1;
+                @include flex(row, nowrap, space-around, center);
+                i
                 {
-                    font-weight: 500;
-                    margin-left: $units * 1.5;
-                    position: relative;
-                    right: -34px;
+                    color: transparent;
+                    font-size: $units * 2;
                 }
-                    &__circle
-                    {
-                        width: $units * 4;
-                        height: $units * 7;
-                        border-radius: 0px 15px 15px 0px;
-                        background-color: setc(tertiary);
-                        position: relative;
-                        right: -54px;
-                        @include flex(row, nowrap, space-around, center);
-                        i
-                        {
-                            color: transparent;
-                            font-size: $units * 2;
-                        }
-                    }
             } 
         }
     }

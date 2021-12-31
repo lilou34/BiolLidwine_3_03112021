@@ -7,8 +7,7 @@ body
 {
     font-family:$font-primary;
     position: relative;
-    max-width: $units * 140;
-    margin: auto;
+    
 }
 *, *:before, *:after 
 {
@@ -29,4 +28,9 @@ a
     text-decoration: none;
     color: setc(body);
     cursor: pointer;
+}
+.max-width
+{
+    max-width: $units * 140;
+    margin: auto;
 }

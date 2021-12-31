@@ -4,7 +4,8 @@
 }
 .foo
 {
-    @include flex(column, nowrap, flex-start, flex-start);background-color: setc(body);
+    
+    background-color: setc(body);
     color: setc(footer);
     height: 100%;
     @include mediaq

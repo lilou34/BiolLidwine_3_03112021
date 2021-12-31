@@ -137,12 +137,13 @@
 {
     0%
     {
-        transform: translateX(0px);
+        margin-right: 0px;
     }
     100%
     {
-        transform: translateX(-48px);
+        margin-right: 60px;
     }
+    
 }
 
 

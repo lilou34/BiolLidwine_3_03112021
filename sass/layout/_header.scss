@@ -1,6 +1,3 @@
-
-
-
 /*header et loader*/
 .header
 {
@@ -80,44 +77,47 @@
     /*barre localisation et recherche ville*/
     &__search
     {
-    @include flex(row, nowrap, center, center);
-    width: $pourcent * 10;
-    height: $units * 5;
-    background-color: setc(bc);
-    margin-top: $units * 2;
-    border-top: 2px solid setc(bord10);
-    animation: display 400ms ease-out 3000ms normal both;
+        @include flex(row, nowrap, center, center);
+        width: $pourcent * 10;
+        background-color: $bord10;
+        margin-top: $units * 2;
+        box-shadow: inset 0px 5px 4px 0px $bord20; 
+        animation: display 400ms ease-out 3000ms normal both;
+        padding-top: $units;
+        padding-bottom: $units;
         &__icon
+        {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: $units * 3;
+            height: $units * 3;
+            border: none;
+        } 
+        &__input
+        {
+            width: auto;
+            border: none;
+            margin-left: $units;
+            background-color: $bord10;
+            font-family: $font-primary;
+            &:focus::placeholder
             {
-                display: inline-flex;
-                justify-content: center;
-                align-items: center;
-                width: $units * 3;
-                height: $units * 3;
-                border: none;
-            } 
-            &__input
+                color: $bord10; 
+            }
+            @include mediaq
             {
-                width: auto;
-                border: none;
-                margin-left: $units;
-                background-color: setc(bc);
-                font-family: $font-primary;
-                &:focus::placeholder
-                {
-                    color: $bord10; 
-                }
-                @include mediaq
-                {
-                    font-size: large;
-                } 
+                font-size: large;
             } 
+        } 
     }
     &__presentation
     {
         text-align: center;
-        margin-top: $units * 3.5;
+        padding-top: $units * 3.5;
+        width: $pourcent * 10;
         animation: display 400ms ease-out 3000ms normal both;
+        background-color: setc(bc);
         &__title
         {
             font-size: $units * 2.4;
@@ -132,7 +132,10 @@
     }
     &__button
     {
-        margin-top: $units * 2.5;
+        width: $pourcent * 10;
+        @include flex(row, nowrap, center, center);
+        background-color: setc(bc);
+        padding: $units * 7;
         animation: display 400ms ease-out 3000ms normal both;
        &__style
        {

@@ -107,19 +107,16 @@
         {
             &__item
             {
-                &__anim
+                &__circle
                 {
                     animation: check 450ms ease-in-out alternate forwards;
-                    &__circle
+                    margin-left: 5px;
+                    i
                     {
-                        i
-                        {
-                            color: white;
-                            vertical-align: middle;
-                            animation: turn 700ms ease-in-out alternate-reverse forwards;
-                        }
+                        color: white;
+                        vertical-align: middle;
+                        animation: turn 700ms ease-in-out alternate-reverse forwards;
                     }
-            
                 }
             }
         }
