@@ -42,8 +42,10 @@
         h2
         {
             font-family: $font-title;
-            font-size: x-large;
+            font-size: $units * 2.5;
             font-weight: 700;
+            padding-right: $units * 1.5;
+            padding-bottom: $units;
         }
         &__anim
         {
@@ -58,23 +60,19 @@
     &-container
     {
         @include flex(column, nowrap, space-around, flex-start);
-        gap: $units;
-        margin: $units * 1;
+        padding-left: $units * 1.5;
         background-color: setc(bc);
         @include mediaq
         {
             @include flex(row, wrap, space-evenly, stretch);
             margin: auto;
         }
-    }
-    
+    } 
 }
 .menu
 {
     width: $pourcent * 9.5;
     padding-top: $units * 2;
-    padding-bottom: $units * 2;
-    margin: $units;
     opacity: 0;
     @include mediaq
         {
@@ -83,7 +81,6 @@
         }
     h3
     {
-        margin-bottom: $units * 2;
         padding-bottom: $units;
         position: relative;
         &::after
@@ -103,8 +100,8 @@
         {
             width: $pourcent * 10;
             height: $units * 7;
-            margin-top: $units;
-            margin-bottom: $units;
+            margin-top: $units * 1.5;
+            margin-bottom: $units * 0.5;
             background-color: setc(footer);
             border-radius: $units * 1.5;
             @include flex(row, nowrap, flex-start, center);
@@ -165,7 +162,6 @@
 } 
 .menu1
 {
-    
     animation: slow 1000ms linear 0ms forwards 1 normal;
 } 
 .menu2
@@ -180,6 +176,6 @@
 {
     @include button;
     background-color: setc(bc);
-    margin: 70px auto;
+    margin: 30px auto;
     text-align: center;
 }

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/style.css" rel="stylesheet"/>
+        <link href="css/prefixed/style.css" rel="stylesheet"/>
         <script src="https://kit.fontawesome.com/7792f8e9f2.js" crossorigin="anonymous">
         </script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,48 +71,48 @@
                     Fonctionnement
                 </h3>
                 <div class="navigation__list max-width">
-                    <a class="navigation__list__elm__lien" href="#">
                         <div class="navigation__list__elm">
-                            <div class="navigation__list__elm__chiffre">
+                            <a class="navigation__list__elm__lien" href="#">
+                            <div class="navigation__list__elm__lien__chiffre">
                                 1
                             </div>
-                                <div class="navigation__list__elm__icon">
+                                <div class="navigation__list__elm__lien__icon">
                                     <i class="fas fa-mobile-alt fa-fw">
                                     </i>
                                 </div>
-                                        <p class="navigation__list__elm__text">
+                                        <p class="navigation__list__elm__lien__text">
                                             Choisissez un restaurant
                                         </p>
+                                    </a>
                         </div>
-                    </a>
-                    <a class="navigation__list__elm__lien" href="#">
                         <div class="navigation__list__elm">
-                            <div class="navigation__list__elm__chiffre">
+                            <a class="navigation__list__elm__lien" href="#">
+                            <div class="navigation__list__elm__lien__chiffre">
                                 2
                             </div>
-                                <div class="navigation__list__elm__icon">
+                                <div class="navigation__list__elm__lien__icon">
                                     <i class="fas fa-list-ul fa-fw">
                                     </i>
                                 </div>
-                                        <p class="navigation__list__elm__text">
+                                        <p class="navigation__list__elm__lien__text">
                                             Composez votre menu
                                         </p>
-                        </div>
-                    </a>
-                    <a class="navigation__list__elm__lien" href="#">       
+                            </a>
+                        </div>     
                         <div class="navigation__list__elm">
-                            <div class="navigation__list__elm__chiffre">
+                            <a class="navigation__list__elm__lien" href="#"> 
+                            <div class="navigation__list__elm__lien__chiffre">
                                 3
                             </div>
-                                <div class="navigation__list__elm__icon">
+                                <div class="navigation__list__elm__lien__icon">
                                     <i class="fas fa-store fa-fw">
                                     </i>
                                 </div>
-                                        <p class="navigation__list__elm__text">
+                                        <p class="navigation__list__elm__lien__text">
                                             Dégustez au restaurant
                                         </p>
+                            </a>
                         </div>
-                    </a>
                 </div>
             </div>
             <section>
@@ -205,7 +205,7 @@
                                 </div>
                             </a>
                         </div>
-                        <!--   structure ajout  futur nouveau retaurant                  
+                        <!--   structure ajout card nouveau retaurant                  
                             <div class="principal__conteneur__card">
                             <a class="principal__conteneur__card__link" href="page5.html">
                                 <div class="principal__conteneur__nouv">

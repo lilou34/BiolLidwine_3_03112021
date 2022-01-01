@@ -2,10 +2,10 @@
 //fonction qui permet d'appeler les couleurs dans une map sans écrire map-get
 @function setc($key) 
 {
-    @if map-has-key($colors, $key) {
+    @if map-has-key($colors, $key) 
+    {
         @return map-get($colors, $key);  
-      }
-       
+    }
       @warn "The key #{$key} is not in the map ’$colors’";
       @return null;
 }
@@ -49,7 +49,7 @@
         transform: scale(0)
     }
 }
-/*loader cercle et i et i check plats pages*/
+/*loader cercle et icone et icone qui tourne check plats menus*/
 @keyframes turn 
 {
     0%
@@ -132,7 +132,7 @@
         opacity: 1;
     }
 } 
-
+/*animation check menus*/
 @keyframes check 
 {
     0%

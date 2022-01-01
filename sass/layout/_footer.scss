@@ -4,7 +4,6 @@
 }
 .foo
 {
-    
     background-color: setc(body);
     color: setc(footer);
     height: 100%;
@@ -13,17 +12,17 @@
         text-align: center;
         font-size: x-large;
     }
-
     h4
     {
         font-family: $font-title;
         font-weight: 200;
         width: $pourcent * 9;
-        padding: $units * 1.5;
+        padding-top: $units * 2;
+        padding-bottom: $units * 2;
+        margin-left: $units * 1.5;
         @include mediaq
         {
-            font-size: xx-large; 
-            width: $pourcent * 9.7;
+            font-size: xx-large;
         } 
     }
     &__liste
@@ -37,7 +36,7 @@
             @include flex(row, nowrap, center, center);
             width: $pourcent * 8;
             margin: auto;
-            padding-bottom: $units * 4;
+            padding-bottom: $units * 6;
         } 
         &__elm
         {

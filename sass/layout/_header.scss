@@ -4,7 +4,7 @@
     @include flex(column, nowrap, center, center);
     text-align: center;
     margin-top: $units;
-    margin-bottom: $units * 5;
+    margin-bottom: $units * 3;
     z-index: 1;
     /*loader*/
     &__spinner
@@ -18,7 +18,6 @@
         left: 0;
         z-index: 90;
         animation: loader 3400ms ease-in-out 0ms forwards;
- 
         &__contain
         {
             @include flex(column, nowrap, center, center);
@@ -26,7 +25,6 @@
             height: $pourcent * 10;
             background-color: setc(body);
             margin: auto;
-            
             &__bell
             {
                 font-weight: 900;
@@ -80,7 +78,7 @@
         @include flex(row, nowrap, center, center);
         width: $pourcent * 10;
         background-color: $bord10;
-        margin-top: $units * 2;
+        margin-top: $units * 0.6;
         box-shadow: inset 0px 5px 4px 0px $bord20; 
         animation: display 400ms ease-out 3000ms normal both;
         padding-top: $units;
@@ -135,7 +133,8 @@
         width: $pourcent * 10;
         @include flex(row, nowrap, center, center);
         background-color: setc(bc);
-        padding: $units * 7;
+        padding-top: $units * 3.5;
+        padding-bottom: $units * 3;
         animation: display 400ms ease-out 3000ms normal both;
        &__style
        {

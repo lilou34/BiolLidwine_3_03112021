@@ -30,7 +30,7 @@
     transform: scale(0);
   }
 }
-/*loader cercle et i et i check plats pages*/
+/*loader cercle et icone et icone qui tourne check plats menus*/
 @keyframes turn {
   0% {
     transform: rotate(0deg);
@@ -97,6 +97,7 @@
     opacity: 1;
   }
 }
+/*animation check menus*/
 @keyframes check {
   0% {
     margin-right: 0px;
@@ -154,7 +155,7 @@ a {
   align-items: center;
   text-align: center;
   margin-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   z-index: 1;
   /*loader*/
   /*logo*/
@@ -237,7 +238,7 @@ a {
   align-items: center;
   width: 100%;
   background-color: #d6d6d6;
-  margin-top: 20px;
+  margin-top: 6px;
   box-shadow: inset 0px 5px 4px 0px #bcbcbc;
   animation: display 400ms ease-out 3000ms normal both;
   padding-top: 10px;
@@ -290,7 +291,8 @@ a {
   justify-content: center;
   align-items: center;
   background-color: #efefef;
-  padding: 70px;
+  padding-top: 35px;
+  padding-bottom: 30px;
   animation: display 400ms ease-out 3000ms normal both;
 }
 .header__button__style {
@@ -324,7 +326,8 @@ a {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
-  padding: 55px 0px 40px 0px;
+  width: 100%;
+  padding: 40px 0px 40px 0px;
   font-weight: bold;
   font-size: 24px;
   font-family: "Roboto", arial, sans-serif;
@@ -334,78 +337,67 @@ a {
     align-items: center;
     margin-bottom: 50px;
     width: 100%;
+    gap: 10px;
   }
 }
 .navigation h3 {
   font-size: x-large;
   padding-left: 15px;
+  padding-bottom: 20px;
 }
 .navigation__list {
-  gap: 15px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  max-width: 99%;
+  width: 90%;
 }
 @media screen and (min-width: 768px) {
   .navigation__list {
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-    gap: 50px;
+    align-items: center;
   }
 }
-.navigation__list__elm {
+.navigation__list__elm__lien {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   box-shadow: 10px 10px 20px #bcbcbc;
   border-radius: 20px;
   margin-top: 20px;
-  gap: 20px;
   width: 100%;
   min-width: 300px;
   height: 75px;
-  padding-right: 10px;
   background-color: #efefef;
   font-size: medium;
+  position: relative;
 }
-.navigation__list__elm:hover {
+.navigation__list__elm__lien:hover {
   box-shadow: 10px 10px 20px #565656;
 }
-@media screen and (min-width: 768px) {
-  .navigation__list__elm {
-    width: 30%;
-  }
-}
-.navigation__list__elm:hover {
+.navigation__list__elm__lien:hover {
   background-color: #e4d5f6;
 }
-.navigation__list__elm:hover i {
+.navigation__list__elm__lien:hover i {
   color: #9356dc;
 }
-.navigation__list__elm__chiffre {
+.navigation__list__elm__lien__chiffre {
   background-color: #9356dc;
   position: absolute;
-  margin-left: -13px;
   text-align: center;
+  line-height: 20px;
   font-size: small;
   color: #ffffff;
   width: 20px;
+  max-width: 20px;
   height: 20px;
   border: 1px solid #9356dc;
   border-radius: 50%;
-  max-width: 20px;
-  line-height: 20px;
+  left: -7px;
 }
-.navigation__list__elm__icon {
-  margin-left: 25px;
-}
-.navigation__list__elm__p {
-  padding-right: 10px;
+.navigation__list__elm__lien i {
+  margin: 5px;
 }
 
 .principal {
@@ -416,14 +408,14 @@ a {
   align-items: center;
   gap: 5%;
   background-color: #efefef;
-  margin-top: 20px;
+  margin-top: 50px;
   width: 100%;
   padding-bottom: 20px;
 }
 .principal__title {
   align-self: start;
   margin: 25px 0px 0px 15px;
-  padding-bottom: 28px;
+  padding-bottom: 20px;
   font-size: x-large;
   font-weight: bolder;
 }
@@ -439,7 +431,6 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 10px;
 }
 @media screen and (min-width: 768px) {
   .principal__conteneur {
@@ -457,9 +448,9 @@ a {
   height: 80%;
   background-color: #efefef;
   box-shadow: 10px 10px 20px #bcbcbc;
-  margin-bottom: 5%;
   cursor: pointer;
   position: relative;
+  margin-bottom: 20px;
 }
 .principal__conteneur__card:hover {
   box-shadow: 10px 10px 20px #565656;
@@ -490,11 +481,11 @@ a {
   border-radius: 15px 15px 0px 0px;
   object-fit: cover;
   width: 100%;
-  max-height: 190px;
+  max-height: 180px;
 }
 .principal__conteneur__card__text {
   height: 20%;
-  margin: 15px;
+  margin: 10px;
   gap: 10px;
   display: flex;
   flex-direction: column;
@@ -548,12 +539,13 @@ a {
   font-family: "Shrikhand", arial, sans-serif;
   font-weight: 200;
   width: 90%;
-  padding: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 15px;
 }
 @media screen and (min-width: 768px) {
   .foo h4 {
     font-size: xx-large;
-    width: 97%;
   }
 }
 .foo__liste {
@@ -575,7 +567,7 @@ a {
     align-items: center;
     width: 80%;
     margin: auto;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
   }
 }
 .foo__liste__elm {
@@ -656,8 +648,10 @@ a {
 }
 .resto-title h2 {
   font-family: "Shrikhand", arial, sans-serif;
-  font-size: x-large;
+  font-size: 25px;
   font-weight: 700;
+  padding-right: 15px;
+  padding-bottom: 10px;
 }
 .resto-title__anim {
   position: relative;
@@ -696,8 +690,7 @@ a {
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: flex-start;
-  gap: 10px;
-  margin: 10px;
+  padding-left: 15px;
   background-color: #efefef;
 }
 @media screen and (min-width: 768px) {
@@ -714,8 +707,6 @@ a {
 .menu {
   width: 95%;
   padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 10px;
   opacity: 0;
 }
 @media screen and (min-width: 768px) {
@@ -725,7 +716,6 @@ a {
   }
 }
 .menu h3 {
-  margin-bottom: 20px;
   padding-bottom: 10px;
   position: relative;
 }
@@ -741,8 +731,8 @@ a {
 .menu__liste__item {
   width: 100%;
   height: 70px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 5px;
   background-color: #ffffff;
   border-radius: 15px;
   display: flex;
@@ -831,7 +821,7 @@ a {
   cursor: pointer;
   box-shadow: 10px 10px 20px #bcbcbc;
   background-color: #efefef;
-  margin: 70px auto;
+  margin: 30px auto;
   text-align: center;
 }
 .button:hover {

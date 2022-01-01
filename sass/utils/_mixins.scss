@@ -1,3 +1,4 @@
+// logo du site
 @mixin header-logo
 {
     font-family: $font-title;
@@ -9,7 +10,7 @@
         font-size: xx-large;
     } 
 }
-
+//mixin flexbox
 @mixin flex($dir: column, $wrap: wrap, $jc: center, $ai: flex-start)
 {
     display: flex;
@@ -18,7 +19,7 @@
     justify-content: $jc;
     align-items: $ai;
 }
-
+//box-shadow
 @mixin box-shadow 
 {
     box-shadow: 10px 10px 20px setc(bord20); 
@@ -27,6 +28,7 @@
         box-shadow: 10px 10px 20px setc(bord60); 
     }
 }
+// button avec hover
 @mixin button
 {
     width: $units * 21.8;
@@ -47,6 +49,7 @@
         animation: button 1s ease forwards;
     }
 }
+// cards restaurants accueil
 @mixin card($background-color: setc(footer))
 {
     @include flex(column, wrap, space-around, flex-start);
@@ -55,10 +58,10 @@
     height: $pourcent * 8;
     background-color: setc(bc);
     @include box-shadow;
-    margin-bottom: $pourcent * 0.5;
+    
     cursor: pointer;
 }
-
+// coeur
 %hearts
 {
     width: $units * 3;
@@ -67,6 +70,7 @@
     font-size: $units * 3;
     position: absolute;
 }
+
 @mixin heart 
 {
     position: relative;
@@ -99,6 +103,7 @@
         transform: scale(0.1);
     } 
 }
+// check plats pages menus
 @mixin hover
 {
     .menu
@@ -123,11 +128,6 @@
     }
     
 }
-
-
-
-        
-
 
 /*média queries, beakpoint*/
 @mixin mediaq 
