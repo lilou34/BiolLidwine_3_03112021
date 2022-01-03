@@ -108,6 +108,7 @@
             @include box-shadow;
             overflow: hidden;
             cursor: pointer;
+            
             &:hover
             { 
                 @include hover;
@@ -149,11 +150,13 @@
                 background-color: setc(tertiary);
                 position: relative;
                 right: -$units * 6.1;
+                transition: all ease-in-out 450ms;
                 @include flex(row, nowrap, space-around, center);
                 i
                 {
-                    color: transparent;
+                    color: white;
                     font-size: $units * 2;
+                    transition: all ease-in-out 500ms;
                 }
             } 
         }
@@ -162,15 +165,15 @@
 } 
 .menu1
 {
-    animation: slow 1000ms linear 0ms forwards 1 normal;
+    animation: slow 600ms linear 0ms forwards 1 normal;
 } 
 .menu2
 {
-    animation: slow 1000ms linear 1000ms forwards 1 normal;
+    animation: slow 600ms linear 600ms forwards 1 normal;
 } 
 .menu3
 {
-    animation: slow 1000ms linear 2000ms forwards 1 normal;
+    animation: slow 600ms linear 1200ms forwards 1 normal;
 }  
 .button
 {

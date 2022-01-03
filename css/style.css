@@ -97,15 +97,6 @@
     opacity: 1;
   }
 }
-/*animation check menus*/
-@keyframes check {
-  0% {
-    margin-right: 0px;
-  }
-  100% {
-    margin-right: 60px;
-  }
-}
 .resto-title__anim .fas, .resto-title__anim .far, .principal__conteneur__card__text__anim .fas, .principal__conteneur__card__text__anim .far {
   width: 30px;
   right: 10px;
@@ -239,10 +230,12 @@ a {
   width: 100%;
   background-color: #d6d6d6;
   margin-top: 6px;
-  box-shadow: inset 0px 5px 4px 0px #bcbcbc;
-  animation: display 400ms ease-out 3000ms normal both;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: inset 0px 5px 4px 0px #bcbcbc;
+  animation: display 400ms ease-out 3000ms normal both;
 }
 .header__search__icon {
   display: inline-flex;
@@ -253,11 +246,13 @@ a {
   border: none;
 }
 .header__search__input {
-  width: auto;
+  max-width: 130px;
   border: none;
-  margin-left: 10px;
   background-color: #d6d6d6;
   font-family: "Roboto", arial, sans-serif;
+}
+.header__search__input::placeholder {
+  text-align: center;
 }
 .header__search__input:focus::placeholder {
   color: #d6d6d6;
@@ -571,7 +566,7 @@ a {
   }
 }
 .foo__liste__elm {
-  font-weight: 100;
+  font-weight: 300;
   font-size: small;
   width: 90%;
 }
@@ -748,13 +743,10 @@ a {
   box-shadow: 10px 10px 20px #565656;
 }
 .menu__liste__item:hover .menu__liste__item__circle {
-  animation: check 450ms ease-in-out alternate forwards;
-  margin-left: 5px;
+  margin-right: 60px;
 }
 .menu__liste__item:hover .menu__liste__item__circle i {
-  color: white;
-  vertical-align: middle;
-  animation: turn 700ms ease-in-out alternate-reverse forwards;
+  transform: rotate(1turn);
 }
 .menu__liste__item__texte {
   width: 100%;
@@ -788,6 +780,7 @@ a {
   background-color: #99e2d0;
   position: relative;
   right: -61px;
+  transition: all ease-in-out 450ms;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -795,20 +788,21 @@ a {
   align-items: center;
 }
 .menu__liste__item__circle i {
-  color: transparent;
+  color: white;
   font-size: 20px;
+  transition: all ease-in-out 500ms;
 }
 
 .menu1 {
-  animation: slow 1000ms linear 0ms forwards 1 normal;
+  animation: slow 600ms linear 0ms forwards 1 normal;
 }
 
 .menu2 {
-  animation: slow 1000ms linear 1000ms forwards 1 normal;
+  animation: slow 600ms linear 600ms forwards 1 normal;
 }
 
 .menu3 {
-  animation: slow 1000ms linear 2000ms forwards 1 normal;
+  animation: slow 600ms linear 1200ms forwards 1 normal;
 }
 
 .button {

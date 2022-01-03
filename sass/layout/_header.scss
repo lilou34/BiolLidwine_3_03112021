@@ -79,10 +79,12 @@
         width: $pourcent * 10;
         background-color: $bord10;
         margin-top: $units * 0.6;
-        box-shadow: inset 0px 5px 4px 0px $bord20; 
-        animation: display 400ms ease-out 3000ms normal both;
         padding-top: $units;
         padding-bottom: $units;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: inset 0px 5px 4px 0px $bord20; 
+        animation: display 400ms ease-out 3000ms normal both;
         &__icon
         {
             display: inline-flex;
@@ -94,11 +96,14 @@
         } 
         &__input
         {
-            width: auto;
+            max-width: $units * 13;
             border: none;
-            margin-left: $units;
             background-color: $bord10;
             font-family: $font-primary;
+            &::placeholder 
+            { 
+                text-align:center; 
+            }
             &:focus::placeholder
             {
                 color: $bord10; 
