@@ -39,11 +39,15 @@
                 border-radius: $units * 2;
                 margin-top: $units * 2;
                 width: $pourcent * 10;
-                min-width: $units * 30;
+                min-width: $units * 22;
                 height: $units * 7.5;
                 background-color: setc(bc);
                 font-size: medium;
                 position: relative;
+                @include mediaq
+                {
+                    min-width: $units * 30;
+                }
                 &:hover
                 {
                     background-color: $lightp;

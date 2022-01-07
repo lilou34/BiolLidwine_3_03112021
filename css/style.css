@@ -362,7 +362,7 @@ a {
   border-radius: 20px;
   margin-top: 20px;
   width: 100%;
-  min-width: 300px;
+  min-width: 220px;
   height: 75px;
   background-color: #efefef;
   font-size: medium;
@@ -370,6 +370,11 @@ a {
 }
 .navigation__list__elm__lien:hover {
   box-shadow: 10px 10px 20px #565656;
+}
+@media screen and (min-width: 768px) {
+  .navigation__list__elm__lien {
+    min-width: 300px;
+  }
 }
 .navigation__list__elm__lien:hover {
   background-color: #e4d5f6;
