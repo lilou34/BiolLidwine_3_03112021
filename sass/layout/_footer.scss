@@ -4,7 +4,7 @@
 }
 .foo
 {
-    background-color: setc(body);
+    background-color: $bord80;
     color: setc(footer);
     height: 100%;
     @include mediaq

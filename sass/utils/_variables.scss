@@ -9,13 +9,15 @@ footer: #ffffff,
 bc: #efefef,
 bord10: #d6d6d6,
 bord20: #bcbcbc,
-bord60: #565656
+bord60: #565656,
+bord80: #232323
 );
 $lightp: lighten(#9356dc, 30%);
 $bord10: darken(#efefef, 10%);
 $bord20: darken(#efefef, 20%);
 $bord40: darken(#efefef, 40%);
 $bord60: darken(#efefef, 60%);
+$bord80: darken(#efefef, 80%);
 $linear: -webkit-linear-gradient(#9356dc,#ff79da);
 $linear2: -webkit-linear-gradient(30deg,#ff79d9, #9356dc 80%);
 $linear3: -webkit-linear-gradient(#9356dc,#ff79da, #99e2d0);

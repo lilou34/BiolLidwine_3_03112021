@@ -393,6 +393,7 @@ a {
 }
 .navigation__list__elm__lien i {
   margin: 5px;
+  color: #232323;
 }
 
 .principal {
@@ -520,7 +521,7 @@ a {
 }
 
 .foo {
-  background-color: #000000;
+  background-color: #232323;
   color: #ffffff;
   height: 100%;
 }
