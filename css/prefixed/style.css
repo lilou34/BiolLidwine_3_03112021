@@ -1133,18 +1133,19 @@ a {
   overflow: hidden;
   cursor: pointer;
 }
-.menu__liste__item:hover {
+.menu__liste__item:hover,:active,:focus {
   -webkit-box-shadow: 10px 10px 20px #565656;
           box-shadow: 10px 10px 20px #565656;
 }
-.menu__liste__item:hover .menu__liste__item__circle {
+.menu__liste__item:hover,:active,:focus .menu__liste__item__circle {
   margin-right: 60px;
 }
-.menu__liste__item:hover .menu__liste__item__circle i {
+.menu__liste__item:hover,:active,:focus .menu__liste__item__circle i {
   -webkit-transform: rotate(1turn);
       -ms-transform: rotate(1turn);
           transform: rotate(1turn);
 }
+
 .menu__liste__item__texte {
   width: 100%;
   padding-left: 10px;
