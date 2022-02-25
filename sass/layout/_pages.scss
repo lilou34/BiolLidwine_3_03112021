@@ -109,7 +109,7 @@
             overflow: hidden;
             cursor: pointer;
             
-            &:hover
+            &:hover,&:focus
             { 
                 @include hover;
             }
